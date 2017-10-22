@@ -13,23 +13,20 @@ import javafx.event.EventHandler;
 
 //import java.awt.*;
 
-public class Main extends Application implements EventHandler<ActionEvent>{
-    @FXML JFXButton loginButton;
+public class Main extends Application{
+    public static Stage callStage;
+    public static Parent feed;
+    public static Parent sample;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("CARPOOL");
-        primaryStage.setScene(new Scene(root, 900, 600));
-        primaryStage.show();
+        callStage = primaryStage;
+        sample = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        feed = FXMLLoader.load(getClass().getResource("feed.fxml"));
+        callStage.setTitle("CARPOOL");
+        callStage.setScene(new Scene(sample, 900, 600));
+        callStage.show();
 
-    }
-
-    @Override
-    public void handle(ActionEvent event) {
-        if (event.getSource()==loginButton) {
-            System.out.println("testttttt");
-        }
     }
 
 
