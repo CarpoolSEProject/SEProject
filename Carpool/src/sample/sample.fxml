@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #2c323f;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Main">
+   <children>
+      <ImageView disable="true" fitHeight="609.0" fitWidth="902.0" layoutX="-4.0" layoutY="-7.0" opacity="0.33" pickOnBounds="true">
+         <image>
+            <Image url="@../img/traffic.jpg" />
+         </image>
+         <effect>
+            <GaussianBlur radius="7.71" />
+         </effect>
+      </ImageView>
+      <JFXButton fx:id="loginButton" alignment="CENTER" contentDisplay="CENTER" depthTest="DISABLE" graphicTextGap="10.0" layoutX="407.0" layoutY="464.0" onAction="#handle" ripplerFill="#ffffff00" style="-fx-border-width: 1; -fx-border-radius: 3; -fx-border-color: white;" text="LOG IN" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </JFXButton>
+      <Group layoutX="292.0" layoutY="144.0">
+         <children>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="9.0" layoutY="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CARPOOL" textAlignment="CENTER">
+               <font>
+                  <Font size="69.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="43.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Car Sharing System">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Text>
+         </children>
+      </Group>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="173.0" layoutX="229.0" layoutY="250.0" opacity="0.76" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="496.0" />
+      <JFXTextField fx:id="enterUsername" layoutX="280.0" layoutY="260.0" prefHeight="55.0" prefWidth="400.0" promptText="Username" unFocusColor="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="enterPassword" layoutX="281.0" layoutY="329.0" prefHeight="55.0" prefWidth="400.0" promptText="Password" unFocusColor="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</Pane>
