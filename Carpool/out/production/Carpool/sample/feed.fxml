@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.Group?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
@@ -82,11 +82,18 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="191.0" layoutX="699.0" layoutY="388.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="186.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374255" height="44.0" layoutX="699.0" layoutY="356.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="186.0" />
       <Text fill="WHITE" layoutX="763.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SEARCH" />
-      <Pane layoutX="325.0" layoutY="139.0" prefHeight="200.0" prefWidth="200.0">
+      <Group layoutX="198.0" layoutY="89.0">
          <children>
-            <ScrollBar layoutX="183.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="17.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="85.0" layoutX="33.0" layoutY="122.0" stroke="BLACK" strokeType="INSIDE" width="67.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="500.0" layoutX="-4.0" layoutY="-9.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="494.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374255" height="44.0" layoutX="-4.0" layoutY="-9.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="494.0" />
+            <Line endX="394.0" layoutX="96.0" layoutY="35.0" opacity="0.13" startX="-100.0" stroke="WHITE" />
+            <Text fill="WHITE" layoutX="4.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WHERE TO GO?" />
+            <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="11.0" layoutY="47.0" preserveRatio="true">
+               <image>
+                  <Image url="@../place/ECC.png" />
+               </image>
+            </ImageView>
          </children>
-      </Pane>
+      </Group>
    </children>
 </Pane>
