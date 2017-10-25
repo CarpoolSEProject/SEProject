@@ -95,7 +95,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="feed.fxml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="feed.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/feed.fxml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-200">
@@ -108,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ecc.fxml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ecc.fxml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/ecc.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="36" lean-forward="false" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+            <state relative-caret-position="295">
+              <caret line="83" column="24" lean-forward="true" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -130,6 +130,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>05</find>
+    </findStrings>
+  </component>
   <component name="FindManager">
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
@@ -146,8 +151,8 @@
         <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
-        <option value="$PROJECT_DIR$/src/sample/ecc.fxml" />
         <option value="$PROJECT_DIR$/src/sample/feed.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/ecc.fxml" />
       </list>
     </option>
   </component>
@@ -648,10 +653,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/ecc.fxml">
+    <entry file="file://$PROJECT_DIR$/src/sample/feed.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="36" lean-forward="false" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+        <state relative-caret-position="-200">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -659,10 +664,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/feed.fxml">
+    <entry file="file://$PROJECT_DIR$/src/sample/ecc.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-200">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="295">
+          <caret line="83" column="24" lean-forward="true" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
           <folding />
         </state>
       </provider>
