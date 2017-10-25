@@ -17,12 +17,14 @@ public class Main extends Application{
     public static Stage callStage;
     public static Parent feed;
     public static Parent sample;
+    public static Parent ecc;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
         callStage = primaryStage;
         sample = FXMLLoader.load(getClass().getResource("sample.fxml"));
         feed = FXMLLoader.load(getClass().getResource("feed.fxml"));
+        ecc = FXMLLoader.load(getClass().getResource("ecc.fxml"));
         callStage.setTitle("CARPOOL");
         callStage.setScene(new Scene(sample, 900, 600));
         callStage.show();
