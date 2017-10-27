@@ -144,7 +144,7 @@
                 <Font size="17.0" />
             </font>
         </Text>
-        <JFXButton fx:id="confirmRnp" contentDisplay="CENTER" focusTraversable="false" layoutX="95.0" layoutY="519.0" onMouseClicked="#toSummary" style="-fx-background-color: #44a0ef;" text="CONFIRM" textAlignment="CENTER" textFill="WHITE">
+        <JFXButton fx:id="confirmRnp" contentDisplay="CENTER" focusTraversable="false" layoutX="95.0" layoutY="519.0" style="-fx-background-color: #44a0ef;" text="CONFIRM" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font size="20.0" />
             </font>
