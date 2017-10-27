@@ -21,6 +21,7 @@ public class Main extends Application{
     public static Parent a;
     public static Parent e12;
     public static Parent rnp;
+    public static Parent choosePlaceEcc;
 
 
     @Override
@@ -32,6 +33,7 @@ public class Main extends Application{
         a = FXMLLoader.load(getClass().getResource("a.fxml"));
         e12 = FXMLLoader.load(getClass().getResource("e12.fxml"));
         rnp = FXMLLoader.load(getClass().getResource("rnp.fxml"));
+        choosePlaceEcc = FXMLLoader.load(getClass().getResource("choosePlaceEcc.fxml"));
         callStage.setTitle("CARPOOL");
         callStage.setScene(new Scene(sample, 900, 600));
         callStage.show();

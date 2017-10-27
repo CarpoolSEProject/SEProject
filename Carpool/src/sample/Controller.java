@@ -114,6 +114,23 @@ public class Controller {
 
     }
 
+//    Ecc
+    @FXML
+    private JFXButton joinEcc;
+
+    @FXML
+    private JFXButton backToFeed;
+
+    @FXML
+    void toChooseEcc(MouseEvent event) {
+        Main.callStage.setScene(new Scene(Main.choosePlaceEcc, 900, 600));
+
+    }
+
+//    @FXML
+//    void toFeed(MouseEvent event) {
+//
+//    }
 
 
 
