@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.Group?>
 <?import javafx.scene.image.Image?>
@@ -144,93 +145,12 @@
                 <Font size="17.0" />
             </font>
         </Text>
-        <Text fill="WHITE" layoutX="200.0" layoutY="158.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="TO">
-            <font>
-                <Font size="15.0" />
-            </font></Text>
-        <Text fill="#ff9129" layoutX="229.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A Cafeteria">
-            <font>
-                <Font size="17.0" />
-            </font></Text>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff9129" height="25.0" layoutX="192.0" layoutY="140.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
-        <Text fill="WHITE" layoutX="200.0" layoutY="190.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Text>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff9129" height="25.0" layoutX="192.0" layoutY="172.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
-        <Text fill="#ff9129" layoutX="250.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kae Ki">
+        <Text fill="WHITE" layoutX="126.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose a place to wait" underline="true">
             <font>
                 <Font size="17.0" />
             </font>
         </Text>
-        <Text fill="WHITE" layoutX="200.0" layoutY="221.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="ARRIVE AT">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Text>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff9129" height="25.0" layoutX="192.0" layoutY="203.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
-        <Text fill="#ff9129" layoutX="284.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="01.00 PM">
-            <font>
-                <Font size="17.0" />
-            </font>
-        </Text>
-        <Text fill="WHITE" layoutX="201.0" layoutY="263.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="CAR TYPE">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Text>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff9129" height="25.0" layoutX="193.0" layoutY="245.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
-        <Text fill="#ff9129" layoutX="285.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Private Car">
-            <font>
-                <Font size="17.0" />
-            </font>
-        </Text>
-        <Text fill="#ff9129" layoutX="284.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25/10/2017">
-            <font>
-                <Font size="17.0" />
-            </font>
-        </Text>
-        <Text fill="WHITE" layoutX="31.0" layoutY="330.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="SEAT LEFT">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Text>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff9129" height="25.0" layoutX="23.0" layoutY="312.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
-        <Text fill="#ff9129" layoutX="129.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
-            <font>
-                <Font size="17.0" />
-            </font>
-        </Text>
-        <Text fill="WHITE" layoutX="201.0" layoutY="295.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="NOTICE">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Text>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff9129" height="25.0" layoutX="193.0" layoutY="277.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
-        <Text fill="#ff9129" layoutX="264.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="None">
-            <font>
-                <Font size="17.0" />
-            </font>
-        </Text>
-        <Text fill="WHITE" layoutX="29.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PLACE TO WAIT" underline="true">
-            <font>
-                <Font size="17.0" />
-            </font>
-        </Text>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff9129" height="25.0" layoutX="28.0" layoutY="409.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
-        <Text fill="WHITE" layoutX="38.0" layoutY="428.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kae Ki">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Text>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff9129" height="25.0" layoutX="28.0" layoutY="440.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
-        <Text fill="WHITE" layoutX="38.0" layoutY="459.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E12 Building">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Text>
-        <JFXButton contentDisplay="CENTER" focusTraversable="false" layoutX="143.0" layoutY="519.0" style="-fx-background-color: #44a0ef;" text="JOIN" textAlignment="CENTER" textFill="WHITE">
+        <JFXButton contentDisplay="CENTER" focusTraversable="false" layoutX="143.0" layoutY="519.0" style="-fx-background-color: #44a0ef;" text="OK" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font size="20.0" />
             </font>
@@ -238,7 +158,7 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </JFXButton>
-        <JFXButton contentDisplay="CENTER" focusTraversable="false" layoutX="234.0" layoutY="518.0" onMouseClicked="#toFeed" style="-fx-border-color: #ffffff; -fx-border-radius: 5;" text="BACK" textAlignment="CENTER" textFill="WHITE">
+        <JFXButton fx:id="backToFeed" contentDisplay="CENTER" focusTraversable="false" layoutX="234.0" layoutY="518.0" onMouseClicked="#toFeed" style="-fx-border-color: #ffffff; -fx-border-radius: 5;" text="BACK" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font size="20.0" />
             </font>
@@ -246,9 +166,25 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </JFXButton>
-      <ImageView fitHeight="163.0" fitWidth="163.0" layoutX="21.0" layoutY="140.0" preserveRatio="true">
+        <JFXCheckBox checkedColor="#cf305200" focusTraversable="false" layoutX="185.0" layoutY="359.0" style="-jfx-unchecked-color: white;" text="RNP" textFill="#00b84a" unCheckedColor="WHITE">
+            <font>
+                <Font size="17.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXCheckBox>
+        <JFXCheckBox checkedColor="#cf305200" focusTraversable="false" layoutX="185.0" layoutY="396.0" style="-jfx-unchecked-color: white;" text="Kae Ki" textFill="#00b84a" unCheckedColor="WHITE">
+            <font>
+                <Font size="17.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXCheckBox>
+      <ImageView fitHeight="163.0" fitWidth="163.0" layoutX="135.0" layoutY="141.0" preserveRatio="true">
          <image>
-            <Image url="@../place/A.png" />
+            <Image url="@../place/E12.png" />
          </image>
       </ImageView>
 
