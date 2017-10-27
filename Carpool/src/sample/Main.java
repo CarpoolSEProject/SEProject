@@ -18,6 +18,10 @@ public class Main extends Application{
     public static Parent feed;
     public static Parent sample;
     public static Parent ecc;
+    public static Parent a;
+    public static Parent e12;
+    public static Parent rnp;
+
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -25,6 +29,9 @@ public class Main extends Application{
         sample = FXMLLoader.load(getClass().getResource("sample.fxml"));
         feed = FXMLLoader.load(getClass().getResource("feed.fxml"));
         ecc = FXMLLoader.load(getClass().getResource("ecc.fxml"));
+        a = FXMLLoader.load(getClass().getResource("a.fxml"));
+        e12 = FXMLLoader.load(getClass().getResource("e12.fxml"));
+        rnp = FXMLLoader.load(getClass().getResource("rnp.fxml"));
         callStage.setTitle("CARPOOL");
         callStage.setScene(new Scene(sample, 900, 600));
         callStage.show();

@@ -3,9 +3,6 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.Group?>
-<?import javafx.scene.effect.Light.Distant?>
-<?import javafx.scene.effect.Lighting?>
-<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
@@ -161,13 +158,13 @@
             <Font size="17.0" />
          </font></Text>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d02f51" height="25.0" layoutX="192.0" layoutY="140.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
-      <Text fill="WHITE" layoutX="200.0" layoutY="191.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM">
+      <Text fill="WHITE" layoutX="200.0" layoutY="190.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM">
          <font>
             <Font size="15.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d02f51" height="25.0" layoutX="192.0" layoutY="173.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
-              <Text fill="#d02f51" layoutX="250.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RNP">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d02f51" height="25.0" layoutX="192.0" layoutY="172.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
+              <Text fill="#d02f51" layoutX="250.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RNP">
          <font>
             <Font size="17.0" />
          </font>
@@ -210,13 +207,13 @@
             <Font size="17.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="201.0" layoutY="293.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="NOTICE">
+      <Text fill="WHITE" layoutX="201.0" layoutY="295.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="NOTICE">
          <font>
             <Font size="15.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d02f51" height="25.0" layoutX="193.0" layoutY="275.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
-      <Text fill="#d02f51" layoutX="264.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="None">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d02f51" height="25.0" layoutX="193.0" layoutY="277.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
+      <Text fill="#d02f51" layoutX="264.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="None">
          <font>
             <Font size="17.0" />
          </font>
@@ -238,23 +235,21 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <JFXButton contentDisplay="CENTER" focusTraversable="false" layoutX="187.0" layoutY="519.0" style="-fx-background-color: #44a0ef;" text="JOIN" textAlignment="CENTER" textFill="WHITE">
+      <JFXButton contentDisplay="CENTER" focusTraversable="false" layoutX="143.0" layoutY="519.0" style="-fx-background-color: #44a0ef;" text="JOIN" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
-         <effect>
-            <Lighting>
-               <bumpInput>
-                  <Shadow />
-               </bumpInput>
-               <light>
-                  <Light.Distant />
-               </light>
-            </Lighting>
-         </effect>
+      </JFXButton>
+      <JFXButton fx:id="backToFeed" contentDisplay="CENTER" focusTraversable="false" layoutX="234.0" layoutY="518.0" onMouseClicked="#toFeed" style="-fx-border-color: #ffffff; -fx-border-radius: 5;" text="BACK" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </JFXButton>
 
     </children>

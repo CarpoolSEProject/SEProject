@@ -91,8 +91,31 @@ public class Controller {
     @FXML
     void toEcc(MouseEvent event) {
         Main.callStage.setScene(new Scene(Main.ecc, 900, 600));
+    }
+    @FXML
+    void toA(MouseEvent event) {
+        Main.callStage.setScene(new Scene(Main.a, 900, 600));
+    }
+
+    @FXML
+    void toE12(MouseEvent event) {
+        Main.callStage.setScene(new Scene(Main.e12, 900, 600));
+    }
+
+    @FXML
+    void toRnp(MouseEvent event) {
+        Main.callStage.setScene(new Scene(Main.rnp, 900, 600));
 
     }
+
+    @FXML
+    void toFeed(MouseEvent event) {
+        System.out.println("To feed");
+
+    }
+
+
+
 
 
 }

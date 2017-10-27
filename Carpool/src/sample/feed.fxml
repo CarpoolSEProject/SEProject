@@ -254,7 +254,7 @@
             <Line endX="5.0" layoutX="259.0" layoutY="190.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
             <Line endX="5.0" layoutX="343.0" layoutY="190.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
             <Line endX="5.0" layoutX="420.0" layoutY="190.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
-            <ImageView fx:id="A" fitHeight="80.0" fitWidth="80.0" layoutX="10.0" layoutY="159.0" preserveRatio="true">
+            <ImageView fx:id="A" fitHeight="80.0" fitWidth="80.0" layoutX="10.0" layoutY="159.0" onMouseClicked="#toA" preserveRatio="true">
                <image>
                   <Image url="@../place/A.png" />
                </image>
@@ -376,7 +376,7 @@
             <Line endX="5.0" layoutX="261.0" layoutY="415.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
             <Line endX="5.0" layoutX="345.0" layoutY="415.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
             <Line endX="5.0" layoutX="422.0" layoutY="415.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
-            <ImageView fx:id="E12" fitHeight="80.0" fitWidth="80.0" layoutX="11.0" layoutY="272.0" preserveRatio="true">
+            <ImageView fx:id="E12" fitHeight="80.0" fitWidth="80.0" layoutX="11.0" layoutY="272.0" onMouseClicked="#toE12" preserveRatio="true">
                <image>
                   <Image url="@../place/E12.png" />
                </image>
@@ -384,7 +384,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <ImageView fx:id="RNP" fitHeight="80.0" fitWidth="80.0" layoutX="12.0" layoutY="384.0" preserveRatio="true">
+            <ImageView fx:id="RNP" fitHeight="80.0" fitWidth="80.0" layoutX="12.0" layoutY="384.0" onMouseClicked="#toRnp" preserveRatio="true">
                <image>
                   <Image url="@../place/RNP.png" />
                </image>
