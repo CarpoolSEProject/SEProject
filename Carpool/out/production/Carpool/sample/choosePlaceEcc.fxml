@@ -179,7 +179,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXCheckBox>
-      <JFXCheckBox checkedColor="#d02f51" focusTraversable="false" layoutX="185.0" layoutY="396.0" style="-jfx-unchecked-color: white;" text="KAE KI" textFill="#d02f51" unCheckedColor="WHITE">
+      <JFXCheckBox checkedColor="#cf305200" focusTraversable="false" layoutX="185.0" layoutY="396.0" style="-jfx-unchecked-color: white;" text="KAE KI" textFill="#d02f51" unCheckedColor="WHITE">
          <font>
             <Font size="17.0" />
          </font>

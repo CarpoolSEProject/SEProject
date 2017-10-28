@@ -219,7 +219,7 @@
             </font>
         </Text>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff9129" height="25.0" layoutX="28.0" layoutY="409.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
-        <Text fill="WHITE" layoutX="38.0" layoutY="428.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A Cafeteria">
+        <Text fill="WHITE" layoutX="38.0" layoutY="428.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kae Ki">
             <font>
                 <Font size="15.0" />
             </font>

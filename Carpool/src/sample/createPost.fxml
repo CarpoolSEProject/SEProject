@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane blendMode="DARKEN" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #2c323f;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="500.0" layoutX="13.0" layoutY="80.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="670.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374255" height="95.0" layoutX="699.0" layoutY="81.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="188.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="57.0" layoutX="13.0" layoutY="13.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" width="875.0" />
+        <Text fx:id="navBar_home" accessibleRole="BUTTON" fill="WHITE" layoutX="622.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HOME" />
+        <Circle fill="WHITE" layoutX="681.0" layoutY="42.0" opacity="0.4" radius="3.0" stroke="WHITE" strokeType="INSIDE" />
+        <Text fx:id="navBar_profile" accessibleRole="BUTTON" fill="WHITE" layoutX="704.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFILE" />
+        <Circle fill="WHITE" layoutX="779.0" layoutY="42.0" opacity="0.4" radius="3.0" stroke="WHITE" strokeType="INSIDE" />
+        <Text fx:id="navBar_logout" accessibleRole="BUTTON" fill="WHITE" layoutX="798.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOG OUT" />
+        <ImageView fitHeight="75.0" fitWidth="131.0" layoutX="26.0" layoutY="3.0">
+            <image>
+                <Image url="@../img/logo.png" />
+            </image>
+        </ImageView>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="231.0" layoutX="699.0" layoutY="113.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="188.0" />
+        <ImageView fitHeight="95.0" fitWidth="188.0" layoutX="699.0" layoutY="81.0" opacity="0.45">
+            <image>
+                <Image url="@../img/cover2.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="91.0" fitWidth="79.0" layoutX="751.0" layoutY="134.0" preserveRatio="true">
+            <image>
+                <Image url="@../img/kong.png" />
+            </image>
+        </ImageView>
+        <JFXButton focusTraversable="false" layoutX="749.0" layoutY="257.0" style="-fx-background-color: #D2335C;" text="Create Post" textFill="WHITE" />
+        <Text fill="WHITE" layoutX="739.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wisarut Kawidam" />
+        <ImageView fx:id="profile" accessibleRole="BUTTON" fitHeight="29.0" fitWidth="29.0" layoutX="714.0" layoutY="308.0" opacity="0.78" preserveRatio="true">
+            <image>
+                <Image url="@../img/man.png" />
+            </image>
+        </ImageView>
+        <Line endX="87.0" layoutX="800.0" layoutY="300.0" opacity="0.68" startX="-100.0" stroke="WHITE" strokeWidth="0.5" />
+        <Line endX="43.0" layoutX="805.0" layoutY="322.0" opacity="0.68" rotate="90.0" stroke="WHITE" strokeWidth="0.5" />
+        <Line endX="43.0" layoutX="740.0" layoutY="322.0" opacity="0.68" rotate="90.0" stroke="WHITE" strokeWidth="0.5" />
+        <ImageView fx:id="setting" accessibleRole="BUTTON" fitHeight="27.0" fitWidth="31.0" layoutX="780.0" layoutY="309.0" opacity="0.78" preserveRatio="true">
+            <image>
+                <Image url="@../img/settings.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="logout" accessibleRole="BUTTON" fitHeight="34.0" fitWidth="30.0" layoutX="843.0" layoutY="308.0" opacity="0.78" preserveRatio="true">
+            <image>
+                <Image url="@../img/logout.png" />
+            </image>
+        </ImageView>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="191.0" layoutX="699.0" layoutY="388.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="186.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374255" height="44.0" layoutX="699.0" layoutY="356.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="186.0" />
+        <Text fill="WHITE" layoutX="763.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SEARCH" />
+        <Group layoutX="198.0" layoutY="89.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374255" height="44.0" layoutX="-185.0" layoutY="-9.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="670.0" />
+                <Line endX="568.0" layoutX="-84.0" layoutY="35.0" opacity="0.13" startX="-100.0" stroke="WHITE" />
+                <Text fill="WHITE" layoutX="-172.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CREATE POST" />
+            </children>
+        </Group>
+        <Line endX="85.0" layoutX="799.0" layoutY="400.0" opacity="0.13" startX="-100.0" stroke="WHITE" />
+        <JFXButton contentDisplay="CENTER" focusTraversable="false" layoutX="234.0" layoutY="519.0" style="-fx-background-color: #39a368;" text="CONFIRM" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <JFXButton contentDisplay="CENTER" focusTraversable="false" layoutX="366.0" layoutY="518.0" onMouseClicked="#toFeed" style="-fx-border-color: #ffffff; -fx-border-radius: 5;" text="BACK" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+      <GridPane layoutX="38.0" layoutY="144.0" prefHeight="306.0" prefWidth="341.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.42306518554688" minWidth="10.0" prefWidth="128.0623321533203" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="306.5934524536133" minWidth="10.0" prefWidth="212.9376678466797" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="TO:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM:" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="ARRIVE AT:" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="CAR TYPE:" GridPane.rowIndex="4">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="SEAT LEFT:" GridPane.rowIndex="5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <JFXTextField focusColor="#0082d5" focusTraversable="false" promptText="Place" style="-fx-background-color: #cad3df; -fx-background-radius: 0;" unFocusColor="#ffffff80" GridPane.columnIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField focusColor="#0082d5" focusTraversable="false" promptText="Place" style="-fx-background-color: #cad3df; -fx-background-radius: 0;" unFocusColor="#ffffff80" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTimePicker defaultColor="#0082d5" editable="true" focusTraversable="false" prefHeight="45.0" prefWidth="233.0" promptText="Time" style="-fx-background-color: #cad3df; -fx-background-radius: 0;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <JFXDatePicker defaultColor="#0082d5" focusTraversable="false" prefHeight="44.0" prefWidth="238.0" promptText="Date" style="-fx-background-color: #cad3df; -fx-background-radius: 0;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <JFXTextField focusColor="#0082d5" focusTraversable="false" promptText="Type" style="-fx-background-color: #cad3df; -fx-background-radius: 0;" unFocusColor="#ffffff80" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField focusColor="#0082d5" focusTraversable="false" promptText="Number" style="-fx-background-color: #cad3df; -fx-background-radius: 0;" unFocusColor="#ffffff80" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </GridPane>
+      <GridPane layoutX="450.0" layoutY="145.0" prefHeight="314.0" prefWidth="177.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose place to wait" underline="true" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <JFXCheckBox checkedColor="#cf345500" style="-jfx-unchecked-color: white; -jfx-checked-color: #d2335c;" text="Kae Ki" textFill="WHITE" unCheckedColor="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox checkedColor="#cf345500" style="-jfx-unchecked-color: white; -jfx-checked-color: #d2335c;" text="E12 Building" textFill="WHITE" unCheckedColor="WHITE" GridPane.rowIndex="3">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox checkedColor="#cf345500" style="-jfx-unchecked-color: white; -jfx-checked-color: #d2335c;" text="A Cafeteria" textFill="WHITE" unCheckedColor="WHITE" GridPane.rowIndex="4">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox checkedColor="#cf345500" style="-jfx-unchecked-color: white; -jfx-checked-color: #d2335c;" text="Central Library" textFill="WHITE" unCheckedColor="WHITE" GridPane.rowIndex="5">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox checkedColor="#cf345500" style="-jfx-unchecked-color: white; -jfx-checked-color: #d2335c;" text="Faculty of Science" textFill="WHITE" unCheckedColor="WHITE" GridPane.rowIndex="6">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox checkedColor="#cf345500" style="-jfx-unchecked-color: white; -jfx-checked-color: #d2335c;" text="Prathep Building" textFill="WHITE" unCheckedColor="WHITE" GridPane.rowIndex="7">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox checkedColor="#cf345500" style="-jfx-unchecked-color: white; -jfx-checked-color: #d2335c;" text="ECC Building" textFill="WHITE" unCheckedColor="WHITE" GridPane.rowIndex="8">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox checkedColor="#109c5600" style="-jfx-unchecked-color: white; -jfx-checked-color: #d2335c;" text="RNP" textFill="WHITE" unCheckedColor="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXCheckBox>
+         </children>
+      </GridPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="350.0" layoutX="422.0" layoutY="147.0" opacity="0.74" stroke="TRANSPARENT" strokeType="INSIDE" width="4.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#a234d5" />
+                  <Stop color="#d74059" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+
+    </children>
+</Pane>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane blendMode="DARKEN" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #2c323f;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="500.0" layoutX="13.0" layoutY="80.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="407.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374255" height="95.0" layoutX="699.0" layoutY="81.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="188.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="57.0" layoutX="13.0" layoutY="13.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" width="875.0" />
+        <Text fx:id="navBar_home" accessibleRole="BUTTON" fill="WHITE" layoutX="622.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HOME" />
+        <Circle fill="WHITE" layoutX="681.0" layoutY="42.0" opacity="0.4" radius="3.0" stroke="WHITE" strokeType="INSIDE" />
+        <Text fx:id="navBar_profile" accessibleRole="BUTTON" fill="WHITE" layoutX="704.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFILE" />
+        <Circle fill="WHITE" layoutX="779.0" layoutY="42.0" opacity="0.4" radius="3.0" stroke="WHITE" strokeType="INSIDE" />
+        <Text fx:id="navBar_logout" accessibleRole="BUTTON" fill="WHITE" layoutX="798.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOG OUT" />
+        <ImageView fitHeight="75.0" fitWidth="131.0" layoutX="26.0" layoutY="3.0">
+            <image>
+                <Image url="@../img/logo.png" />
+            </image>
+        </ImageView>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="231.0" layoutX="699.0" layoutY="113.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="188.0" />
+        <ImageView fitHeight="95.0" fitWidth="188.0" layoutX="699.0" layoutY="81.0" opacity="0.45">
+            <image>
+                <Image url="@../img/cover.jpg" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="91.0" fitWidth="75.0" layoutX="754.0" layoutY="134.0" preserveRatio="true">
+            <image>
+                <Image url="@../img/avatar.png" />
+            </image>
+        </ImageView>
+        <Text fill="WHITE" layoutX="718.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Putthachart Srisuwankul" />
+        <Text fill="WHITE" layoutX="769.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PASSENGER">
+            <font>
+                <Font size="7.0" />
+            </font>
+        </Text>
+        <ImageView fx:id="profile" accessibleRole="BUTTON" fitHeight="29.0" fitWidth="29.0" layoutX="714.0" layoutY="308.0" opacity="0.78" preserveRatio="true">
+            <image>
+                <Image url="@../img/man.png" />
+            </image>
+        </ImageView>
+        <Line endX="87.0" layoutX="800.0" layoutY="300.0" opacity="0.68" startX="-100.0" stroke="WHITE" strokeWidth="0.5" />
+        <Rectangle arcHeight="30.0" arcWidth="20.0" fill="#1f93ff00" height="27.0" layoutX="758.0" layoutY="248.0" stroke="WHITE" strokeMiterLimit="20.0" strokeType="OUTSIDE" width="65.0" />
+        <Line endX="43.0" layoutX="805.0" layoutY="322.0" opacity="0.68" rotate="90.0" stroke="WHITE" strokeWidth="0.5" />
+        <Line endX="43.0" layoutX="740.0" layoutY="322.0" opacity="0.68" rotate="90.0" stroke="WHITE" strokeWidth="0.5" />
+        <ImageView fx:id="setting" accessibleRole="BUTTON" fitHeight="27.0" fitWidth="31.0" layoutX="780.0" layoutY="309.0" opacity="0.78" preserveRatio="true">
+            <image>
+                <Image url="@../img/settings.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="logout" accessibleRole="BUTTON" fitHeight="34.0" fitWidth="30.0" layoutX="843.0" layoutY="308.0" opacity="0.78" preserveRatio="true">
+            <image>
+                <Image url="@../img/logout.png" />
+            </image>
+        </ImageView>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="191.0" layoutX="699.0" layoutY="388.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="186.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374255" height="44.0" layoutX="699.0" layoutY="356.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="186.0" />
+        <Text fill="WHITE" layoutX="763.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SEARCH" />
+        <Group layoutX="198.0" layoutY="89.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374255" height="44.0" layoutX="-185.0" layoutY="-9.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="407.0" />
+                <Line endX="305.0" layoutX="-84.0" layoutY="35.0" opacity="0.13" startX="-100.0" stroke="WHITE" />
+                <Text fill="WHITE" layoutX="-172.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EVENT DETAIL" />
+            </children>
+        </Group>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="469.0" layoutX="433.0" layoutY="112.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="251.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374255" height="44.0" layoutX="433.0" layoutY="80.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="251.0" />
+        <Line endX="85.0" layoutX="799.0" layoutY="400.0" opacity="0.13" startX="-100.0" stroke="WHITE" />
+        <Text fill="WHITE" layoutX="535.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DRIVER" />
+        <Line endX="151.0" layoutX="533.0" layoutY="124.0" opacity="0.13" startX="-100.0" stroke="WHITE" />
+        <Circle layoutX="557.0" layoutY="208.0" radius="65.0" stroke="#30232300" strokeType="INSIDE">
+            <fill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop color="#0082d5" />
+                        <Stop color="#a234d5" offset="1.0" />
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Circle>
+        <ImageView fitHeight="125.0" fitWidth="125.0" layoutX="494.0" layoutY="145.0" preserveRatio="true">
+            <image>
+                <Image url="@../img/kong.png" />
+            </image>
+        </ImageView>
+        <Circle fill="#f99436" layoutX="517.0" layoutY="294.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+        <Circle fill="#f99436" layoutX="537.0" layoutY="295.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+        <Circle fill="#f99436" layoutX="557.0" layoutY="295.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+        <Circle fill="#f99436" layoutX="577.0" layoutY="295.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+        <Circle fill="#f7903600" layoutX="597.0" layoutY="295.0" radius="7.0" stroke="#f79036" strokeType="INSIDE" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0082d5" height="25.0" layoutX="444.0" layoutY="319.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
+        <Text fill="WHITE" layoutX="451.0" layoutY="336.0" opacity="0.6" strokeType="OUTSIDE" strokeWidth="0.0" text="NAME">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="462.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wisarut Kawidam">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Text>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0082d5" height="25.0" layoutX="444.0" layoutY="386.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
+        <Text fill="WHITE" layoutX="451.0" layoutY="404.0" opacity="0.6" strokeType="OUTSIDE" strokeWidth="0.0" text="AGE">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="464.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="21">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Text>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0082d5" height="25.0" layoutX="444.0" layoutY="453.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
+        <Text fill="WHITE" layoutX="451.0" layoutY="471.0" opacity="0.6" strokeType="OUTSIDE" strokeWidth="0.0" text="PHONE NO.">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="462.0" layoutY="499.0" strokeType="OUTSIDE" strokeWidth="0.0" text="091-071-9895">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Text>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0082d5" height="25.0" layoutX="445.0" layoutY="516.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
+        <Text fill="WHITE" layoutX="452.0" layoutY="534.0" opacity="0.6" strokeType="OUTSIDE" strokeWidth="0.0" text="CAR LICENSE">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="463.0" layoutY="561.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AB 4321">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="126.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose a place to wait" underline="true">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Text>
+        <JFXButton contentDisplay="CENTER" focusTraversable="false" layoutX="143.0" layoutY="519.0" style="-fx-background-color: #44a0ef;" text="OK" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <JFXButton fx:id="backToFeed" contentDisplay="CENTER" focusTraversable="false" layoutX="234.0" layoutY="518.0" onMouseClicked="#toFeed" style="-fx-border-color: #ffffff; -fx-border-radius: 5;" text="BACK" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <JFXCheckBox checkedColor="#cf305200" focusTraversable="false" layoutX="185.0" layoutY="359.0" style="-jfx-unchecked-color: white;" text="ECC Building" textFill="#0071d5" unCheckedColor="WHITE">
+            <font>
+                <Font size="17.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXCheckBox>
+        <JFXCheckBox checkedColor="#cf305200" focusTraversable="false" layoutX="185.0" layoutY="396.0" style="-jfx-unchecked-color: white;" text="Prathep Building" textFill="#0071d5" unCheckedColor="WHITE">
+            <font>
+                <Font size="17.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXCheckBox>
+      <JFXCheckBox checkedColor="#cf305200" focusTraversable="false" layoutX="185.0" layoutY="430.0" style="-jfx-unchecked-color: white;" text="Kae Ki" textFill="#0071d5" unCheckedColor="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXCheckBox>
+      <ImageView fitHeight="163.0" fitWidth="163.0" layoutX="135.0" layoutY="141.0" preserveRatio="true">
+         <image>
+            <Image url="@../place/RNP.png" />
+         </image>
+      </ImageView>
+
+    </children>
+</Pane>
