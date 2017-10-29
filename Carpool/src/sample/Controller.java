@@ -24,10 +24,9 @@ public class Controller {
     @FXML
     void handle(ActionEvent event) {
         System.out.println("Test Change Scene");
-        Main.callStage.setScene(Main.a);
+        Main.callStage.setScene(Main.feed);
     }
 
-//    Feed
     @FXML
     private Text navBar_home;
 
@@ -101,6 +100,7 @@ public class Controller {
 
     @FXML
     void toE12(MouseEvent event) {
+
         Main.callStage.setScene(Main.e12);
     }
 
@@ -109,12 +109,6 @@ public class Controller {
         Main.callStage.setScene(Main.rnp);
 
     }
-
-//    @FXML
-//    void toFeed(MouseEvent event) {
-//        System.out.println("To feed");
-//        Main.callStage.setScene(Main.feed);
-//    }
 
 
 

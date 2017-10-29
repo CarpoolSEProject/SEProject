@@ -9,9 +9,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane fx:id="confirmA" blendMode="DARKEN" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="406.0" style="-fx-background-color: #3f4e66;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.choosePlaceController">
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="406.0" style="-fx-background-color: #3f4e66;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="A.confirmAController">
    <children>
-      <JFXButton fx:id="confirmA" contentDisplay="CENTER" focusTraversable="false" layoutX="80.0" layoutY="401.0" onAction="#confirmToSummaryA" style="-fx-background-color: #44a0ef;" text="CONFIRM" textAlignment="CENTER" textFill="WHITE">
+      <JFXButton fx:id="confirm_A" contentDisplay="CENTER" focusTraversable="false" layoutX="80.0" layoutY="401.0" onAction="#confirm" style="-fx-background-color: #44a0ef;" text="CONFIRM" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
@@ -19,7 +19,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton fx:id="backToFeed" contentDisplay="CENTER" focusTraversable="false" layoutX="219.0" layoutY="400.0" style="-fx-border-color: #ffffff; -fx-border-radius: 5;" text="BACK" textAlignment="CENTER" textFill="WHITE">
+      <JFXButton fx:id="back_A" contentDisplay="CENTER" focusTraversable="false" layoutX="219.0" layoutY="400.0" onAction="#back" style="-fx-border-color: #ffffff; -fx-border-radius: 5;" text="BACK" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
