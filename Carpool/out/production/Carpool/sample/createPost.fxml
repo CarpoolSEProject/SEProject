@@ -86,7 +86,7 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </JFXButton>
-        <JFXButton contentDisplay="CENTER" focusTraversable="false" layoutX="366.0" layoutY="518.0" onMouseClicked="#toFeed" style="-fx-border-color: #ffffff; -fx-border-radius: 5;" text="BACK" textAlignment="CENTER" textFill="WHITE">
+        <JFXButton contentDisplay="CENTER" focusTraversable="false" layoutX="366.0" layoutY="518.0" style="-fx-border-color: #ffffff; -fx-border-radius: 5;" text="BACK" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font size="20.0" />
             </font>
@@ -94,7 +94,7 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </JFXButton>
-      <GridPane layoutX="38.0" layoutY="139.0" prefHeight="306.0" prefWidth="341.0">
+      <GridPane layoutX="38.0" layoutY="144.0" prefHeight="306.0" prefWidth="341.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.42306518554688" minWidth="10.0" prefWidth="128.0623321533203" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="306.5934524536133" minWidth="10.0" prefWidth="212.9376678466797" />
@@ -178,7 +178,7 @@
                   <Font size="20.0" />
                </font>
             </Text>
-            <JFXCheckBox checkedColor="#cf345500" style="-jfx-unchecked-color: white; -jfx-checked-color: #d2335c;" text="KAE KI" textFill="WHITE" unCheckedColor="WHITE" GridPane.rowIndex="2">
+            <JFXCheckBox checkedColor="#cf345500" style="-jfx-unchecked-color: white; -jfx-checked-color: #d2335c;" text="Kae Ki" textFill="WHITE" unCheckedColor="WHITE" GridPane.rowIndex="2">
                <font>
                   <Font size="17.0" />
                </font>

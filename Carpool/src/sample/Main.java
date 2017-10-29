@@ -15,27 +15,35 @@ import javafx.event.EventHandler;
 
 public class Main extends Application{
     public static Stage callStage;
-    public static Parent feed;
-    public static Parent sample;
-    public static Parent ecc;
-    public static Parent a;
-    public static Parent e12;
-    public static Parent rnp;
-    public static Parent choosePlaceEcc;
-    public static Parent createPost;
+    public static Scene sample;
+    public static Scene ecc;
+    public static Scene a;
+    public static Scene e12;
+    public static Scene rnp;
+    public static Scene choosePlaceEcc;
+    public static Scene createPost;
+    public static Scene feed;
 
 
     @Override
     public void start(Stage primaryStage) throws Exception{
         callStage = primaryStage;
-        sample = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        feed = FXMLLoader.load(getClass().getResource("feed.fxml"));
-        ecc = FXMLLoader.load(getClass().getResource("ecc.fxml"));
-        a = FXMLLoader.load(getClass().getResource("a.fxml"));
-        e12 = FXMLLoader.load(getClass().getResource("e12.fxml"));
-        rnp = FXMLLoader.load(getClass().getResource("rnp.fxml"));
-        choosePlaceEcc = FXMLLoader.load(getClass().getResource("choosePlaceEcc.fxml"));
-        createPost = FXMLLoader.load(getClass().getResource("createPost.fxml"));
+        Parent sample = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent feed = FXMLLoader.load(getClass().getResource("feed.fxml"));
+        Parent ecc = FXMLLoader.load(getClass().getResource("ecc.fxml"));
+        Parent a = FXMLLoader.load(getClass().getResource("a.fxml"));
+        Parent e12 = FXMLLoader.load(getClass().getResource("e12.fxml"));
+        Parent rnp = FXMLLoader.load(getClass().getResource("rnp.fxml"));
+        Parent choosePlaceEcc = FXMLLoader.load(getClass().getResource("choosePlaceEcc.fxml"));
+        Parent createPost = FXMLLoader.load(getClass().getResource("createPost.fxml"));
+        this.feed = new Scene(feed);
+        this.ecc = new Scene(ecc);
+        this.a = new Scene(a);
+        this.e12 = new Scene(e12);
+        this.rnp = new Scene(rnp);
+        this.choosePlaceEcc = new Scene(choosePlaceEcc);
+        this.createPost = new Scene(createPost);
+
         callStage.setTitle("CARPOOL");
         callStage.setScene(new Scene(sample, 900, 600));
         callStage.show();

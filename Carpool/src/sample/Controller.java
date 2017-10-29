@@ -24,7 +24,7 @@ public class Controller {
     @FXML
     void handle(ActionEvent event) {
         System.out.println("Test Change Scene");
-        Main.callStage.setScene(new Scene(Main.createPost, 900, 600));
+        Main.callStage.setScene(Main.a);
     }
 
 //    Feed
@@ -90,47 +90,32 @@ public class Controller {
 
     @FXML
     void toEcc(MouseEvent event) {
-        Main.callStage.setScene(new Scene(Main.ecc, 900, 600));
+
+        Main.callStage.setScene(Main.ecc);
     }
+
     @FXML
     void toA(MouseEvent event) {
-        Main.callStage.setScene(new Scene(Main.a, 900, 600));
+        Main.callStage.setScene(Main.a);
     }
 
     @FXML
     void toE12(MouseEvent event) {
-        Main.callStage.setScene(new Scene(Main.e12, 900, 600));
+        Main.callStage.setScene(Main.e12);
     }
 
     @FXML
     void toRnp(MouseEvent event) {
-        Main.callStage.setScene(new Scene(Main.rnp, 900, 600));
-
-    }
-
-    @FXML
-    void toFeed(MouseEvent event) {
-        System.out.println("To feed");
-
-    }
-
-//    Ecc
-    @FXML
-    private JFXButton joinEcc;
-
-    @FXML
-    private JFXButton backToFeed;
-
-    @FXML
-    void toChooseEcc(MouseEvent event) {
-        Main.callStage.setScene(new Scene(Main.choosePlaceEcc, 900, 600));
+        Main.callStage.setScene(Main.rnp);
 
     }
 
 //    @FXML
 //    void toFeed(MouseEvent event) {
-//
+//        System.out.println("To feed");
+//        Main.callStage.setScene(Main.feed);
 //    }
+
 
 
 
