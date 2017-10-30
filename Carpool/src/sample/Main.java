@@ -27,7 +27,7 @@ public class Main extends Application{
         Parent feed = FXMLLoader.load(getClass().getResource("feed.fxml"));
         Parent ecc = FXMLLoader.load(getClass().getResource("ecc.fxml"));
         Parent a = FXMLLoader.load(getClass().getResource("../A/a.fxml"));
-        Parent e12 = FXMLLoader.load(getClass().getResource("e12.fxml"));
+        Parent e12 = FXMLLoader.load(getClass().getResource("../E12/e12.fxml"));
         Parent rnp = FXMLLoader.load(getClass().getResource("rnp.fxml"));
         Parent choosePlaceEcc = FXMLLoader.load(getClass().getResource("choosePlaceEcc.fxml"));
         Parent createPost = FXMLLoader.load(getClass().getResource("createPost.fxml"));

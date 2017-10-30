@@ -95,6 +95,7 @@ public class Controller {
 
     @FXML
     void toA(MouseEvent event) {
+
         Main.callStage.setScene(Main.a);
     }
 

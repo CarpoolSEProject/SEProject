@@ -1,4 +1,4 @@
-package A;
+package E12;
 
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
@@ -11,7 +11,7 @@ import sample.Main;
 
 import java.io.IOException;
 
-public class aController {
+public class e12Controller {
 
     @FXML
     private Text navBar_home;
@@ -32,24 +32,24 @@ public class aController {
     private ImageView logout;
 
     @FXML
-    private Pane aPane;
+    private Pane pane;
 
     @FXML
-    private JFXButton join_A;
+    private JFXButton join_E12;
 
     @FXML
-    private JFXButton back_A;
+    private JFXButton back_e12;
 
     @FXML
     void back(ActionEvent event) {
-
         Main.callStage.setScene(Main.feed);
+
     }
 
     @FXML
     void join(ActionEvent event) throws IOException {
-        aPane.getChildren().clear();
-        aPane.getChildren().add(FXMLLoader.load(getClass().getResource("../A/choosePlaceA.fxml")));
+        pane.getChildren().clear();
+        pane.getChildren().add(FXMLLoader.load(getClass().getResource("../E12/choosePlaceE12.fxml")));
 
     }
 

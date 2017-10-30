@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane blendMode="DARKEN" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #2c323f;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #2c323f;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="E12.e12Controller">
     <children>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="500.0" layoutX="13.0" layoutY="80.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="407.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374255" height="95.0" layoutX="699.0" layoutY="81.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="188.0" />
@@ -144,113 +144,118 @@
                 <Font size="17.0" />
             </font>
         </Text>
-        <Text fill="WHITE" layoutX="200.0" layoutY="158.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="TO">
-            <font>
-                <Font size="15.0" />
-            </font></Text>
-        <Text fill="#00b84a" layoutX="229.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E12 Building">
-            <font>
-                <Font size="17.0" />
-            </font></Text>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00b84a" height="25.0" layoutX="192.0" layoutY="140.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
-        <Text fill="WHITE" layoutX="200.0" layoutY="190.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Text>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00b84a" height="25.0" layoutX="192.0" layoutY="172.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
-        <Text fill="#00b84a" layoutX="250.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RNP">
-            <font>
-                <Font size="17.0" />
-            </font>
-        </Text>
-        <Text fill="WHITE" layoutX="200.0" layoutY="221.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="ARRIVE AT">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Text>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00b84a" height="25.0" layoutX="192.0" layoutY="203.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
-        <Text fill="#00b84a" layoutX="284.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10.00 AM">
-            <font>
-                <Font size="17.0" />
-            </font>
-        </Text>
-        <Text fill="WHITE" layoutX="201.0" layoutY="263.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="CAR TYPE">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Text>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00b84a" height="25.0" layoutX="193.0" layoutY="245.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
-        <Text fill="#00b84a" layoutX="285.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Private Car">
-            <font>
-                <Font size="17.0" />
-            </font>
-        </Text>
-        <Text fill="#00b84a" layoutX="284.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="28/10/2017">
-            <font>
-                <Font size="17.0" />
-            </font>
-        </Text>
-        <Text fill="WHITE" layoutX="31.0" layoutY="330.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="SEAT LEFT">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Text>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00b84a" height="25.0" layoutX="23.0" layoutY="312.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
-        <Text fill="#00b84a" layoutX="129.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4">
-            <font>
-                <Font size="17.0" />
-            </font>
-        </Text>
-        <Text fill="WHITE" layoutX="201.0" layoutY="295.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="NOTICE">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Text>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00b84a" height="25.0" layoutX="193.0" layoutY="277.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
-        <Text fill="#00b84a" layoutX="264.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="None">
-            <font>
-                <Font size="17.0" />
-            </font>
-        </Text>
-        <Text fill="WHITE" layoutX="29.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PLACE TO WAIT" underline="true">
-            <font>
-                <Font size="17.0" />
-            </font>
-        </Text>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00b84a" height="25.0" layoutX="28.0" layoutY="409.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
-        <Text fill="WHITE" layoutX="38.0" layoutY="428.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RNP">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Text>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00b84a" height="25.0" layoutX="28.0" layoutY="440.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
-        <Text fill="WHITE" layoutX="38.0" layoutY="459.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KAE KI">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Text>
-        <JFXButton contentDisplay="CENTER" focusTraversable="false" layoutX="143.0" layoutY="519.0" style="-fx-background-color: #44a0ef;" text="JOIN" textAlignment="CENTER" textFill="WHITE">
-            <font>
-                <Font size="20.0" />
-            </font>
-            <cursor>
-                <Cursor fx:constant="HAND" />
-            </cursor>
-        </JFXButton>
-        <JFXButton contentDisplay="CENTER" focusTraversable="false" layoutX="234.0" layoutY="518.0" style="-fx-border-color: #ffffff; -fx-border-radius: 5;" text="BACK" textAlignment="CENTER" textFill="WHITE">
-            <font>
-                <Font size="20.0" />
-            </font>
-            <cursor>
-                <Cursor fx:constant="HAND" />
-            </cursor>
-        </JFXButton>
-      <ImageView fitHeight="163.0" fitWidth="163.0" layoutX="21.0" layoutY="140.0" preserveRatio="true">
-         <image>
-            <Image url="@../place/E12.png" />
-         </image>
-      </ImageView>
+      <Pane fx:id="pane" layoutX="13.0" layoutY="125.0" prefHeight="455.0" prefWidth="406.0">
+         <children>
+            <Text fill="WHITE" layoutX="201.0" layoutY="32.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="TO">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#00b84a" layoutX="228.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E12 Building">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00b84a" height="25.0" layoutX="26.0" layoutY="183.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
+            <Text fill="WHITE" layoutX="203.0" layoutY="63.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00b84a" height="25.0" layoutX="194.0" layoutY="149.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
+            <Text fill="#00b84a" layoutX="255.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RNP">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="203.0" layoutY="94.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="ARRIVE AT">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00b84a" height="25.0" layoutX="144.0" layoutY="302.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
+            <Text fill="#00b84a" layoutX="287.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10.00 AM">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="201.0" layoutY="136.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="CAR TYPE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00b84a" height="25.0" layoutX="194.0" layoutY="14.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
+            <Text fill="#00b84a" layoutX="280.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Private Car">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text fill="#00b84a" layoutX="288.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="28/10/2017">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="35.0" layoutY="201.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="SEAT LEFT">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00b84a" height="25.0" layoutX="144.0" layoutY="265.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
+            <Text fill="#00b84a" layoutX="126.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="203.0" layoutY="167.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="NOTICE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00b84a" height="25.0" layoutX="194.0" layoutY="118.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
+            <Text fill="#00b84a" layoutX="268.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="None">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="139.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PLACE TO WAIT" underline="true">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00b84a" height="25.0" layoutX="194.0" layoutY="44.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
+            <Text fill="WHITE" layoutX="158.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RNP">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00b84a" height="25.0" layoutX="194.0" layoutY="75.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
+            <Text fill="WHITE" layoutX="158.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KAE KI">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="join_E12" contentDisplay="CENTER" focusTraversable="false" layoutX="116.0" layoutY="391.0" onAction="#join" style="-fx-background-color: #44a0ef;" text="JOIN" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="back_e12" contentDisplay="CENTER" focusTraversable="false" layoutX="203.0" layoutY="390.0" onAction="#back" style="-fx-border-color: #ffffff; -fx-border-radius: 5;" text="BACK" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="163.0" fitWidth="163.0" layoutX="24.0" layoutY="13.0" preserveRatio="true">
+               <image>
+                  <Image url="@../place/E12.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
 
     </children>
 </Pane>

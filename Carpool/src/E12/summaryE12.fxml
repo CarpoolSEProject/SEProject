@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="406.0" style="-fx-background-color: #3f4e66;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="E12.summaryE12Controller">
+   <children>
+      <JFXButton fx:id="arrived_e12" contentDisplay="CENTER" focusTraversable="false" layoutX="88.0" layoutY="394.0" onAction="#arrived" style="-fx-background-color: #39a368;" text="ARRIVED" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="home_e12" contentDisplay="CENTER" focusTraversable="false" layoutX="218.0" layoutY="393.0" onAction="#home" style="-fx-border-color: #ffffff; -fx-border-radius: 5;" text="HOME" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Text fill="#00b84a" layoutX="67.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TO: E12 Building">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text fill="#00b84a" layoutX="68.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM: RNP">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text fill="#00b84a" layoutX="68.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ARRIVE AT: 10.00 AM  28/10/2017">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text fill="#00b84a" layoutX="69.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PLACE TO WAIT: KAE KI">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="158.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SUMMARY" underline="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="163.0" fitWidth="163.0" layoutX="123.0" layoutY="20.0" preserveRatio="true">
+         <image>
+            <Image url="@../place/E12.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
