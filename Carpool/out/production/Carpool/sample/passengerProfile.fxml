@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane blendMode="DARKEN" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #2c323f;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="500.0" layoutX="13.0" layoutY="80.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="613.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="57.0" layoutX="13.0" layoutY="13.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" width="875.0" />
+        <Text fx:id="navBar_home" accessibleRole="BUTTON" fill="WHITE" layoutX="622.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HOME" />
+        <Circle fill="WHITE" layoutX="681.0" layoutY="42.0" opacity="0.4" radius="3.0" stroke="WHITE" strokeType="INSIDE" />
+        <Text fx:id="navBar_profile" accessibleRole="BUTTON" fill="WHITE" layoutX="704.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFILE" />
+        <Circle fill="WHITE" layoutX="779.0" layoutY="42.0" opacity="0.4" radius="3.0" stroke="WHITE" strokeType="INSIDE" />
+        <Text fx:id="navBar_logout" accessibleRole="BUTTON" fill="WHITE" layoutX="798.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOG OUT" />
+        <ImageView fitHeight="75.0" fitWidth="131.0" layoutX="26.0" layoutY="3.0">
+            <image>
+                <Image url="@../img/logo.png" />
+            </image>
+        </ImageView>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="468.0" layoutX="637.0" layoutY="113.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="250.0" />
+        <ImageView fitHeight="142.0" fitWidth="156.0" layoutX="41.0" layoutY="142.0" preserveRatio="true">
+            <image>
+                <Image url="@../img/avatar.png" />
+            </image>
+        </ImageView>
+        <Text fill="WHITE" layoutX="67.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PASSENGER">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Rectangle arcHeight="30.0" arcWidth="20.0" fill="#1f93ff00" height="39.0" layoutX="53.0" layoutY="300.0" stroke="WHITE" strokeMiterLimit="20.0" strokeType="OUTSIDE" width="117.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374255" height="43.0" layoutX="637.0" layoutY="81.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="250.0" />
+        <Group layoutX="198.0" layoutY="89.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374255" height="44.0" layoutX="-185.0" layoutY="-9.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="613.0" />
+                <Line endX="512.0" layoutX="-84.0" layoutY="35.0" opacity="0.13" startX="-100.0" stroke="WHITE" />
+                <Text fill="WHITE" layoutX="-172.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YOUR PROFILE" />
+            </children>
+        </Group>
+      <Text fill="WHITE" layoutX="716.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YOUR EVENT" />
+      <Line endX="148.0" layoutX="738.0" layoutY="124.0" opacity="0.13" startX="-100.0" stroke="WHITE" />
+      <GridPane layoutX="243.0" layoutY="144.0" prefHeight="411.0" prefWidth="364.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Putthachart Srisuwankul" textAlignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="NAME" />
+            <Text fill="WHITE" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="GENDER" GridPane.rowIndex="2" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Female" GridPane.rowIndex="3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="AGE" GridPane.rowIndex="4" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="21" GridPane.rowIndex="5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="EMAIL" GridPane.rowIndex="6" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="tangkwaaa555@gmail.com" GridPane.rowIndex="7">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="PHONE NO." GridPane.rowIndex="8" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="087-593-3814" GridPane.rowIndex="9">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="CAR TYPE" GridPane.rowIndex="10" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="-" GridPane.rowIndex="11">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="CAR LICENSE" GridPane.rowIndex="12" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="-" GridPane.rowIndex="13">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </GridPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="415.0" layoutX="217.0" layoutY="147.0" stroke="TRANSPARENT" strokeType="INSIDE" width="3.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#0082d5" />
+                  <Stop color="#a234d5" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="647.0" layoutY="133.0" preserveRatio="true">
+         <image>
+            <Image url="@../place/ECC.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="735.0" layoutY="130.0" prefHeight="85.0" prefWidth="100.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text fill="#d12b4f" strokeType="OUTSIDE" strokeWidth="0.0" text="TO: ECC Building" />
+            <Text fill="#d12b4f" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM: RNP" GridPane.rowIndex="1" />
+            <Text fill="#d12b4f" strokeType="OUTSIDE" strokeWidth="0.0" text="ARRIVE AT: 09.00 AM" GridPane.rowIndex="2" />
+            <Text fill="#d12b4f" strokeType="OUTSIDE" strokeWidth="0.0" text="25/10/2017" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+
+    </children>
+</Pane>

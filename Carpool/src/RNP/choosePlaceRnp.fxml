@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="406.0" style="-fx-background-color: #3f4e66;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RNP.choosePlaceRnpController">
+   <children>
+      <Text fill="WHITE" layoutX="108.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose a place to wait" underline="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="ok_rnp" contentDisplay="CENTER" focusTraversable="false" layoutX="125.0" layoutY="401.0" onAction="#ok" style="-fx-background-color: #44a0ef;" text="OK" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="back_rnp" contentDisplay="CENTER" focusTraversable="false" layoutX="216.0" layoutY="400.0" onAction="#back" style="-fx-border-color: #ffffff; -fx-border-radius: 5;" text="BACK" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXCheckBox checkedColor="#cf305200" focusTraversable="false" layoutX="138.0" layoutY="241.0" style="-jfx-unchecked-color: white;" text="ECC Building" textFill="#0071d5" unCheckedColor="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXCheckBox>
+      <JFXCheckBox checkedColor="#cf305200" focusTraversable="false" layoutX="138.0" layoutY="278.0" style="-jfx-unchecked-color: white;" text="Prathep Building" textFill="#0071d5" unCheckedColor="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXCheckBox>
+      <JFXCheckBox checkedColor="#cf305200" focusTraversable="false" layoutX="138.0" layoutY="312.0" style="-jfx-unchecked-color: white;" text="Kae Ki" textFill="#0071d5" unCheckedColor="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXCheckBox>
+      <ImageView fitHeight="163.0" fitWidth="163.0" layoutX="117.0" layoutY="23.0" preserveRatio="true">
+         <image>
+            <Image url="@../place/RNP.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
