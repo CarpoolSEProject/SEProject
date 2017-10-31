@@ -23,7 +23,7 @@ public class Main extends Application{
     @Override
     public void start(Stage primaryStage) throws Exception{
         callStage = primaryStage;
-        Parent sample = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent sample = FXMLLoader.load(getClass().getResource("sample.fxml")); // login
         Parent feed = FXMLLoader.load(getClass().getResource("feed.fxml"));
         Parent ecc = FXMLLoader.load(getClass().getResource("../ECC/ecc.fxml"));
         Parent a = FXMLLoader.load(getClass().getResource("../A/a.fxml"));
