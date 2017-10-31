@@ -1,6 +1,6 @@
 package sample;
 
-public class PrivateCar extends car {
+public class PrivateCar extends Car {
 
     public PrivateCar() {
         super.typeName = "Private Car";

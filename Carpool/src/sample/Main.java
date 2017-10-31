@@ -18,6 +18,7 @@ public class Main extends Application{
     public static Scene choosePlaceEcc;
     public static Scene createPost;
     public static Scene feed;
+    public static Scene driverFeed;
 
 
     @Override
@@ -31,6 +32,7 @@ public class Main extends Application{
         Parent rnp = FXMLLoader.load(getClass().getResource("../RNP/rnp.fxml"));
         Parent choosePlaceEcc = FXMLLoader.load(getClass().getResource("../ECC/choosePlaceEcc.fxml"));
         Parent createPost = FXMLLoader.load(getClass().getResource("createPost.fxml"));
+        Parent driverFeed = FXMLLoader.load(getClass().getResource("driverFeed.fxml"));
         this.feed = new Scene(feed);
         this.ecc = new Scene(ecc);
         this.a = new Scene(a);
@@ -38,6 +40,7 @@ public class Main extends Application{
         this.rnp = new Scene(rnp);
         this.choosePlaceEcc = new Scene(choosePlaceEcc);
         this.createPost = new Scene(createPost);
+        this.driverFeed = new Scene(driverFeed);
 
         callStage.setTitle("CARPOOL");
         callStage.setScene(new Scene(sample, 900, 600));

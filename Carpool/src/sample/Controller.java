@@ -24,7 +24,7 @@ public class Controller {
     @FXML
     void handle(ActionEvent event) {
         System.out.println("Test Change Scene");
-        Main.callStage.setScene(Main.createPost);
+        Main.callStage.setScene(Main.driverFeed);
     }
 
     @FXML
