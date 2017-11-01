@@ -24,6 +24,7 @@ public class Main extends Application{
     public static Scene feed;
     public static Scene driverFeed;
 
+    public static int checkLogin = 0;
     private static EntityManagerFactory emf;
 
 
@@ -40,6 +41,7 @@ public class Main extends Application{
         Parent choosePlaceEcc = FXMLLoader.load(getClass().getResource("../ECC/choosePlaceEcc.fxml"));
         Parent createPost = FXMLLoader.load(getClass().getResource("createPost.fxml"));
         Parent driverFeed = FXMLLoader.load(getClass().getResource("driverFeed.fxml"));
+        this.sample = new Scene(sample);
         this.feed = new Scene(feed);
         this.ecc = new Scene(ecc);
         this.a = new Scene(a);
@@ -50,7 +52,9 @@ public class Main extends Application{
         this.driverFeed = new Scene(driverFeed);
 
         callStage.setTitle("CARPOOL");
-        callStage.setScene(new Scene(sample, 900, 600));
+        callStage.setScene(this.sample);
+        callStage.setHeight(610);
+        callStage.setWidth(900);
         callStage.show();
 
         // DB TEST
