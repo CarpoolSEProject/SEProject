@@ -2,36 +2,27 @@ package sample;
 
 public class Driver extends Person {
 
-//    public static String carType;
-//    public static String carLicense;
-//    public static String Rating;
-//    public static Event DriverEvent;
-//
+    private String carType;
+    private String carLicense;
+    private String Rating;
+    private Event DriverEvent;
+
     public Driver() {
 
     }
-//
-//    public static String getCarType() {
-//        return carType;
-//    }
-//
-//    public static void setCarType(String carType) {
-//        Driver.carType = carType;
-//    }
-//
-//    public static String getCarLicense() {
-//        return carLicense;
-//    }
-//
-//    public static void setCarLicense(String carLicense) {
-//        Driver.carLicense = carLicense;
-//    }
-//
-//    public static String getRating() {
-//        return Rating;
-//    }
-//
-//    public static void setRating(String rating) {
-//        Rating = rating;
-//    }
+
+    public Driver(String carType, String carLicense, String Rating, Event DriverEvent) {
+        this.carType = carType;
+        this.carLicense = carLicense;
+        this.Rating = Rating;
+        this.DriverEvent = DriverEvent;
+    }
+
+    public String getCarType() { return carType; }
+
+    public String getCarLicense() { return carLicense; }
+
+    public String getRating() { return Rating; }
+
+    public Event getDriverEvent() { return DriverEvent; }
 }
