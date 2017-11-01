@@ -1,5 +1,6 @@
 package sample;
 
+import CarpoolDB.Database;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
@@ -8,6 +9,11 @@ import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
+import jdk.internal.agent.Agent;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 
 public class Controller {
@@ -23,7 +29,16 @@ public class Controller {
 
     @FXML
     void handle(ActionEvent event) {
-        System.out.println("Test Change Scene");
+        System.out.println("Test Change Scene");  //When push loginButton
+
+        EntityManager em = Database.getConnection().createEntityManager();
+        TypedQuery<Person> q = em.createQuery("SELECT p FROM Person p WHERE p.Username :user AND p.Password :pass", Person.class);
+        q.setParameter("user",enterUsername.getText());
+        q.setParameter("pass",enterPassword.getText());
+        for (Person ps : q.getResultList()) {
+            System.out.println(ps.getUsername());
+        }
+
         Main.callStage.setScene(Main.driverFeed);
     }
 

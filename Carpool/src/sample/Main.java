@@ -24,9 +24,11 @@ public class Main extends Application{
     public static Scene feed;
     public static Scene driverFeed;
 
+    private static EntityManagerFactory emf;
+
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
 
         callStage = primaryStage;
         Parent sample = FXMLLoader.load(getClass().getResource("sample.fxml")); // login
@@ -53,19 +55,24 @@ public class Main extends Application{
 
         // DB TEST
         Database.connect();
-        EntityManagerFactory emf = Database.getConnection();
+        emf = Database.getConnection();
 
         Person kong = new Person("kongza", "1234", "kong@hotmail.com", "Witsarut Kavidum", "Male", 21, "0910719895");
         Person tangkwa = new Person("tangkwaaa", "5678", "tangkwa@hotmail.com", "Putthachart Srisuwankul", "Female", 21, "0875933814");
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
+        em.getMetamodel().entity(Person.class);
+        em.createQuery("DELETE FROM Person").executeUpdate();
         em.persist(kong);
         em.persist(tangkwa);
         em.getTransaction().commit();
         em.close();
 
-        emf.close();
+    }
 
+    @Override
+    public void stop() {
+        emf.close();
     }
 
     public static void main(String[] args) {
