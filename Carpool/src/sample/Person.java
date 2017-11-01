@@ -1,44 +1,62 @@
 package sample;
 
+import javax.persistence.*;
+
+@Entity
 public class Person {
 
-    private static String Username;
-    private static String Password;
-    private static String Email;
-    public static String Name;
-    public static String Gender;
-    public static String Age;
-    public static String PhoneNo;
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Integer id;
+    private String Username;
+    private String Password;
+    private String Email;
+    private String Name;
+    private String Gender;
+    private Integer Age;
+    private String PhoneNo;
 
     public Person() {
 
     }
 
-    public static String getUsername() {
+    public Person(String Username, String Password, String Email, String Name, String Gender, Integer Age, String PhoneNo) {
+        this.Username = Username;
+        this.Password = Password;
+        this.Email = Email;
+        this.Name = Name;
+        this.Gender = Gender;
+        this.Age = Age;
+        this.PhoneNo = PhoneNo;
+    }
+
+    public Integer getId() { return id; }
+
+    public String getUsername() {
         return Username;
     }
 
-    public static String getPassword() {
+    public String getPassword() {
         return Password;
     }
 
-    public static String getEmail() {
+    public String getEmail() {
         return Email;
     }
 
-    public static String getName() {
+    public String getName() {
         return Name;
     }
 
-    public static String getGender() {
+    public String getGender() {
         return Gender;
     }
 
-    public static String getAge() {
+    public Integer getAge() {
         return Age;
     }
 
-    public static String getPhoneNo() {
+    public String getPhoneNo() {
         return PhoneNo;
     }
 }

@@ -1,10 +1,14 @@
 package sample;
 
+import CarpoolDB.Database;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 
 //import java.awt.*;
 
@@ -23,6 +27,7 @@ public class Main extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+
         callStage = primaryStage;
         Parent sample = FXMLLoader.load(getClass().getResource("sample.fxml")); // login
         Parent feed = FXMLLoader.load(getClass().getResource("feed.fxml"));
@@ -45,6 +50,21 @@ public class Main extends Application{
         callStage.setTitle("CARPOOL");
         callStage.setScene(new Scene(sample, 900, 600));
         callStage.show();
+
+        // DB TEST
+        Database.connect();
+        EntityManagerFactory emf = Database.getConnection();
+
+        Person kong = new Person("kongza", "1234", "kong@hotmail.com", "Witsarut Kavidum", "Male", 21, "0910719895");
+        Person tangkwa = new Person("tangkwaaa", "5678", "tangkwa@hotmail.com", "Putthachart Srisuwankul", "Female", 21, "0875933814");
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+        em.persist(kong);
+        em.persist(tangkwa);
+        em.getTransaction().commit();
+        em.close();
+
+        emf.close();
 
     }
 

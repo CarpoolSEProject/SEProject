@@ -26,6 +26,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="objectdb" level="project" />
+    <orderEntry type="library" exported="" name="objectdb" level="project" />
   </component>
 </module>
