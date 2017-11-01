@@ -9,10 +9,10 @@ import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
-import jdk.internal.agent.Agent;
+
 
 import javax.persistence.EntityManager;
-import javax.persistence.Query;
+
 import javax.persistence.TypedQuery;
 
 
@@ -30,16 +30,20 @@ public class Controller {
     @FXML
     void handle(ActionEvent event) {
         System.out.println("Test Change Scene");  //When push loginButton
-
+        int checklogin = 0;
         EntityManager em = Database.getConnection().createEntityManager();
-        TypedQuery<Person> q = em.createQuery("SELECT p FROM Person p WHERE p.Username :user AND p.Password :pass", Person.class);
+        TypedQuery<Person> q = em.createQuery("SELECT p FROM Person p WHERE p.Username = :user AND p.Password = :pass", Person.class);
         q.setParameter("user",enterUsername.getText());
         q.setParameter("pass",enterPassword.getText());
         for (Person ps : q.getResultList()) {
             System.out.println(ps.getUsername());
+            System.out.println(ps.getPassword());
+            checklogin = 1;
         }
 
-        Main.callStage.setScene(Main.driverFeed);
+        if (checklogin == 1) {
+            Main.callStage.setScene(Main.driverFeed);
+        }
     }
 
     @FXML
