@@ -3,7 +3,8 @@ package sample;
 import javax.persistence.*;
 
 @Entity
-public class Person {
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+public abstract class Person {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -16,9 +17,9 @@ public class Person {
     private Integer Age;
     private String PhoneNo;
 
-    public Person() {
-
-    }
+//    public Person() {
+//
+//    }
 
     public Person(String Username, String Password, String Email, String Name, String Gender, Integer Age, String PhoneNo) {
         this.Username = Username;

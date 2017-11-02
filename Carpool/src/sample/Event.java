@@ -1,5 +1,11 @@
 package sample;
 
+import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import java.util.Date;
+
+@Entity
 public class Event {
 
     public static String EventID;
@@ -7,7 +13,8 @@ public class Event {
     public static String DriverPhone;
     public static String From;
     public static String To;
-    public static String TimetoArrive;
+    @Temporal(TemporalType.DATE)
+    public static Date TimetoArrive;
     public static Car CarType;
     public static int SeatLeft;
     public static String LocationWaiting;
@@ -57,11 +64,11 @@ public class Event {
         To = to;
     }
 
-    public static String getTimetoArrive() {
+    public static Date getTimetoArrive() {
         return TimetoArrive;
     }
 
-    public static void setTimetoArrive(String timetoArrive) {
+    public static void setTimetoArrive(Date timetoArrive) {
         TimetoArrive = timetoArrive;
     }
 

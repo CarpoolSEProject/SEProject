@@ -8,7 +8,14 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 public class createPostController {
+
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
 
     @FXML
     private Text navBar_home;
@@ -69,6 +76,7 @@ public class createPostController {
         seatLeft.getItems().add(new Label("4"));
 
     }
+    public void createEvent(){}
 
 
 }
