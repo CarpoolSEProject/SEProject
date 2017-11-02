@@ -52,32 +52,32 @@ public class Main extends Application{
         this.driverFeed = new Scene(driverFeed);
 
         callStage.setTitle("CARPOOL");
-        callStage.setScene(this.sample);
+        callStage.setScene(this.createPost);
         callStage.setHeight(610);
         callStage.setWidth(900);
         callStage.show();
 
         // DB TEST
-        Database.connect();
-        emf = Database.getConnection();
-
-        Person kong = new Person("kongza", "1234", "kong@hotmail.com", "Witsarut Kavidum", "Male", 21, "0910719895");
-        Person tangkwa = new Person("tangkwaaa", "5678", "tangkwa@hotmail.com", "Putthachart Srisuwankul", "Female", 21, "0875933814");
-        EntityManager em = emf.createEntityManager();
-        em.getTransaction().begin();
-        em.getMetamodel().entity(Person.class);
-        em.createQuery("DELETE FROM Person").executeUpdate();
-        em.persist(kong);
-        em.persist(tangkwa);
-        em.getTransaction().commit();
-        em.close();
+//        Database.connect();
+//        emf = Database.getConnection();
+//
+//        Person kong = new Person("kongza", "1234", "kong@hotmail.com", "Witsarut Kavidum", "Male", 21, "0910719895");
+//        Person tangkwa = new Person("tangkwaaa", "5678", "tangkwa@hotmail.com", "Putthachart Srisuwankul", "Female", 21, "0875933814");
+//        EntityManager em = emf.createEntityManager();
+//        em.getTransaction().begin();
+//        em.getMetamodel().entity(Person.class);
+//        em.createQuery("DELETE FROM Person").executeUpdate();
+//        em.persist(kong);
+//        em.persist(tangkwa);
+//        em.getTransaction().commit();
+//        em.close();
 
     }
 
-    @Override
-    public void stop() {
-        emf.close();
-    }
+//    @Override
+//    public void stop() {
+//        emf.close();
+//    }
 
     public static void main(String[] args) {
         launch(args);

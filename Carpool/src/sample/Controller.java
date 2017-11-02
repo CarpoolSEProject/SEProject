@@ -53,7 +53,7 @@ public class Controller {
             ps2 = ps1;
         }
         if ((Main.checkLogin == 1) && (ps2.getUsername().equals("kongza")) && (ps2.getPassword().equals("1234"))) {
-            Main.callStage.setScene(Main.driverFeed);
+            Main.callStage.setScene(Main.createPost);
         }
         else if ((Main.checkLogin == 1) && (ps2.getUsername().equals("tangkwaaa")) && (ps2.getPassword().equals("5678"))) {
             Main.callStage.setScene(Main.feed);
@@ -83,7 +83,7 @@ public class Controller {
                         ps2 = ps1;
                     }
                     if ((Main.checkLogin == 1) && (ps2.getUsername().equals("kongza")) && (ps2.getPassword().equals("1234"))) {
-                        Main.callStage.setScene(Main.driverFeed);
+                        Main.callStage.setScene(Main.createPost);
                     }
                     else if ((Main.checkLogin == 1) && (ps2.getUsername().equals("tangkwaaa")) && (ps2.getPassword().equals("5678"))) {
                         Main.callStage.setScene(Main.feed);
