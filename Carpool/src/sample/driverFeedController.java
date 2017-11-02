@@ -66,27 +66,15 @@ public class driverFeedController {
     @FXML
     void logout(MouseEvent event) {
         Main.callStage.setScene(Main.sample);
-        Main.checkLogin = 0;
     }
 
-//    @FXML
-//    void createPost(ActionEvent event) {
-//
-//    }
-//
-//    @FXML
-//    void toA(MouseEvent event) {
-//
-//    }
-//
-//    @FXML
-//    void toE12(MouseEvent event) {
-//
-//    }
-//
-//    @FXML
-//    void toRnp(MouseEvent event) {
-//
-//    }
+
+    @FXML
+    void createPost(ActionEvent event) {
+        Main.callStage.setScene(Main.createPost);
+    }
+
+
+
 
 }

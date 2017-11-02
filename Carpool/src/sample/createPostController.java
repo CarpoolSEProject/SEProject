@@ -36,6 +36,7 @@ public class createPostController {
     @FXML
     private ImageView logout;
 
+
     @FXML
     private JFXComboBox<Label> choicePlace_to;
 
@@ -116,15 +117,16 @@ public class createPostController {
     }
 
 
-//    @FXML
-//    void back(ActionEvent event) {
-//
-//    }
-//
-//    @FXML
-//    void confirm(ActionEvent event) {
-//
-//    }
+
+    @FXML
+    void back(ActionEvent event){
+
+    }
+
+    @FXML
+    void confirm(ActionEvent event) {
+
+    }
 
 
 
