@@ -1,21 +1,19 @@
 package sample;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 
 @Entity
-public class JoinEvent {
+public class JoinEvent extends Event {
 
-    public static Event event;
+    @ManyToOne
+    private Passenger Passenger;
 
     public JoinEvent() {
 
     }
 
-    public static Event getEvent() {
-        return event;
-    }
+    public Passenger getPassenger() { return Passenger; }
 
-    public static void setEvent(Event event) {
-        JoinEvent.event = event;
-    }
+    public void setPassenger(Passenger Passenger) { this.Passenger = Passenger; }
 }

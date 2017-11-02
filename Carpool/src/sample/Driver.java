@@ -1,10 +1,14 @@
 package sample;
 
+import javax.persistence.*;
+
+@Entity
 public class Driver extends Person {
 
     private String carType;
     private String carLicense;
     private String Rating;
+    @OneToMany(cascade=CascadeType.ALL, mappedBy="Driver")
     private Event DriverEvent;
 
 

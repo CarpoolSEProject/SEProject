@@ -1,106 +1,97 @@
 package sample;
 
-import javax.persistence.Entity;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Event {
 
-    public static String EventID;
-    public static String DriverName;
-    public static String DriverPhone;
-    public static String From;
-    public static String To;
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    public Integer EventID;
+    @ManyToOne
+    public Driver Driver;
+    @OneToMany(cascade=CascadeType.ALL, mappedBy="event")
+    private JoinEvent JoinEvent;
+    public String From;
+    public String To;
     @Temporal(TemporalType.DATE)
-    public static Date TimetoArrive;
-    public static Car CarType;
-    public static int SeatLeft;
-    public static String LocationWaiting;
-    public static String Notice;
+    public Date TimetoArrive;
+    public Car CarType;
+    public Integer SeatLeft;
+    public String LocationWaiting;
+    public String Notice;
 
     public Event() {
 
     }
 
-    public static String getEventID() {
+    public Integer getEventID() {
         return EventID;
     }
 
-    public static void setEventID(String eventID) {
-        EventID = eventID;
+    public void setEventID(Integer eventID) { EventID = eventID; }
+
+    public Driver getDriver() {
+        return Driver;
     }
 
-    public static String getDriverName() {
-        return DriverName;
-    }
+    public void setDriver(Driver driver) { Driver = driver; }
 
-    public static void setDriverName(String driverName) {
-        DriverName = driverName;
-    }
-
-    public static String getDriverPhone() {
-        return DriverPhone;
-    }
-
-    public static void setDriverPhone(String driverPhone) {
-        DriverPhone = driverPhone;
-    }
-
-    public static String getFrom() {
+    public String getFrom() {
         return From;
     }
 
-    public static void setFrom(String from) {
+    public void setFrom(String from) {
         From = from;
     }
 
-    public static String getTo() {
+    public String getTo() {
         return To;
     }
 
-    public static void setTo(String to) {
+    public void setTo(String to) {
         To = to;
     }
 
-    public static Date getTimetoArrive() {
+    public Date getTimetoArrive() {
         return TimetoArrive;
     }
 
-    public static void setTimetoArrive(Date timetoArrive) {
+    public void setTimetoArrive(Date timetoArrive) {
         TimetoArrive = timetoArrive;
     }
 
-    public static Car getCarType() {
+    public Car getCarType() {
         return CarType;
     }
 
-    public static void setCarType(Car carType) {
+    public void setCarType(Car carType) {
         CarType = carType;
     }
 
-    public static int getSeatLeft() {
+    public int getSeatLeft() {
         return SeatLeft;
     }
 
-    public static void setSeatLeft(int seatLeft) {
+    public void setSeatLeft(int seatLeft) {
         SeatLeft = seatLeft;
     }
 
-    public static String getLocationWaiting() {
+    public String getLocationWaiting() {
         return LocationWaiting;
     }
 
-    public static void setLocationWaiting(String locationWaiting) {
+    public void setLocationWaiting(String locationWaiting) {
         LocationWaiting = locationWaiting;
     }
 
-    public static String getNotice() {
+    public String getNotice() {
         return Notice;
     }
 
-    public static void setNotice(String notice) {
+    public void setNotice(String notice) {
         Notice = notice;
     }
 }

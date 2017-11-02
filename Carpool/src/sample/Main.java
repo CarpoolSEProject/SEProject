@@ -61,12 +61,16 @@ public class Main extends Application{
         Database.connect();
         emf = Database.getConnection();
 
-        Driver kong = new Driver("kongza", "1234", "kong@hotmail.com", "Witsarut Kavidum", "Male", 21, "0910719895","Private Car","AB1234","4",null);
+        Driver kong = new Driver("kongza", "1234", "kong@hotmail.com", "Witsarut Kavidum", "Male", 21, "0910719895","Private Car","AB1234","4",new Event());
         Passenger tangkwa = new Passenger("tangkwaaa", "5678", "tangkwa@hotmail.com", "Putthachart Srisuwankul", "Female", 21, "0875933814");
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         em.getMetamodel().entity(Person.class);
         em.createQuery("DELETE FROM Person").executeUpdate();
+        em.getMetamodel().entity(Driver.class);
+        em.createQuery("DELETE FROM Driver").executeUpdate();
+        em.getMetamodel().entity(Passenger.class);
+        em.createQuery("DELETE FROM Passenger").executeUpdate();
         em.persist(kong);
         em.persist(tangkwa);
         em.getTransaction().commit();

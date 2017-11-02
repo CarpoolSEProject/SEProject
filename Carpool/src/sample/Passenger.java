@@ -1,18 +1,22 @@
 package sample;
 
+import javax.persistence.*;
+
+@Entity
 public class Passenger extends Person {
 
-    public static JoinEvent PassengerEvent;
+    @OneToMany(cascade=CascadeType.ALL, mappedBy="Passenger")
+    public JoinEvent PassengerEvent = new JoinEvent();
 
     public Passenger(String Username, String Password, String Email, String Name, String Gender, Integer Age, String PhoneNo) {
         super(Username, Password, Email, Name, Gender, Age, PhoneNo);
     }
 
-    public static JoinEvent getPassengerEvent() {
+    public JoinEvent getPassengerEvent() {
         return PassengerEvent;
     }
 
-    public static void setPassengerEvent(JoinEvent passengerEvent) {
+    public void setPassengerEvent(JoinEvent passengerEvent) {
         PassengerEvent = passengerEvent;
     }
 }

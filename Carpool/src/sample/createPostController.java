@@ -76,7 +76,7 @@ public class createPostController {
         seatLeft.getItems().add(new Label("4"));
 
     }
-    public void createEvent(){}
+
 
 
 }
