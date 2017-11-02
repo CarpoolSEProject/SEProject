@@ -1,8 +1,9 @@
 package sample;
 
-import com.jfoenix.controls.JFXComboBox;
+import com.jfoenix.controls.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
@@ -48,6 +49,43 @@ public class createPostController {
     private JFXComboBox<Label> seatLeft;
 
     @FXML
+    private JFXTimePicker time;
+
+    @FXML
+    private JFXDatePicker date;
+
+    @FXML
+    private JFXButton confirm_createPost;
+
+    @FXML
+    private JFXButton back_createPost;
+
+    @FXML
+    private JFXCheckBox wait_KaeKi;
+
+    @FXML
+    private JFXCheckBox wait_E12;
+
+    @FXML
+    private JFXCheckBox wait_A;
+
+    @FXML
+    private JFXCheckBox wait_lib;
+
+    @FXML
+    private JFXCheckBox wait_sci;
+
+    @FXML
+    private JFXCheckBox wait_prathep;
+
+    @FXML
+    private JFXCheckBox wait_ecc;
+
+    @FXML
+    private JFXCheckBox wait_RNP;
+
+
+    @FXML
     public void initialize() {
         choicePlace_to.getItems().add(new Label("RNP"));
         choicePlace_to.getItems().add(new Label("Kae Ki"));
@@ -76,6 +114,17 @@ public class createPostController {
         seatLeft.getItems().add(new Label("4"));
 
     }
+
+
+//    @FXML
+//    void back(ActionEvent event) {
+//
+//    }
+//
+//    @FXML
+//    void confirm(ActionEvent event) {
+//
+//    }
 
 
 

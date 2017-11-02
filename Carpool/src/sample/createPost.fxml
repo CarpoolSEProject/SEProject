@@ -78,7 +78,7 @@
             </children>
         </Group>
         <Line endX="85.0" layoutX="799.0" layoutY="400.0" opacity="0.13" startX="-100.0" stroke="WHITE" />
-        <JFXButton contentDisplay="CENTER" focusTraversable="false" layoutX="234.0" layoutY="519.0" style="-fx-background-color: #39a368;" text="CONFIRM" textAlignment="CENTER" textFill="WHITE">
+        <JFXButton fx:id="confirm_createPost" contentDisplay="CENTER" focusTraversable="false" layoutX="234.0" layoutY="519.0" onAction="#confirm" style="-fx-background-color: #39a368;" text="CONFIRM" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font size="20.0" />
             </font>
@@ -86,7 +86,7 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </JFXButton>
-        <JFXButton contentDisplay="CENTER" focusTraversable="false" layoutX="366.0" layoutY="518.0" style="-fx-border-color: #ffffff; -fx-border-radius: 5;" text="BACK" textAlignment="CENTER" textFill="WHITE">
+        <JFXButton fx:id="back_createPost" contentDisplay="CENTER" focusTraversable="false" layoutX="366.0" layoutY="518.0" onAction="#back" style="-fx-border-color: #ffffff; -fx-border-radius: 5;" text="BACK" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font size="20.0" />
             </font>
@@ -133,8 +133,8 @@
                   <Font size="20.0" />
                </font>
             </Text>
-            <JFXTimePicker defaultColor="#0082d5" editable="true" focusTraversable="false" prefHeight="34.0" prefWidth="213.0" promptText="Time" style="-fx-background-color: #cad3df;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <JFXDatePicker defaultColor="#0082d5" focusTraversable="false" prefHeight="36.0" prefWidth="213.0" promptText="Date" style="-fx-background-color: #cad3df;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <JFXTimePicker fx:id="time" defaultColor="#0082d5" editable="true" focusTraversable="false" prefHeight="34.0" prefWidth="213.0" promptText="Time" style="-fx-background-color: #cad3df;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <JFXDatePicker fx:id="date" defaultColor="#0082d5" focusTraversable="false" prefHeight="36.0" prefWidth="213.0" promptText="Date" style="-fx-background-color: #cad3df;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <JFXComboBox fx:id="choicePlace_to" focusColor="#405aa800" prefHeight="36.0" prefWidth="213.0" promptText="Choose Place" style="-fx-background-color: #cad3df;" unFocusColor="#ffffff00" visibleRowCount="4" GridPane.columnIndex="1" />
             <JFXComboBox fx:id="choicePlace_from" focusColor="#405aa800" prefHeight="36.0" prefWidth="213.0" promptText="Choose Place" style="-fx-background-color: #cad3df;" unFocusColor="#ffffff00" visibleRowCount="4" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <JFXComboBox fx:id="choiceCarType" focusColor="#405aa800" prefHeight="36.0" prefWidth="213.0" promptText="Choose Car Type" style="-fx-background-color: #cad3df;" unFocusColor="#ffffff00" visibleRowCount="2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
@@ -162,42 +162,42 @@
                   <Font size="20.0" />
                </font>
             </Text>
-            <JFXCheckBox checkedColor="#cf345500" style="-jfx-unchecked-color: white; -jfx-checked-color: #d2335c;" text="Kae Ki" textFill="WHITE" unCheckedColor="WHITE" GridPane.rowIndex="2">
+            <JFXCheckBox fx:id="wait_KaeKi" checkedColor="#cf345500" style="-jfx-unchecked-color: white; -jfx-checked-color: #d2335c;" text="Kae Ki" textFill="WHITE" unCheckedColor="WHITE" GridPane.rowIndex="2">
                <font>
                   <Font size="17.0" />
                </font>
             </JFXCheckBox>
-            <JFXCheckBox checkedColor="#cf345500" style="-jfx-unchecked-color: white; -jfx-checked-color: #d2335c;" text="E12 Building" textFill="WHITE" unCheckedColor="WHITE" GridPane.rowIndex="3">
+            <JFXCheckBox fx:id="wait_E12" checkedColor="#cf345500" style="-jfx-unchecked-color: white; -jfx-checked-color: #d2335c;" text="E12 Building" textFill="WHITE" unCheckedColor="WHITE" GridPane.rowIndex="3">
                <font>
                   <Font size="17.0" />
                </font>
             </JFXCheckBox>
-            <JFXCheckBox checkedColor="#cf345500" style="-jfx-unchecked-color: white; -jfx-checked-color: #d2335c;" text="A Cafeteria" textFill="WHITE" unCheckedColor="WHITE" GridPane.rowIndex="4">
+            <JFXCheckBox fx:id="wait_A" checkedColor="#cf345500" style="-jfx-unchecked-color: white; -jfx-checked-color: #d2335c;" text="A Cafeteria" textFill="WHITE" unCheckedColor="WHITE" GridPane.rowIndex="4">
                <font>
                   <Font size="17.0" />
                </font>
             </JFXCheckBox>
-            <JFXCheckBox checkedColor="#cf345500" style="-jfx-unchecked-color: white; -jfx-checked-color: #d2335c;" text="Central Library" textFill="WHITE" unCheckedColor="WHITE" GridPane.rowIndex="5">
+            <JFXCheckBox fx:id="wait_lib" checkedColor="#cf345500" style="-jfx-unchecked-color: white; -jfx-checked-color: #d2335c;" text="Central Library" textFill="WHITE" unCheckedColor="WHITE" GridPane.rowIndex="5">
                <font>
                   <Font size="17.0" />
                </font>
             </JFXCheckBox>
-            <JFXCheckBox checkedColor="#cf345500" style="-jfx-unchecked-color: white; -jfx-checked-color: #d2335c;" text="Faculty of Science" textFill="WHITE" unCheckedColor="WHITE" GridPane.rowIndex="6">
+            <JFXCheckBox fx:id="wait_sci" checkedColor="#cf345500" style="-jfx-unchecked-color: white; -jfx-checked-color: #d2335c;" text="Faculty of Science" textFill="WHITE" unCheckedColor="WHITE" GridPane.rowIndex="6">
                <font>
                   <Font size="17.0" />
                </font>
             </JFXCheckBox>
-            <JFXCheckBox checkedColor="#cf345500" style="-jfx-unchecked-color: white; -jfx-checked-color: #d2335c;" text="Prathep Building" textFill="WHITE" unCheckedColor="WHITE" GridPane.rowIndex="7">
+            <JFXCheckBox fx:id="wait_prathep" checkedColor="#cf345500" style="-jfx-unchecked-color: white; -jfx-checked-color: #d2335c;" text="Prathep Building" textFill="WHITE" unCheckedColor="WHITE" GridPane.rowIndex="7">
                <font>
                   <Font size="17.0" />
                </font>
             </JFXCheckBox>
-            <JFXCheckBox checkedColor="#cf345500" style="-jfx-unchecked-color: white; -jfx-checked-color: #d2335c;" text="ECC Building" textFill="WHITE" unCheckedColor="WHITE" GridPane.rowIndex="8">
+            <JFXCheckBox fx:id="wait_ecc" checkedColor="#cf345500" style="-jfx-unchecked-color: white; -jfx-checked-color: #d2335c;" text="ECC Building" textFill="WHITE" unCheckedColor="WHITE" GridPane.rowIndex="8">
                <font>
                   <Font size="17.0" />
                </font>
             </JFXCheckBox>
-            <JFXCheckBox checkedColor="#109c5600" style="-jfx-unchecked-color: white; -jfx-checked-color: #d2335c;" text="RNP" textFill="WHITE" unCheckedColor="WHITE" GridPane.rowIndex="1">
+            <JFXCheckBox fx:id="wait_RNP" checkedColor="#109c5600" style="-jfx-unchecked-color: white; -jfx-checked-color: #d2335c;" text="RNP" textFill="WHITE" unCheckedColor="WHITE" GridPane.rowIndex="1">
                <font>
                   <Font size="20.0" />
                </font>
