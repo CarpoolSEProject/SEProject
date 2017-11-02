@@ -99,129 +99,7 @@
                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374255" height="44.0" layoutX="-4.0" layoutY="-9.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="494.0" />
                 <Line endX="394.0" layoutX="96.0" layoutY="35.0" opacity="0.13" startX="-100.0" stroke="WHITE" />
                 <Text fill="WHITE" layoutX="4.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WHERE TO GO?" />
-                <GridPane layoutX="88.0" layoutY="49.0" prefHeight="64.0" prefWidth="386.0">
-                    <columnConstraints>
-                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                    <children>
-                        <Text fill="WHITE" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="TO" GridPane.valignment="TOP" />
-                        <Text fill="WHITE" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
-                        <Text fill="WHITE" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="ARRIVE AT" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="TOP">
-                            <GridPane.margin>
-                                <Insets right="1.0" />
-                            </GridPane.margin>
-                        </Text>
-                        <Text fill="WHITE" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="CAR TYPE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="TOP">
-                            <GridPane.margin>
-                                <Insets left="2.0" />
-                            </GridPane.margin>
-                        </Text>
-                        <Text fill="WHITE" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="SEAT LEFT" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
-                            <GridPane.margin>
-                                <Insets left="1.0" />
-                            </GridPane.margin>
-                        </Text>
-                        <Text fill="#ff9129" strokeType="OUTSIDE" strokeWidth="0.0" text="Cafeteria" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                            <GridPane.margin>
-                                <Insets top="30.0" />
-                            </GridPane.margin>
-                        </Text>
-                        <Text fill="#ff9129" strokeType="OUTSIDE" strokeWidth="0.0" text="A" />
-                        <Text fill="#ff9129" strokeType="OUTSIDE" strokeWidth="0.0" text="Kae Ki " GridPane.columnIndex="1" />
-                        <Text fill="#ff9129" strokeType="OUTSIDE" strokeWidth="0.0" text="1.00 PM" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
-                        <Text fill="#ff9129" strokeType="OUTSIDE" strokeWidth="0.0" text="Private Car" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                            <GridPane.margin>
-                                <Insets left="3.0" />
-                            </GridPane.margin>
-                        </Text>
-                        <Text fill="#ff9129" strokeType="OUTSIDE" strokeWidth="0.0" text="1" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                        <Text fill="#ff9129" strokeType="OUTSIDE" strokeWidth="0.0" text="25/10/2017" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                            <GridPane.margin>
-                                <Insets top="35.0" />
-                            </GridPane.margin>
-                        </Text>
-                    </children>
-                </GridPane>
-                <Text fill="WHITE" layoutX="118.0" layoutY="132.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="NOTICE:" />
-                <Line endX="350.0" layoutX="116.0" layoutY="142.0" startX="-100.0" stroke="WHITE" />
-                <Text fill="WHITE" layoutX="175.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="None" />
-                <Line endX="5.0" layoutX="185.0" layoutY="80.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
-                <Line endX="5.0" layoutX="258.0" layoutY="80.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
-                <Line endX="5.0" layoutX="342.0" layoutY="80.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
-                <Line endX="5.0" layoutX="419.0" layoutY="80.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
-                <ImageView fx:id="A" fitHeight="80.0" fitWidth="80.0" layoutX="9.0" layoutY="49.0"  preserveRatio="true">
-                    <image>
-                        <Image url="@../place/A.png" />
-                    </image>
-                    <cursor>
-                        <Cursor fx:constant="HAND" />
-                    </cursor>
-                </ImageView>
-                <GridPane layoutX="89.0" layoutY="162.0" prefHeight="64.0" prefWidth="386.0">
-                    <columnConstraints>
-                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                    <children>
-                        <Text fill="WHITE" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="TO" GridPane.valignment="TOP" />
-                        <Text fill="WHITE" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
-                        <Text fill="WHITE" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="ARRIVE AT" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="TOP">
-                            <GridPane.margin>
-                                <Insets right="1.0" />
-                            </GridPane.margin>
-                        </Text>
-                        <Text fill="WHITE" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="CAR TYPE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="TOP">
-                            <GridPane.margin>
-                                <Insets left="2.0" />
-                            </GridPane.margin>
-                        </Text>
-                        <Text fill="WHITE" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="SEAT LEFT" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
-                            <GridPane.margin>
-                                <Insets left="1.0" />
-                            </GridPane.margin>
-                        </Text>
-                        <Text fill="#00b84a" strokeType="OUTSIDE" strokeWidth="0.0" text="Building" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                            <GridPane.margin>
-                                <Insets top="30.0" />
-                            </GridPane.margin>
-                        </Text>
-                        <Text fill="#00b84a" strokeType="OUTSIDE" strokeWidth="0.0" text="E12" />
-                        <Text fill="#00b84a" strokeType="OUTSIDE" strokeWidth="0.0" text="RNP" GridPane.columnIndex="1" />
-                        <Text fill="#00b84a" strokeType="OUTSIDE" strokeWidth="0.0" text="10.00 AM" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
-                        <Text fill="#00b84a" strokeType="OUTSIDE" strokeWidth="0.0" text="Private Car" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                            <GridPane.margin>
-                                <Insets left="3.0" />
-                            </GridPane.margin>
-                        </Text>
-                        <Text fill="#00b84a" strokeType="OUTSIDE" strokeWidth="0.0" text="4" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                        <Text fill="#00b84a" strokeType="OUTSIDE" strokeWidth="0.0" text="28/10/2017" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                            <GridPane.margin>
-                                <Insets top="35.0" />
-                            </GridPane.margin>
-                        </Text>
-                    </children>
-                </GridPane>
-                <Text fill="WHITE" layoutX="119.0" layoutY="245.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="NOTICE:" />
-                <Line endX="350.0" layoutX="117.0" layoutY="255.0" startX="-100.0" stroke="WHITE" />
-                <Text fill="WHITE" layoutX="176.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="None" />
-                <Line endX="5.0" layoutX="186.0" layoutY="193.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
-                <Line endX="5.0" layoutX="259.0" layoutY="193.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
-                <Line endX="5.0" layoutX="343.0" layoutY="193.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
-                <Line endX="5.0" layoutX="420.0" layoutY="193.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
-                <GridPane layoutX="90.0" layoutY="274.0" prefHeight="64.0" prefWidth="386.0">
+                <GridPane layoutX="88.0" layoutY="50.0" prefHeight="64.0" prefWidth="386.0">
                     <columnConstraints>
                         <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                         <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -271,22 +149,14 @@
                         </Text>
                     </children>
                 </GridPane>
-                <Text fill="WHITE" layoutX="120.0" layoutY="357.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="NOTICE:" />
-                <Line endX="350.0" layoutX="118.0" layoutY="367.0" startX="-100.0" stroke="WHITE" />
-                <Text fill="WHITE" layoutX="177.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="None" />
-                <Line endX="5.0" layoutX="187.0" layoutY="305.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
-                <Line endX="5.0" layoutX="260.0" layoutY="305.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
-                <Line endX="5.0" layoutX="344.0" layoutY="305.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
-                <Line endX="5.0" layoutX="421.0" layoutY="305.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
-                <ImageView fx:id="E12" fitHeight="80.0" fitWidth="80.0" layoutX="10.0" layoutY="162.0" preserveRatio="true">
-                    <image>
-                        <Image url="@../place/E12.png" />
-                    </image>
-                    <cursor>
-                        <Cursor fx:constant="HAND" />
-                    </cursor>
-                </ImageView>
-                <ImageView fx:id="RNP" fitHeight="80.0" fitWidth="80.0" layoutX="11.0" layoutY="274.0" preserveRatio="true">
+                <Text fill="WHITE" layoutX="118.0" layoutY="133.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="NOTICE:" />
+                <Line endX="350.0" layoutX="116.0" layoutY="143.0" startX="-100.0" stroke="WHITE" />
+                <Text fill="WHITE" layoutX="175.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="None" />
+                <Line endX="5.0" layoutX="185.0" layoutY="81.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
+                <Line endX="5.0" layoutX="258.0" layoutY="81.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
+                <Line endX="5.0" layoutX="342.0" layoutY="81.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
+                <Line endX="5.0" layoutX="419.0" layoutY="81.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
+                <ImageView fx:id="RNP" fitHeight="80.0" fitWidth="80.0" layoutX="9.0" layoutY="50.0" preserveRatio="true">
                     <image>
                         <Image url="@../place/RNP.png" />
                     </image>

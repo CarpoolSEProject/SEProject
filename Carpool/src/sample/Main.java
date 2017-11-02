@@ -52,7 +52,7 @@ public class Main extends Application{
         this.driverFeed = new Scene(driverFeed);
 
         callStage.setTitle("CARPOOL");
-        callStage.setScene(this.createPost);
+        callStage.setScene(this.sample);
         callStage.setHeight(610);
         callStage.setWidth(900);
         callStage.show();
