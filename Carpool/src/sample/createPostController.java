@@ -12,6 +12,7 @@ import javafx.scene.text.Text;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Date;
 
 public class createPostController {
 
@@ -115,19 +116,28 @@ public class createPostController {
         seatLeft.getItems().add(new Label("4"));
 
     }
+//    public void createPost(Driver driver, JoinEvent joinevent, String From, String To, Date TimetoArrive, Car CarType, Integer SeatLeft, String LocationWaiting){
+//
+//    }
 
 
 
     @FXML
-    void back(ActionEvent event){
+    void back(ActionEvent event) {
 
     }
 
     @FXML
-    void confirm(ActionEvent event) {
+    void confirm(ActionEvent event) { //press confirm
+        if((choicePlace_to.getValue() != null) && (choicePlace_from.getValue() != null) && (choiceCarType.getValue() != null) && (seatLeft.getValue() != null)
+                && (time.getValue() != null) && (date.getValue() != null)){
+            System.out.println("yayayayayayayayayayayayay");
+        }
+        else {
+            System.out.println("Noooooooooooooooooooooooooooooooo");
+        }
 
     }
-
 
 
 }

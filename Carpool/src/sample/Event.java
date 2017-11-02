@@ -21,7 +21,7 @@ public class Event {
     public Car CarType;
     public Integer SeatLeft;
     public String LocationWaiting;
-    public String Notice;
+    //public String Notice;
 
     public Event() {
 
@@ -87,11 +87,11 @@ public class Event {
         LocationWaiting = locationWaiting;
     }
 
-    public String getNotice() {
-        return Notice;
-    }
-
-    public void setNotice(String notice) {
-        Notice = notice;
-    }
+//    public String getNotice() {
+//        return Notice;
+//    }
+//
+//    public void setNotice(String notice) {
+//        Notice = notice;
+//    }
 }
