@@ -7,6 +7,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import sample.Main;
 
+import java.io.IOException;
+
 public class summaryEccController {
 
     @FXML
@@ -22,13 +24,13 @@ public class summaryEccController {
     private JFXButton home_ecc;
 
     @FXML
-    void arrived(ActionEvent event) {
+    void arrived(ActionEvent event) throws IOException {
         Main.callStage.setScene(Main.feed);
 
     }
 
     @FXML
-    void home(ActionEvent event) {
+    void home(ActionEvent event) throws IOException {
         Main.callStage.setScene(Main.feed);
 
     }

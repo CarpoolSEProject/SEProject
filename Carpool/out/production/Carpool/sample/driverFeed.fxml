@@ -15,7 +15,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Text?>
 
-<Pane blendMode="DARKEN" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #2c323f;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<Pane blendMode="DARKEN" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #2c323f;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.driverFeedController">
     <children>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374255" height="95.0" layoutX="699.0" layoutY="81.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="188.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="57.0" layoutX="13.0" layoutY="13.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" width="875.0" />
@@ -29,7 +29,7 @@
                 <Cursor fx:constant="HAND" />
             </cursor></Text>
         <Circle fill="WHITE" layoutX="779.0" layoutY="42.0" opacity="0.4" radius="3.0" stroke="WHITE" strokeType="INSIDE" />
-        <Text fx:id="navBar_logout" accessibleRole="BUTTON" fill="WHITE" layoutX="798.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOG OUT">
+        <Text fx:id="navBar_logout" accessibleRole="BUTTON" fill="WHITE" layoutX="798.0" layoutY="48.0" onMouseClicked="#logout" strokeType="OUTSIDE" strokeWidth="0.0" text="LOG OUT">
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor></Text>
@@ -62,7 +62,7 @@
         <Line endX="65.0" layoutX="113.0" layoutY="195.0" opacity="0.13" startX="-100.0" stroke="WHITE" />
         <Line endX="65.0" layoutX="112.0" layoutY="404.0" opacity="0.13" startX="-100.0" stroke="WHITE" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="231.0" layoutX="699.0" layoutY="113.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="188.0" />
-        <Text fill="WHITE" layoutX="741.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wisarut Kawidam" />
+        <Text fill="WHITE" layoutX="738.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Witsarut Kawidam" />
         <ImageView fx:id="profile" accessibleRole="BUTTON" fitHeight="29.0" fitWidth="29.0" layoutX="714.0" layoutY="308.0" opacity="0.78" preserveRatio="true">
             <image>
                 <Image url="@../img/man.png" />
@@ -156,7 +156,7 @@
                 <Line endX="5.0" layoutX="258.0" layoutY="80.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
                 <Line endX="5.0" layoutX="342.0" layoutY="80.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
                 <Line endX="5.0" layoutX="419.0" layoutY="80.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
-                <ImageView fx:id="A" fitHeight="80.0" fitWidth="80.0" layoutX="9.0" layoutY="49.0" onMouseClicked="#toA" preserveRatio="true">
+                <ImageView fx:id="A" fitHeight="80.0" fitWidth="80.0" layoutX="9.0" layoutY="49.0"  preserveRatio="true">
                     <image>
                         <Image url="@../place/A.png" />
                     </image>
@@ -278,7 +278,7 @@
                 <Line endX="5.0" layoutX="260.0" layoutY="305.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
                 <Line endX="5.0" layoutX="344.0" layoutY="305.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
                 <Line endX="5.0" layoutX="421.0" layoutY="305.0" opacity="0.68" rotate="90.0" startX="-50.0" stroke="WHITE" />
-                <ImageView fx:id="E12" fitHeight="80.0" fitWidth="80.0" layoutX="10.0" layoutY="162.0" onMouseClicked="#toE12" preserveRatio="true">
+                <ImageView fx:id="E12" fitHeight="80.0" fitWidth="80.0" layoutX="10.0" layoutY="162.0" preserveRatio="true">
                     <image>
                         <Image url="@../place/E12.png" />
                     </image>
@@ -286,7 +286,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </ImageView>
-                <ImageView fx:id="RNP" fitHeight="80.0" fitWidth="80.0" layoutX="11.0" layoutY="274.0" onMouseClicked="#toRnp" preserveRatio="true">
+                <ImageView fx:id="RNP" fitHeight="80.0" fitWidth="80.0" layoutX="11.0" layoutY="274.0" preserveRatio="true">
                     <image>
                         <Image url="@../place/RNP.png" />
                     </image>
@@ -330,6 +330,6 @@
             <Image url="@../img/kong.png" />
          </image>
       </ImageView>
-      <JFXButton focusTraversable="false" layoutX="749.0" layoutY="257.0" style="-fx-background-color: #D2335C;" text="Create Post" textFill="WHITE" />
+      <JFXButton fx:id="createPost_Feed" focusTraversable="false" layoutX="749.0" layoutY="257.0" style="-fx-background-color: #D2335C;" text="Create Post" textFill="WHITE" />
     </children>
 </Pane>

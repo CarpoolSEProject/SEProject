@@ -1,5 +1,6 @@
 package sample;
 
+import CarpoolDB.Database;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
@@ -10,7 +11,13 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
 
+import javax.persistence.EntityManager;
+
+import javax.persistence.TypedQuery;
+
+
 public class Controller {
+
 
     @FXML
     private JFXButton loginButton;
@@ -23,8 +30,26 @@ public class Controller {
 
     @FXML
     void handle(ActionEvent event) {
-        System.out.println("Test Change Scene");
-        Main.callStage.setScene(Main.feed);
+        System.out.println("Test Change Scene");  //When push loginButton
+        EntityManager em = Database.getConnection().createEntityManager();
+        TypedQuery<Person> q = em.createQuery("SELECT p FROM Person p WHERE p.Username = :user AND p.Password = :pass", Person.class);
+//        int checklogin = 0;
+        Person ps2 = null;
+        q.setParameter("user",enterUsername.getText());
+        q.setParameter("pass",enterPassword.getText());
+        for ( Person ps1 : q.getResultList()) {
+            System.out.println(ps1.getUsername());
+            System.out.println(ps1.getPassword());
+            Main.checkLogin = 1;
+            ps2 = ps1;
+        }
+        if ((Main.checkLogin == 1) && (ps2.getUsername().equals("kongza")) && (ps2.getPassword().equals("1234"))) {
+            Main.callStage.setScene(Main.driverFeed);
+        }
+        else if ((Main.checkLogin == 1) && (ps2.getUsername().equals("tangkwaaa")) && (ps2.getPassword().equals("5678"))) {
+            Main.callStage.setScene(Main.feed);
+        }
+
     }
 
     @FXML
