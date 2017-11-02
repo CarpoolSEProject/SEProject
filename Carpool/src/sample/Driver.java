@@ -8,7 +8,6 @@ public class Driver extends Person {
     private Event DriverEvent;
 
     public Driver() {
-
     }
 
     public Driver(String carType, String carLicense, String Rating, Event DriverEvent) {

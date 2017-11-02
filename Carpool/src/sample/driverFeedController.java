@@ -69,10 +69,10 @@ public class driverFeedController {
         Main.checkLogin = 0;
     }
 
-//    @FXML
-//    void createPost(ActionEvent event) {
-//
-//    }
+    @FXML
+    void createPost(ActionEvent event) {
+        Main.callStage.setScene(Main.createPost);
+    }
 //
 //    @FXML
 //    void toA(MouseEvent event) {

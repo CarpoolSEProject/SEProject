@@ -48,7 +48,7 @@
             </image>
         </ImageView>
         <JFXButton focusTraversable="false" layoutX="749.0" layoutY="257.0" style="-fx-background-color: #D2335C;" text="Create Post" textFill="WHITE" />
-        <Text fill="WHITE" layoutX="739.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wisarut Kawidam" />
+        <Text fill="WHITE" layoutX="739.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Witsarut Kawidam" />
         <ImageView fx:id="profile" accessibleRole="BUTTON" fitHeight="29.0" fitWidth="29.0" layoutX="714.0" layoutY="308.0" opacity="0.78" preserveRatio="true">
             <image>
                 <Image url="@../img/man.png" />
