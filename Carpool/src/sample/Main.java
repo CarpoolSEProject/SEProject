@@ -61,7 +61,7 @@ public class Main extends Application{
         Database.connect();
         emf = Database.getConnection();
 
-        Driver kong = new Driver("kongza", "1234", "kong@hotmail.com", "Witsarut Kavidum", "Male", 21, "0910719895","Private Car","AB1234","4",new Event());
+        Driver kong = new Driver("kongza", "1234", "kong@hotmail.com", "Witsarut Kavidum", "Male", 21, "0910719895","Private Car","AB1234","4",null);
         Passenger tangkwa = new Passenger("tangkwaaa", "5678", "tangkwa@hotmail.com", "Putthachart Srisuwankul", "Female", 21, "0875933814");
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();

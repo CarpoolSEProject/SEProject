@@ -135,7 +135,9 @@ public class createPostController {
     void confirm(ActionEvent event) { //press confirm
         if((choicePlace_to.getValue() != null) && (choicePlace_from.getValue() != null) && (choiceCarType.getValue() != null) && (seatLeft.getValue() != null)
                 && (time.getValue() != null) && (date.getValue() != null) && countCheckBox()==1){
-            System.out.println("yayayayayayayayayayayayay");
+            System.out.println("Form Accepted");
+            warning.setVisible(false);
+
         }
         else {
             warning.setVisible(true);

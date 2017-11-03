@@ -1,5 +1,7 @@
 package sample;
 
+import com.objectdb.o.TOL;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -12,19 +14,26 @@ public class Event {
     public Integer EventID;
     @ManyToOne
     public Driver Driver;
-    @OneToMany(cascade=CascadeType.ALL, mappedBy="event")
-    private JoinEvent JoinEvent;
+//    @OneToMany(cascade=CascadeType.ALL, mappedBy="event")
+//    private JoinEvent JoinEvent;
     public String From;
     public String To;
     @Temporal(TemporalType.DATE)
     public Date TimetoArrive;
     public Car CarType;
     public Integer SeatLeft;
-    public String LocationWaiting;
+    public String[] LocationWaiting;
     //public String Notice;
 
-    public Event() {
-
+    public Event(Driver Driver, String From, String To, Date TimetoArrive, Car CarType, Integer SeatLeft, String[] LocationWaiting) {
+        this.Driver = Driver;
+//        this.JoinEvent = JoinEvent;
+        this.From = From;
+        this.To = To;
+        this.TimetoArrive = TimetoArrive;
+        this.CarType = CarType;
+        this.SeatLeft = SeatLeft;
+        this.LocationWaiting = LocationWaiting;
     }
 
     public Integer getEventID() {
@@ -79,11 +88,11 @@ public class Event {
         SeatLeft = seatLeft;
     }
 
-    public String getLocationWaiting() {
+    public String[] getLocationWaiting() {
         return LocationWaiting;
     }
 
-    public void setLocationWaiting(String locationWaiting) {
+    public void setLocationWaiting(String[] locationWaiting) {
         LocationWaiting = locationWaiting;
     }
 
