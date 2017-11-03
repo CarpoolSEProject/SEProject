@@ -1,18 +1,19 @@
 package sample;
 
 import com.jfoenix.controls.*;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
+import com.jfoenix.controls.JFXDatePicker;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.LocalDate;
 import java.util.Date;
+import java.time.LocalTime;
 
 public class createPostController {
 
@@ -138,6 +139,15 @@ public class createPostController {
             System.out.println("Form Accepted");
             warning.setVisible(false);
 
+            String to = choicePlace_to.getValue().getText();
+            String from = choicePlace_from.getValue().getText();
+            LocalTime timee = time.getValue();
+            LocalDate datee = date.getValue();
+            String carType = choiceCarType.getValue().getText();
+            String seat = seatLeft.getValue().getText();
+            int seatNo = Integer.parseInt(seat);
+
+//            Event(Driver Driver, String From, String To, Date TimetoArrive, Car CarType, Integer SeatLeft, String[] LocationWaiting)
         }
         else {
             warning.setVisible(true);
