@@ -91,6 +91,9 @@ public class createPostController {
     @FXML
     private Text warning;
 
+    String[] LocationWaiting;
+
+
 
     @FXML
     public void initialize() {
@@ -147,6 +150,8 @@ public class createPostController {
             String seat = seatLeft.getValue().getText();
             int seatNo = Integer.parseInt(seat);
 
+
+
 //            Event(Driver Driver, String From, String To, Date TimetoArrive, Car CarType, Integer SeatLeft, String[] LocationWaiting)
         }
         else {
@@ -162,6 +167,12 @@ public class createPostController {
                 wait_lib.isSelected() == true || wait_sci.isSelected() == true || wait_prathep.isSelected() == true ||
                 wait_ecc.isSelected() == true || wait_RNP.isSelected() == true){
             count = 1;
+            int i = 0;
+            if (wait_KaeKi.isSelected() == true) {
+                LocationWaiting[i] = "Kae Ki";
+//                to be continue
+            }
+
         }
         else {
             count = 0;
