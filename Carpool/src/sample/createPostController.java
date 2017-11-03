@@ -88,6 +88,10 @@ public class createPostController {
 
 
     @FXML
+    private Text warning;
+
+
+    @FXML
     public void initialize() {
         choicePlace_to.getItems().add(new Label("RNP"));
         choicePlace_to.getItems().add(new Label("Kae Ki"));
@@ -130,12 +134,28 @@ public class createPostController {
     @FXML
     void confirm(ActionEvent event) { //press confirm
         if((choicePlace_to.getValue() != null) && (choicePlace_from.getValue() != null) && (choiceCarType.getValue() != null) && (seatLeft.getValue() != null)
-                && (time.getValue() != null) && (date.getValue() != null)){
+                && (time.getValue() != null) && (date.getValue() != null) && countCheckBox()==1){
             System.out.println("yayayayayayayayayayayayay");
         }
         else {
-            System.out.println("Noooooooooooooooooooooooooooooooo");
+            warning.setVisible(true);
         }
+
+    }
+
+
+    public int countCheckBox (){
+        int count = 0;
+        if (wait_KaeKi.isSelected() == true || wait_E12.isSelected() == true || wait_A.isSelected() == true ||
+                wait_lib.isSelected() == true || wait_sci.isSelected() == true || wait_prathep.isSelected() == true ||
+                wait_ecc.isSelected() == true || wait_RNP.isSelected() == true){
+            count = 1;
+        }
+        else {
+            count = 0;
+        }
+
+        return count;
 
     }
 
