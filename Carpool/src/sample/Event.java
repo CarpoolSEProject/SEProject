@@ -25,12 +25,12 @@ public class Event {
     @Temporal(TemporalType.DATE)
     public String TimetoArrive;
     @OneToOne (fetch=EAGER, cascade=PERSIST)
-    public Car CarType;
+    public String CarType;
     public Integer SeatLeft;
     public int[] LocationWaiting;
     //public String Notice;
 
-    public Event(String Driver, String From, String To, String TimetoArrive, Car CarType, Integer SeatLeft, int[] LocationWaiting) {
+    public Event(String Driver, String From, String To, String TimetoArrive, String CarType, Integer SeatLeft, int[] LocationWaiting) {
         this.Driver = Driver;
 //        this.JoinEvent = JoinEvent;
         this.From = From;
@@ -77,11 +77,11 @@ public class Event {
         TimetoArrive = timetoArrive;
     }
 
-    public Car getCarType() {
+    public String getCarType() {
         return CarType;
     }
 
-    public void setCarType(Car carType) {
+    public void setCarType(String carType) {
         CarType = carType;
     }
 

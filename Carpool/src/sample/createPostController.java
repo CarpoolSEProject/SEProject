@@ -188,15 +188,15 @@ public class createPostController {
             if (carType == "Motorcycle"){
                 Car test = new Motorcycle("Motorcycle",2);
                 System.out.println(test.getTypeName());
-                Event toSend = new Event(driverName, from, to, timee.toString().concat(datee.toString()), test, seatNo, checkLocation);
+                Event toSend = new Event(driverName, from, to, timee.toString().concat(datee.toString()), test.getTypeName(), seatNo, checkLocation);
                 em.getTransaction().begin();
                 em.persist(toSend);
                 em.getTransaction().commit();
 
             }
             else if (carType == "Private Car"){
-                Car test = new Motorcycle("Private Car",4);
-                Event toSend = new Event(driverName, from, to, timee.toString().concat(datee.toString()), test, seatNo, checkLocation);
+                Car test = new PrivateCar("Private Car",4);
+                Event toSend = new Event(driverName, from, to, timee.toString().concat(datee.toString()), test.getTypeName(), seatNo, checkLocation);
                 em.getTransaction().begin();
                 em.persist(toSend);
                 em.getTransaction().commit();

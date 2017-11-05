@@ -2,6 +2,8 @@ package sample;
 
 import javax.persistence.*;
 
+import static javax.persistence.CascadeType.ALL;
+
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class Car {

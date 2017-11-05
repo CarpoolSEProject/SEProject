@@ -12,7 +12,7 @@ public class JoinEvent extends Event {
     @ManyToOne
     private Passenger Passenger;
 
-    public JoinEvent(String Driver, String From, String To, String TimetoArrive, Car CarType, Integer SeatLeft, int[] LocationWaiting, Passenger Passenger) {
+    public JoinEvent(String Driver, String From, String To, String TimetoArrive, String CarType, Integer SeatLeft, int[] LocationWaiting, Passenger Passenger) {
        super(Driver, From, To, TimetoArrive, CarType, SeatLeft, LocationWaiting);
         this.Passenger = Passenger;
     }
