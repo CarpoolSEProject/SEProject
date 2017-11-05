@@ -9,13 +9,13 @@ public class Motorcycle extends Car {
         super(typeName,seatNo);
     }
 
-//    @Override
-//    public String getTypeName() {
-//        return "Motocycle";
-//    }
-//
-//    @Override
-//    public int getSeatNo() {
-//        return 2;
-//    }
+    @Override
+    public String getTypeName() {
+        return super.getTypeName();
+    }
+
+    @Override
+    public int getSeatNo() {
+        return super.getSeatNo();
+    }
 }

@@ -9,13 +9,13 @@ public class PrivateCar extends Car {
         super(typeName,seatNo);
     }
 
-//    @Override
-//    public String getTypeName() {
-//        return "Private Car";
-//    }
-//
-//    @Override
-//    public int getSeatNo() {
-//        return 4;
-//    }
+    @Override
+    public String getTypeName() {
+        return super.getTypeName();
+    }
+
+    @Override
+    public int getSeatNo() {
+        return super.getSeatNo();
+    }
 }

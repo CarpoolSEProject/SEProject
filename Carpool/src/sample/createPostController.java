@@ -137,7 +137,7 @@ public class createPostController {
     void confirm(ActionEvent event) { //press confirm
         String witsarut = "Witsarut Kavidum";
         EntityManager em = Database.getConnection().createEntityManager();
-        TypedQuery<String> q = em.createQuery("SELECT Name FROM Driver ", String.class);
+        TypedQuery<String> q = em.createQuery("SELECT Name FROM Driver", String.class);
         String driverName = null ;
         for ( String kong : q.getResultList()) {
             if(kong.equals(witsarut)){
@@ -183,23 +183,22 @@ public class createPostController {
                 checkLocation[7] = 1;
             }
 
-            EntityManager em2 = Database.getConnection().createEntityManager();
-            TypedQuery<String> c = em2.createQuery("SELECT typeName FROM Car ", String.class);
-            String motor = "Motorcycle";
-            String privateCar = "Private Car";
-            String checkCar = null ;
-            System.out.println(c.getResultList());
-            for ( String car : c.getResultList()) {
-                if(car.equals(motor)){
-                    checkCar = motor;
-                }
-                else if(car.equals(privateCar)){
-                    checkCar = privateCar;
-                }
+
+            // Send event to Database (Event Class)
+            if (carType == "Motorcycle"){
+                Car test = new Motorcycle("Motorcycle",2);
+                System.out.println(test.getTypeName());
+//                Event toSend = new Event(driverName, from, to, timee.toString().concat(datee.toString()), test, seatNo, checkLocation);
+//                em.persist(toSend);
+            }
+            else if (carType == "Private Car"){
+                Car test = new Motorcycle("Private Car",4);
+//                Event toSend = new Event(driverName, from, to, timee.toString().concat(datee.toString()), test, seatNo, checkLocation);
+//                em.persist(toSend);
             }
 
-            //Event toSend = new Event(driverName, from, to, timee.toString().concat(datee.toString()), carType, seatNo, checkLocation);
-            System.out.println("kuy "+checkCar);
+
+
         }
         else {
             warning.setVisible(true);
