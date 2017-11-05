@@ -130,7 +130,7 @@ public class createPostController {
 
     @FXML
     void back(ActionEvent event) {
-
+        Main.callStage.setScene(Main.feed);
     }
 
     @FXML
@@ -138,7 +138,6 @@ public class createPostController {
         String witsarut = "Witsarut Kavidum";
         EntityManager em = Database.getConnection().createEntityManager();
         TypedQuery<String> q = em.createQuery("SELECT Name FROM Driver ", String.class);
-        //System.out.println("edok "+q.getResultList());
         String driverName = null ;
         for ( String kong : q.getResultList()) {
             if(kong.equals(witsarut)){
@@ -184,9 +183,23 @@ public class createPostController {
                 checkLocation[7] = 1;
             }
 
+            EntityManager em2 = Database.getConnection().createEntityManager();
+            TypedQuery<String> c = em2.createQuery("SELECT typeName FROM Car ", String.class);
+            String motor = "Motorcycle";
+            String privateCar = "Private Car";
+            String checkCar = null ;
+            System.out.println(c.getResultList());
+            for ( String car : c.getResultList()) {
+                if(car.equals(motor)){
+                    checkCar = motor;
+                }
+                else if(car.equals(privateCar)){
+                    checkCar = privateCar;
+                }
+            }
 
-            Event toSend = new Event(driverName, from, to, timee.toString().concat(datee.toString()), carType, seatNo, checkLocation);
-
+            //Event toSend = new Event(driverName, from, to, timee.toString().concat(datee.toString()), carType, seatNo, checkLocation);
+            System.out.println("kuy "+checkCar);
         }
         else {
             warning.setVisible(true);

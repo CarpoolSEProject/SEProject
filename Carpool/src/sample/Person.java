@@ -17,10 +17,6 @@ public abstract class Person {
     private Integer Age;
     private String PhoneNo;
 
-//    public Person() {
-//
-//    }
-
     public Person(String Username, String Password, String Email, String Name, String Gender, Integer Age, String PhoneNo) {
         this.Username = Username;
         this.Password = Password;
