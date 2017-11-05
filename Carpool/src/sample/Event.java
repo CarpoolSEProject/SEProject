@@ -6,6 +6,9 @@ import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
+import static javax.persistence.CascadeType.PERSIST;
+import static javax.persistence.FetchType.EAGER;
+
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Event {
@@ -21,6 +24,7 @@ public class Event {
     public String To;
     @Temporal(TemporalType.DATE)
     public String TimetoArrive;
+    @OneToOne (fetch=EAGER, cascade=PERSIST)
     public Car CarType;
     public Integer SeatLeft;
     public int[] LocationWaiting;

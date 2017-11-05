@@ -73,14 +73,14 @@ public class Main extends Application{
         em.createQuery("DELETE FROM Driver").executeUpdate();
         em.getMetamodel().entity(Passenger.class);
         em.createQuery("DELETE FROM Passenger").executeUpdate();
-        em.getMetamodel().entity(Motorcycle.class);
-        em.createQuery("DELETE FROM Motorcycle").executeUpdate();
-        em.getMetamodel().entity(PrivateCar.class);
-        em.createQuery("DELETE FROM PrivateCar").executeUpdate();
+        //em.getMetamodel().entity(Motorcycle.class);
+        //em.createQuery("DELETE FROM Motorcycle").executeUpdate();
+//        em.getMetamodel().entity(PrivateCar.class);
+//        em.createQuery("DELETE FROM PrivateCar").executeUpdate();
         em.persist(kong);
         em.persist(tangkwa);
-        em.persist(moto);
-        em.persist(priCar);
+        //em.persist(moto);
+        //em.persist(priCar);
         em.getTransaction().commit();
         em.close();
 
