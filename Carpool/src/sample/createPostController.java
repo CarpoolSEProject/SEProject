@@ -1,5 +1,6 @@
 package sample;
 
+import CarpoolDB.Database;
 import com.jfoenix.controls.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,12 +9,13 @@ import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import com.jfoenix.controls.JFXDatePicker;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import javax.xml.stream.Location;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
 import java.time.LocalTime;
+import java.util.List;
 
 public class createPostController {
 
@@ -91,8 +93,8 @@ public class createPostController {
     @FXML
     private Text warning;
 
-    String[] LocationWaiting;
-
+    String[] locationWaiting = new String[8];
+    int[] checkLocation = new int[8];
 
 
     @FXML
@@ -124,10 +126,6 @@ public class createPostController {
         seatLeft.getItems().add(new Label("4"));
 
     }
-//    public void createPost(Driver driver, JoinEvent joinevent, String From, String To, Date TimetoArrive, Car CarType, Integer SeatLeft, String LocationWaiting){
-//
-//    }
-
 
 
     @FXML
@@ -137,6 +135,17 @@ public class createPostController {
 
     @FXML
     void confirm(ActionEvent event) { //press confirm
+        String witsarut = "Witsarut Kavidum";
+        EntityManager em = Database.getConnection().createEntityManager();
+        TypedQuery<String> q = em.createQuery("SELECT Name FROM Driver ", String.class);
+        //System.out.println("edok "+q.getResultList());
+        String driverName = null ;
+        for ( String kong : q.getResultList()) {
+            if(kong.equals(witsarut)){
+                driverName = kong;
+            }
+        }
+
         if((choicePlace_to.getValue() != null) && (choicePlace_from.getValue() != null) && (choiceCarType.getValue() != null) && (seatLeft.getValue() != null)
                 && (time.getValue() != null) && (date.getValue() != null) && countCheckBox()==1){
             System.out.println("Form Accepted");
@@ -150,9 +159,34 @@ public class createPostController {
             String seat = seatLeft.getValue().getText();
             int seatNo = Integer.parseInt(seat);
 
+            if (wait_KaeKi.isSelected() == true) {
+                checkLocation[0] = 1;
+            }
+            if (wait_E12.isSelected() == true) {
+                checkLocation[1] = 1;
+            }
+            if (wait_A.isSelected() == true) {
+                checkLocation[2] = 1;
+            }
+            if (wait_lib.isSelected() == true) {
+                checkLocation[3] = 1;
+            }
+            if (wait_sci.isSelected() == true) {
+                checkLocation[4] = 1;
+            }
+            if (wait_prathep.isSelected() == true) {
+                checkLocation[5] = 1;
+            }
+            if (wait_ecc.isSelected() == true) {
+                checkLocation[6] = 1;
+            }
+            if (wait_RNP.isSelected() == true) {
+                checkLocation[7] = 1;
+            }
 
 
-//            Event(Driver Driver, String From, String To, Date TimetoArrive, Car CarType, Integer SeatLeft, String[] LocationWaiting)
+            Event toSend = new Event(driverName, from, to, timee.toString().concat(datee.toString()), carType, seatNo, checkLocation);
+
         }
         else {
             warning.setVisible(true);
@@ -168,19 +202,52 @@ public class createPostController {
                 wait_ecc.isSelected() == true || wait_RNP.isSelected() == true){
             count = 1;
             int i = 0;
-            if (wait_KaeKi.isSelected() == true) {
-                LocationWaiting[i] = "Kae Ki";
-//                to be continue
-            }
 
         }
+
         else {
             count = 0;
         }
 
         return count;
-
     }
+
+//    public int[] checkLocation() {
+//        locationWaiting[0] = "wait_KaeKi";
+//        locationWaiting[1] = "wait_E12";
+//        locationWaiting[2] = "wait_A";
+//        locationWaiting[3] = "wait_lib";
+//        locationWaiting[4] = "wait_sci";
+//        locationWaiting[5] = "wait_prathep";
+//        locationWaiting[6] = "wait_ecc";
+//        locationWaiting[7] = "wait_RNP";
+//        if (wait_KaeKi.isSelected() == true) {
+//            checkLocation[0] = 1;
+//        }
+//        if (wait_E12.isSelected() == true) {
+//            checkLocation[1] = 1;
+//        }
+//        if (wait_A.isSelected() == true) {
+//            checkLocation[2] = 1;
+//        }
+//        if (wait_lib.isSelected() == true) {
+//            checkLocation[3] = 1;
+//        }
+//        if (wait_sci.isSelected() == true) {
+//            checkLocation[4] = 1;
+//        }
+//        if (wait_prathep.isSelected() == true) {
+//            checkLocation[5] = 1;
+//        }
+//        if (wait_ecc.isSelected() == true) {
+//            checkLocation[6] = 1;
+//        }
+//        if (wait_RNP.isSelected() == true) {
+//            checkLocation[7] = 1;
+//        }
+//        return checkLocation;
+//    }
+
 
 
 }

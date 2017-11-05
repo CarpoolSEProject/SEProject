@@ -4,6 +4,7 @@ import com.objectdb.o.TOL;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
@@ -13,19 +14,19 @@ public class Event {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     public Integer EventID;
     @ManyToOne
-    public Driver Driver;
+    public String Driver;
 //    @OneToMany(cascade=CascadeType.ALL, mappedBy="event")
 //    private JoinEvent JoinEvent;
     public String From;
     public String To;
     @Temporal(TemporalType.DATE)
-    public Date TimetoArrive;
+    public String TimetoArrive;
     public Car CarType;
     public Integer SeatLeft;
-    public String[] LocationWaiting;
+    public int[] LocationWaiting;
     //public String Notice;
 
-    public Event(Driver Driver, String From, String To, Date TimetoArrive, Car CarType, Integer SeatLeft, String[] LocationWaiting) {
+    public Event(String Driver, String From, String To, String TimetoArrive, Car CarType, Integer SeatLeft, int[] LocationWaiting) {
         this.Driver = Driver;
 //        this.JoinEvent = JoinEvent;
         this.From = From;
@@ -42,11 +43,11 @@ public class Event {
 
     public void setEventID(Integer eventID) { EventID = eventID; }
 
-    public Driver getDriver() {
+    public String getDriver() {
         return Driver;
     }
 
-    public void setDriver(Driver driver) { Driver = driver; }
+    public void setDriver(String driver) { Driver = driver; }
 
     public String getFrom() {
         return From;
@@ -64,11 +65,11 @@ public class Event {
         To = to;
     }
 
-    public Date getTimetoArrive() {
+    public String getTimetoArrive() {
         return TimetoArrive;
     }
 
-    public void setTimetoArrive(Date timetoArrive) {
+    public void setTimetoArrive(String timetoArrive) {
         TimetoArrive = timetoArrive;
     }
 
@@ -88,11 +89,11 @@ public class Event {
         SeatLeft = seatLeft;
     }
 
-    public String[] getLocationWaiting() {
+    public int[] getLocationWaiting() {
         return LocationWaiting;
     }
 
-    public void setLocationWaiting(String[] locationWaiting) {
+    public void setLocationWaiting(int[] locationWaiting) {
         LocationWaiting = locationWaiting;
     }
 
