@@ -4,7 +4,7 @@
 <?import com.jfoenix.controls.JFXCheckBox?>
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXDatePicker?>
-<?import com.jfoenix.controls.JFXTimePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.Group?>
 <?import javafx.scene.image.Image?>
@@ -133,12 +133,12 @@
                   <Font size="20.0" />
                </font>
             </Text>
-            <JFXTimePicker fx:id="time" defaultColor="#0082d5" editable="true" focusTraversable="false" prefHeight="34.0" prefWidth="213.0" promptText="Time" style="-fx-background-color: #cad3df;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <JFXDatePicker fx:id="date" defaultColor="#0082d5" focusTraversable="false" prefHeight="36.0" prefWidth="213.0" promptText="Date" style="-fx-background-color: #cad3df;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <JFXComboBox fx:id="choicePlace_to" focusColor="#405aa800" prefHeight="36.0" prefWidth="213.0" promptText="Choose Place" style="-fx-background-color: #cad3df;" unFocusColor="#ffffff00" visibleRowCount="4" GridPane.columnIndex="1" />
             <JFXComboBox fx:id="choicePlace_from" focusColor="#405aa800" prefHeight="36.0" prefWidth="213.0" promptText="Choose Place" style="-fx-background-color: #cad3df;" unFocusColor="#ffffff00" visibleRowCount="4" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <JFXComboBox fx:id="choiceCarType" focusColor="#405aa800" prefHeight="36.0" prefWidth="213.0" promptText="Choose Car Type" style="-fx-background-color: #cad3df;" unFocusColor="#ffffff00" visibleRowCount="2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <JFXComboBox fx:id="seatLeft" focusColor="#405aa800" prefHeight="36.0" prefWidth="213.0" promptText="choose seat left" style="-fx-background-color: #cad3df;" unFocusColor="#ffffff00" visibleRowCount="4" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <JFXTextField fx:id="time" focusColor="#405aa800" prefHeight="36.0" prefWidth="213.0" promptText="Ex. 09.00 AM" style="-fx-background-color: #cad3df;" unFocusColor="#4d4d4d00" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
       <GridPane layoutX="450.0" layoutY="145.0" prefHeight="314.0" prefWidth="177.0">

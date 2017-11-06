@@ -3,8 +3,7 @@ package sample;
 import com.objectdb.o.TOL;
 
 import javax.persistence.*;
-import java.util.Date;
-import java.util.List;
+
 
 import static javax.persistence.CascadeType.PERSIST;
 import static javax.persistence.FetchType.EAGER;
@@ -23,19 +22,21 @@ public class Event {
     public String From;
     public String To;
     @Temporal(TemporalType.DATE)
-    public String TimetoArrive;
+    public String Date;
+    public String Time;
     @OneToOne (fetch=EAGER, cascade=PERSIST)
     public String CarType;
     public Integer SeatLeft;
     public int[] LocationWaiting;
     //public String Notice;
 
-    public Event(String Driver, String From, String To, String TimetoArrive, String CarType, Integer SeatLeft, int[] LocationWaiting) {
+    public Event(String Driver, String From, String To,String Date, String Time, String CarType, Integer SeatLeft, int[] LocationWaiting) {
         this.Driver = Driver;
 //        this.JoinEvent = JoinEvent;
         this.From = From;
         this.To = To;
-        this.TimetoArrive = TimetoArrive;
+        this.Date = Date;
+        this.Time = Time;
         this.CarType = CarType;
         this.SeatLeft = SeatLeft;
         this.LocationWaiting = LocationWaiting;
@@ -69,12 +70,14 @@ public class Event {
         To = to;
     }
 
-    public String getTimetoArrive() {
-        return TimetoArrive;
+    public String getDate() {return Date;}
+
+    public String getTime() {
+        return Time;
     }
 
-    public void setTimetoArrive(String timetoArrive) {
-        TimetoArrive = timetoArrive;
+    public void setTime(String timetoArrive) {
+        Time = Time;
     }
 
     public String getCarType() {

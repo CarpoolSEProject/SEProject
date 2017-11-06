@@ -150,14 +150,46 @@ public class passengerFeedController {
             blockPane3.setVisible(false);
             blockPane4.setVisible(false);
         }
-        else if (j > 1){ // event is not empty
+        else if (j > 1){ // event is not empty (ev.getEventID = 1 = dummy)
             TypedQuery<Event> fromTable = em.createQuery("SELECT e FROM Event e WHERE EventID <> 1", Event.class);
 
             for ( Event ev : fromTable.getResultList()) {
-                System.out.println(ev.getEventID());
+
                 if (ev.getEventID() == 2) {
                     blockPane1.setVisible(true);
                     to1.setText(ev.getTo());
+                    from1.setText(ev.getFrom());
+                    time1.setText(ev.getTime());
+                    date1.setText(ev.getDate());
+                    seat1.setText(String.valueOf(ev.getSeatLeft()));
+                    car1.setText(ev.getCarType());
+                }
+                else if (ev.getEventID() == 3) {
+                    blockPane2.setVisible(true);
+                    to2.setText(ev.getTo());
+                    from2.setText(ev.getFrom());
+                    time2.setText(ev.getTime());
+                    date2.setText(ev.getDate());
+                    seat2.setText(String.valueOf(ev.getSeatLeft()));
+                    car2.setText(ev.getCarType());
+                }
+                else if (ev.getEventID() == 4) {
+                    blockPane3.setVisible(true);
+                    to3.setText(ev.getTo());
+                    from3.setText(ev.getFrom());
+                    time3.setText(ev.getTime());
+                    date3.setText(ev.getDate());
+                    seat3.setText(String.valueOf(ev.getSeatLeft()));
+                    car3.setText(ev.getCarType());
+                }
+                else if (ev.getEventID() == 5) {
+                    blockPane4.setVisible(true);
+                    to4.setText(ev.getTo());
+                    from4.setText(ev.getFrom());
+                    time4.setText(ev.getTime());
+                    date4.setText(ev.getDate());
+                    seat4.setText(String.valueOf(ev.getSeatLeft()));
+                    car4.setText(ev.getCarType());
                 }
             }
         }

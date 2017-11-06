@@ -5,7 +5,6 @@ import javax.persistence.MappedSuperclass;
 
 
 @Entity
-
 public class PrivateCar extends Car {
 
     public PrivateCar(String typeName, int seatNo) {

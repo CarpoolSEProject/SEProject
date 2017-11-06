@@ -10,12 +10,8 @@ import javafx.scene.text.Text;
 import com.jfoenix.controls.JFXDatePicker;
 
 import javax.persistence.*;
-import javax.xml.stream.Location;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Date;
-import java.time.LocalTime;
-import java.util.List;
+
 
 public class createPostController {
 
@@ -54,7 +50,7 @@ public class createPostController {
     private JFXComboBox<Label> seatLeft;
 
     @FXML
-    private JFXTimePicker time;
+    private JFXTextField time;
 
     @FXML
     private JFXDatePicker date;
@@ -146,13 +142,13 @@ public class createPostController {
         }
 
         if((choicePlace_to.getValue() != null) && (choicePlace_from.getValue() != null) && (choiceCarType.getValue() != null) && (seatLeft.getValue() != null)
-                && (time.getValue() != null) && (date.getValue() != null) && countCheckBox()==1){
+                && (time.getText() != null) && (date.getValue() != null) && countCheckBox()==1){
             System.out.println("Form Accepted");
             warning.setVisible(false);
 
             String to = choicePlace_to.getValue().getText();
             String from = choicePlace_from.getValue().getText();
-            LocalTime timee = time.getValue();
+            String timee = time.getText();
             LocalDate datee = date.getValue();
             String carType = choiceCarType.getValue().getText();
             String seat = seatLeft.getValue().getText();
@@ -186,17 +182,17 @@ public class createPostController {
 
             // Send event to Database (Event Class)
             if (carType == "Motorcycle"){
-                Car test = new Motorcycle("Motorcycle",2);
-                System.out.println(test.getTypeName());
-                Event toSend = new Event(driverName, from, to, timee.toString().concat(datee.toString()), test.getTypeName(), seatNo, checkLocation);
+                Car c = new Motorcycle("Motorcycle",2);
+                System.out.println(c.getTypeName());
+                Event toSend = new Event(driverName, from, to, datee.toString(), timee, c.getTypeName(), seatNo, checkLocation);
                 em.getTransaction().begin();
                 em.persist(toSend);
                 em.getTransaction().commit();
 
             }
             else if (carType == "Private Car"){
-                Car test = new PrivateCar("Private Car",4);
-                Event toSend = new Event(driverName, from, to, timee.toString().concat(datee.toString()), test.getTypeName(), seatNo, checkLocation);
+                Car c = new PrivateCar("Private Car",4);
+                Event toSend = new Event(driverName, from, to, datee.toString(), timee, c.getTypeName(), seatNo, checkLocation);
                 em.getTransaction().begin();
                 em.persist(toSend);
                 em.getTransaction().commit();
