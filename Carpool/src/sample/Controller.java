@@ -12,6 +12,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
 
@@ -19,11 +20,8 @@ import javax.persistence.EntityManager;
 
 import javax.persistence.TypedQuery;
 
-import static javafx.scene.input.KeyCode.*;
-
 
 public class Controller {
-
 
     @FXML
     private JFXButton loginButton;
@@ -36,68 +34,6 @@ public class Controller {
 
     @FXML
     private Text userOrPassIncorrect;
-
-
-    @FXML
-    void handle(ActionEvent event) {
-        System.out.println("Log in");  //When press loginButton
-        EntityManager em = Database.getConnection().createEntityManager();
-        TypedQuery<Person> q = em.createQuery("SELECT p FROM Person p WHERE p.Username = :user AND p.Password = :pass", Person.class);
-        Person ps2 = null;
-        q.setParameter("user",enterUsername.getText());
-        q.setParameter("pass",enterPassword.getText());
-        for ( Person ps1 : q.getResultList()) {
-            System.out.println(ps1.getUsername());
-            System.out.println(ps1.getPassword());
-            Main.checkLogin = 1;
-            ps2 = ps1;
-        }
-        if ((Main.checkLogin == 1) && (ps2.getUsername().equals("kongza")) && (ps2.getPassword().equals("1234"))) {
-            Main.callStage.setScene(Main.createPost);
-        }
-        else if ((Main.checkLogin == 1) && (ps2.getUsername().equals("tangkwaaa")) && (ps2.getPassword().equals("5678"))) {
-            Main.callStage.setScene(Main.feed);
-        }
-        else {
-            userOrPassIncorrect.setVisible(true);
-        }
-
-    }
-
-    @FXML
-    void pressEnter(KeyEvent event) {
-        enterPassword.setOnKeyPressed(new EventHandler<KeyEvent>(){
-            @Override
-            public void handle(KeyEvent event) {
-                if(event.getCode().equals(KeyCode.ENTER)) {
-                    System.out.println("Log in");  //When press loginButton
-                    EntityManager em = Database.getConnection().createEntityManager();
-                    TypedQuery<Person> q = em.createQuery("SELECT p FROM Person p WHERE p.Username = :user AND p.Password = :pass", Person.class);
-                    Person ps2 = null;
-                    q.setParameter("user",enterUsername.getText());
-                    q.setParameter("pass",enterPassword.getText());
-                    for ( Person ps1 : q.getResultList()) {
-                        System.out.println(ps1.getUsername());
-                        System.out.println(ps1.getPassword());
-                        Main.checkLogin = 1;
-                        ps2 = ps1;
-                    }
-                    if ((Main.checkLogin == 1) && (ps2.getUsername().equals("kongza")) && (ps2.getPassword().equals("1234"))) {
-                        Main.callStage.setScene(Main.driverFeed);
-                    }
-                    else if ((Main.checkLogin == 1) && (ps2.getUsername().equals("tangkwaaa")) && (ps2.getPassword().equals("5678"))) {
-                        Main.callStage.setScene(Main.feed);
-                    }
-                    else {
-                        userOrPassIncorrect.setVisible(true);
-                    }
-                }
-            }
-        });
-    }
-
-
-
 
     @FXML
     private Text navBar_home;
@@ -160,6 +96,73 @@ public class Controller {
     private JFXButton search_KaeKi;
 
     @FXML
+    private Pane blockPane;
+
+    @FXML
+    private JFXButton testJoinEvent;
+
+
+    @FXML
+    void handle(ActionEvent event) {
+        System.out.println("Log in");  //When press loginButton
+        EntityManager em = Database.getConnection().createEntityManager();
+        TypedQuery<Person> q = em.createQuery("SELECT p FROM Person p WHERE p.Username = :user AND p.Password = :pass", Person.class);
+        Person ps2 = null;
+        q.setParameter("user",enterUsername.getText());
+        q.setParameter("pass",enterPassword.getText());
+        for ( Person ps1 : q.getResultList()) {
+            System.out.println(ps1.getUsername());
+            System.out.println(ps1.getPassword());
+            Main.checkLogin = 1;
+            ps2 = ps1;
+        }
+        if ((Main.checkLogin == 1) && (ps2.getUsername().equals("kongza")) && (ps2.getPassword().equals("1234"))) {
+            Main.callStage.setScene(Main.createPost);
+        }
+        else if ((Main.checkLogin == 1) && (ps2.getUsername().equals("tangkwaaa")) && (ps2.getPassword().equals("5678"))) {
+            Main.callStage.setScene(Main.feed);
+        }
+        else {
+            userOrPassIncorrect.setVisible(true);
+        }
+
+    }
+
+    @FXML
+    void pressEnter(KeyEvent event) {
+        enterPassword.setOnKeyPressed(new EventHandler<KeyEvent>(){
+            @Override
+            public void handle(KeyEvent event) {
+                if(event.getCode().equals(KeyCode.ENTER)) {
+                    System.out.println("Log in");  //When press loginButton
+                    EntityManager em = Database.getConnection().createEntityManager();
+                    TypedQuery<Person> q = em.createQuery("SELECT p FROM Person p WHERE p.Username = :user AND p.Password = :pass", Person.class);
+                    Person ps2 = null;
+                    q.setParameter("user",enterUsername.getText());
+                    q.setParameter("pass",enterPassword.getText());
+                    for ( Person ps1 : q.getResultList()) {
+                        System.out.println(ps1.getUsername());
+                        System.out.println(ps1.getPassword());
+                        Main.checkLogin = 1;
+                        ps2 = ps1;
+                    }
+                    if ((Main.checkLogin == 1) && (ps2.getUsername().equals("kongza")) && (ps2.getPassword().equals("1234"))) {
+                        Main.callStage.setScene(Main.driverFeed);
+                    }
+                    else if ((Main.checkLogin == 1) && (ps2.getUsername().equals("tangkwaaa")) && (ps2.getPassword().equals("5678"))) {
+                        Main.callStage.setScene(Main.feed);
+                    }
+                    else {
+                        userOrPassIncorrect.setVisible(true);
+                    }
+                }
+            }
+        });
+    }
+
+
+
+    @FXML
     void toEcc(MouseEvent event) {
 
         Main.callStage.setScene(Main.ecc);
@@ -182,6 +185,14 @@ public class Controller {
         Main.callStage.setScene(Main.rnp);
 
     }
+
+
+    // test join event and send to JoinEvent Database
+    @FXML
+    void testJoinEvent(ActionEvent event) {
+        System.out.println("test join event");
+    }
+
 
 
 
