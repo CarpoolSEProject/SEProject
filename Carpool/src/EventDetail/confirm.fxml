@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="406.0" style="-fx-background-color: #3f4e66;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EventDetail.confirmController">
+    <children>
+        <JFXButton fx:id="confirm_A" contentDisplay="CENTER" focusTraversable="false" layoutX="80.0" layoutY="401.0" onAction="#confirm" style="-fx-background-color: #44a0ef;" text="CONFIRM" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <JFXButton fx:id="back_A" contentDisplay="CENTER" focusTraversable="false" layoutX="219.0" layoutY="400.0" onAction="#back" style="-fx-border-color: #ffffff; -fx-border-radius: 5;" text="BACK" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="118.0" layoutX="44.0" layoutY="240.0" opacity="0.61" stroke="TRANSPARENT" strokeType="INSIDE" width="309.0" />
+        <Text layoutX="64.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TO:">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Text>
+        <Text layoutX="65.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM:">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Text>
+        <Text layoutX="65.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ARRIVE AT:">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Text>
+        <Text layoutX="66.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PLACE TO WAIT:">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="136.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONFIRMATION" underline="true">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Text>
+        <ImageView fx:id="img" fitHeight="163.0" fitWidth="163.0" layoutX="120.0" layoutY="23.0" preserveRatio="true">
+            <image>
+                <Image url="@../place/A.png" />
+            </image>
+        </ImageView>
+      <Text fx:id="to" layoutX="99.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="to" visible="false">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="from" layoutX="126.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="from" visible="false">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="time" layoutX="162.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="time" visible="false">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="date" layoutX="256.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="date" visible="false">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="placeToWait" layoutX="207.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="place to wait" visible="false">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+    </children>
+</Pane>
