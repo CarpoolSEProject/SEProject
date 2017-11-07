@@ -159,7 +159,7 @@
                <children>
                   <Pane fx:id="blockPane1" prefHeight="104.0" prefWidth="494.0" visible="false">
                      <children>
-                        <ImageView fx:id="img1" fitHeight="80.0" fitWidth="80.0" layoutX="17.0" layoutY="14.0" onMouseClicked="#toDetail" preserveRatio="true">
+                        <ImageView fx:id="img1" fitHeight="80.0" fitWidth="80.0" layoutX="17.0" layoutY="14.0" onMouseClicked="#clickBlock1" preserveRatio="true">
                            <image>
                               <Image url="@../place/ECC.png" />
                            </image>
@@ -228,7 +228,7 @@
                   </Pane>
                   <Pane fx:id="blockPane2" layoutX="-4.0" layoutY="111.0" prefHeight="104.0" prefWidth="494.0" visible="false">
                      <children>
-                        <ImageView fx:id="img2" fitHeight="80.0" fitWidth="80.0" layoutX="17.0" layoutY="14.0" onMouseClicked="#toDetail" preserveRatio="true">
+                        <ImageView fx:id="img2" fitHeight="80.0" fitWidth="80.0" layoutX="17.0" layoutY="14.0" onMouseClicked="#clickBlock2" preserveRatio="true">
                            <image>
                               <Image url="@../place/ECC.png" />
                            </image>
@@ -270,14 +270,14 @@
                                     <Insets left="1.0" />
                                  </GridPane.margin>
                               </Text>
-                              <Text fx:id="time11" fill="#d02f51" strokeType="OUTSIDE" strokeWidth="0.0" text="9.00 AM" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
-                              <Text fx:id="car11" fill="#d02f51" strokeType="OUTSIDE" strokeWidth="0.0" text="Private Car" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                              <Text fx:id="time2" fill="#d02f51" strokeType="OUTSIDE" strokeWidth="0.0" text="9.00 AM" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                              <Text fx:id="car2" fill="#d02f51" strokeType="OUTSIDE" strokeWidth="0.0" text="Private Car" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                  <GridPane.margin>
                                     <Insets left="3.0" />
                                  </GridPane.margin>
                               </Text>
-                              <Text fx:id="seat11" fill="#d02f51" strokeType="OUTSIDE" strokeWidth="0.0" text="3" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                              <Text fx:id="date11" fill="#d02f51" strokeType="OUTSIDE" strokeWidth="0.0" text="25/10/2017" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                              <Text fx:id="seat2" fill="#d02f51" strokeType="OUTSIDE" strokeWidth="0.0" text="3" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <Text fx:id="date2" fill="#d02f51" strokeType="OUTSIDE" strokeWidth="0.0" text="25/10/2017" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                  <GridPane.margin>
                                     <Insets top="35.0" />
                                  </GridPane.margin>
@@ -298,7 +298,7 @@
                   </Pane>
                   <Pane fx:id="blockPane3" layoutX="-4.0" layoutY="220.0" prefHeight="104.0" prefWidth="494.0" visible="false">
                      <children>
-                        <ImageView fx:id="img3" fitHeight="80.0" fitWidth="80.0" layoutX="17.0" layoutY="14.0" onMouseClicked="#toDetail" preserveRatio="true">
+                        <ImageView fx:id="img3" fitHeight="80.0" fitWidth="80.0" layoutX="17.0" layoutY="14.0" onMouseClicked="#clickBlock3" preserveRatio="true">
                            <image>
                               <Image url="@../place/ECC.png" />
                            </image>
@@ -340,14 +340,14 @@
                                     <Insets left="1.0" />
                                  </GridPane.margin>
                               </Text>
-                              <Text fx:id="time111" fill="#d02f51" strokeType="OUTSIDE" strokeWidth="0.0" text="9.00 AM" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
-                              <Text fx:id="car111" fill="#d02f51" strokeType="OUTSIDE" strokeWidth="0.0" text="Private Car" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                              <Text fx:id="time3" fill="#d02f51" strokeType="OUTSIDE" strokeWidth="0.0" text="9.00 AM" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                              <Text fx:id="car3" fill="#d02f51" strokeType="OUTSIDE" strokeWidth="0.0" text="Private Car" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                  <GridPane.margin>
                                     <Insets left="3.0" />
                                  </GridPane.margin>
                               </Text>
-                              <Text fx:id="seat111" fill="#d02f51" strokeType="OUTSIDE" strokeWidth="0.0" text="3" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                              <Text fx:id="date111" fill="#d02f51" strokeType="OUTSIDE" strokeWidth="0.0" text="25/10/2017" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                              <Text fx:id="seat3" fill="#d02f51" strokeType="OUTSIDE" strokeWidth="0.0" text="3" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <Text fx:id="date3" fill="#d02f51" strokeType="OUTSIDE" strokeWidth="0.0" text="25/10/2017" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                  <GridPane.margin>
                                     <Insets top="35.0" />
                                  </GridPane.margin>
@@ -368,7 +368,7 @@
                   </Pane>
                   <Pane fx:id="blockPane4" layoutX="-2.0" layoutY="330.0" prefHeight="104.0" prefWidth="494.0" visible="false">
                      <children>
-                        <ImageView fx:id="img4" fitHeight="80.0" fitWidth="80.0" layoutX="17.0" layoutY="14.0" onMouseClicked="#toDetail" preserveRatio="true">
+                        <ImageView fx:id="img4" fitHeight="80.0" fitWidth="80.0" layoutX="17.0" layoutY="14.0" onMouseClicked="#clickBlock4" preserveRatio="true">
                            <image>
                               <Image url="@../place/ECC.png" />
                            </image>
@@ -410,14 +410,14 @@
                                     <Insets left="1.0" />
                                  </GridPane.margin>
                               </Text>
-                              <Text fx:id="time1111" fill="#d02f51" strokeType="OUTSIDE" strokeWidth="0.0" text="9.00 AM" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
-                              <Text fx:id="car1111" fill="#d02f51" strokeType="OUTSIDE" strokeWidth="0.0" text="Private Car" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                              <Text fx:id="time4" fill="#d02f51" strokeType="OUTSIDE" strokeWidth="0.0" text="9.00 AM" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                              <Text fx:id="car4" fill="#d02f51" strokeType="OUTSIDE" strokeWidth="0.0" text="Private Car" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                  <GridPane.margin>
                                     <Insets left="3.0" />
                                  </GridPane.margin>
                               </Text>
-                              <Text fx:id="seat1111" fill="#d02f51" strokeType="OUTSIDE" strokeWidth="0.0" text="3" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                              <Text fx:id="date1111" fill="#d02f51" strokeType="OUTSIDE" strokeWidth="0.0" text="25/10/2017" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                              <Text fx:id="seat4" fill="#d02f51" strokeType="OUTSIDE" strokeWidth="0.0" text="3" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <Text fx:id="date4" fill="#d02f51" strokeType="OUTSIDE" strokeWidth="0.0" text="25/10/2017" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                  <GridPane.margin>
                                     <Insets top="35.0" />
                                  </GridPane.margin>
