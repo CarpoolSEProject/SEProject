@@ -137,6 +137,11 @@ public class passengerFeedController {
     @FXML
     private JFXButton refresh;
 
+    int[] location1 = new int[8];
+    int[] location2 = new int[8];
+    int[] location3 = new int[8];
+    int[] location4 = new int[8];
+
 
     @FXML
     void refresh(ActionEvent event) { //to refresh the feed
@@ -152,7 +157,7 @@ public class passengerFeedController {
             blockPane3.setVisible(false);
             blockPane4.setVisible(false);
         }
-        else if (check.getResultList().isEmpty() == false) {
+        else if (check.getResultList().isEmpty() == false) { //event is not empty
             TypedQuery<Event> fromTable = em.createQuery("SELECT e FROM Event e", Event.class);
 
             for (Event ev : fromTable.getResultList()) {
@@ -167,6 +172,7 @@ public class passengerFeedController {
                     date1.setText(ev.getDate());
                     seat1.setText(String.valueOf(ev.getSeatLeft()));
                     car1.setText(ev.getCarType());
+                    location1 = ev.getLocationWaiting();
 
                     if (ev.getTo().equals("E12 Building")){
                         img1.setImage(new Image("place/E12.png"));
@@ -227,6 +233,24 @@ public class passengerFeedController {
                         seat1.setFill(Color.valueOf("#cf2e51"));
                         car1.setFill(Color.valueOf("#cf2e51"));
                     }
+//                    else if (ev.getTo().equals("Prathep Building")){
+//                        img1.setImage(new Image("place/ECC.png"));
+//                        to1.setFill(Color.valueOf("#cf2e51"));
+//                        from1.setFill(Color.valueOf("#cf2e51"));
+//                        time1.setFill(Color.valueOf("#cf2e51"));
+//                        date1.setFill(Color.valueOf("#cf2e51"));
+//                        seat1.setFill(Color.valueOf("#cf2e51"));
+//                        car1.setFill(Color.valueOf("#cf2e51"));
+//                    }
+//                    else if (ev.getTo().equals("Kae Ki")){
+//                        img1.setImage(new Image("place/ECC.png"));
+//                        to1.setFill(Color.valueOf("#cf2e51"));
+//                        from1.setFill(Color.valueOf("#cf2e51"));
+//                        time1.setFill(Color.valueOf("#cf2e51"));
+//                        date1.setFill(Color.valueOf("#cf2e51"));
+//                        seat1.setFill(Color.valueOf("#cf2e51"));
+//                        car1.setFill(Color.valueOf("#cf2e51"));
+//                    }
 
                 }
                 else if (ev.getEventID() == 2) {
@@ -238,6 +262,7 @@ public class passengerFeedController {
                     date2.setText(ev.getDate());
                     seat2.setText(String.valueOf(ev.getSeatLeft()));
                     car2.setText(ev.getCarType());
+                    location2 = ev.getLocationWaiting();
 
                     if (ev.getTo().equals("E12 Building")){
                         img2.setImage(new Image("place/E12.png"));
@@ -299,6 +324,25 @@ public class passengerFeedController {
                         car2.setFill(Color.valueOf("#cf2e51"));
                     }
 
+                    //else if (ev.getTo().equals("Prathep Building")){
+//                        img1.setImage(new Image("place/ECC.png"));
+//                        to1.setFill(Color.valueOf("#cf2e51"));
+//                        from1.setFill(Color.valueOf("#cf2e51"));
+//                        time1.setFill(Color.valueOf("#cf2e51"));
+//                        date1.setFill(Color.valueOf("#cf2e51"));
+//                        seat1.setFill(Color.valueOf("#cf2e51"));
+//                        car1.setFill(Color.valueOf("#cf2e51"));
+//                    }
+//                    else if (ev.getTo().equals("Kae Ki")){
+//                        img1.setImage(new Image("place/ECC.png"));
+//                        to1.setFill(Color.valueOf("#cf2e51"));
+//                        from1.setFill(Color.valueOf("#cf2e51"));
+//                        time1.setFill(Color.valueOf("#cf2e51"));
+//                        date1.setFill(Color.valueOf("#cf2e51"));
+//                        seat1.setFill(Color.valueOf("#cf2e51"));
+//                        car1.setFill(Color.valueOf("#cf2e51"));
+//                    }
+
 
 
                 }
@@ -310,6 +354,7 @@ public class passengerFeedController {
                     date3.setText(ev.getDate());
                     seat3.setText(String.valueOf(ev.getSeatLeft()));
                     car3.setText(ev.getCarType());
+                    location3 = ev.getLocationWaiting();
 
                     if (ev.getTo().equals("E12 Building")){
                         img3.setImage(new Image("place/E12.png"));
@@ -371,6 +416,25 @@ public class passengerFeedController {
                         car3.setFill(Color.valueOf("#cf2e51"));
                     }
 
+                     //                    else if (ev.getTo().equals("Prathep Building")){
+//                        img1.setImage(new Image("place/ECC.png"));
+//                        to1.setFill(Color.valueOf("#cf2e51"));
+//                        from1.setFill(Color.valueOf("#cf2e51"));
+//                        time1.setFill(Color.valueOf("#cf2e51"));
+//                        date1.setFill(Color.valueOf("#cf2e51"));
+//                        seat1.setFill(Color.valueOf("#cf2e51"));
+//                        car1.setFill(Color.valueOf("#cf2e51"));
+//                    }
+//                    else if (ev.getTo().equals("Kae Ki")){
+//                        img1.setImage(new Image("place/ECC.png"));
+//                        to1.setFill(Color.valueOf("#cf2e51"));
+//                        from1.setFill(Color.valueOf("#cf2e51"));
+//                        time1.setFill(Color.valueOf("#cf2e51"));
+//                        date1.setFill(Color.valueOf("#cf2e51"));
+//                        seat1.setFill(Color.valueOf("#cf2e51"));
+//                        car1.setFill(Color.valueOf("#cf2e51"));
+//                    }
+
                 }
                  if (ev.getEventID() == 4) {
                     blockPane4.setVisible(true);
@@ -380,6 +444,7 @@ public class passengerFeedController {
                     date4.setText(ev.getDate());
                     seat4.setText(String.valueOf(ev.getSeatLeft()));
                     car4.setText(ev.getCarType());
+                    location4 = ev.getLocationWaiting();
 
                     if (ev.getTo().equals("E12 Building")){
                         img1.setImage(new Image("place/E12.png"));
@@ -440,8 +505,28 @@ public class passengerFeedController {
                         seat4.setFill(Color.valueOf("#cf2e51"));
                         car4.setFill(Color.valueOf("#cf2e51"));
                     }
+                     //                    else if (ev.getTo().equals("Prathep Building")){
+//                        img1.setImage(new Image("place/ECC.png"));
+//                        to1.setFill(Color.valueOf("#cf2e51"));
+//                        from1.setFill(Color.valueOf("#cf2e51"));
+//                        time1.setFill(Color.valueOf("#cf2e51"));
+//                        date1.setFill(Color.valueOf("#cf2e51"));
+//                        seat1.setFill(Color.valueOf("#cf2e51"));
+//                        car1.setFill(Color.valueOf("#cf2e51"));
+//                    }
+//                    else if (ev.getTo().equals("Kae Ki")){
+//                        img1.setImage(new Image("place/ECC.png"));
+//                        to1.setFill(Color.valueOf("#cf2e51"));
+//                        from1.setFill(Color.valueOf("#cf2e51"));
+//                        time1.setFill(Color.valueOf("#cf2e51"));
+//                        date1.setFill(Color.valueOf("#cf2e51"));
+//                        seat1.setFill(Color.valueOf("#cf2e51"));
+//                        car1.setFill(Color.valueOf("#cf2e51"));
+//                    }
+
                 }
             }
+
         }
     }
 
@@ -449,8 +534,8 @@ public class passengerFeedController {
     @FXML
     void clickBlock1(MouseEvent event) {
         Main.callStage.setScene(Main.detail);
-        Main.detailController.test(img1.getImage(), to1.getText(), from1.getText(), time1.getText(), date1.getText(), seat1.getText(), car1.getText());
-
+        Main.detailController.toDetail(img1.getImage(), to1.getText(), from1.getText(), time1.getText(),
+                date1.getText(), seat1.getText(), car1.getText(),location1);
 
     }
 

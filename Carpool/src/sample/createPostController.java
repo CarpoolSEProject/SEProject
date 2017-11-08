@@ -234,30 +234,7 @@ public class createPostController {
 //        locationWaiting[5] = "wait_prathep";
 //        locationWaiting[6] = "wait_ecc";
 //        locationWaiting[7] = "wait_RNP";
-//        if (wait_KaeKi.isSelected() == true) {
-//            checkLocation[0] = 1;
-//        }
-//        if (wait_E12.isSelected() == true) {
-//            checkLocation[1] = 1;
-//        }
-//        if (wait_A.isSelected() == true) {
-//            checkLocation[2] = 1;
-//        }
-//        if (wait_lib.isSelected() == true) {
-//            checkLocation[3] = 1;
-//        }
-//        if (wait_sci.isSelected() == true) {
-//            checkLocation[4] = 1;
-//        }
-//        if (wait_prathep.isSelected() == true) {
-//            checkLocation[5] = 1;
-//        }
-//        if (wait_ecc.isSelected() == true) {
-//            checkLocation[6] = 1;
-//        }
-//        if (wait_RNP.isSelected() == true) {
-//            checkLocation[7] = 1;
-//        }
+//
 //        return checkLocation;
 //    }
 
