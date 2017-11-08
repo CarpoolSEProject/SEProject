@@ -13,6 +13,7 @@ import javafx.scene.text.Text;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
+import java.util.List;
 
 public class passengerFeedController {
 
@@ -140,24 +141,22 @@ public class passengerFeedController {
     @FXML
     void refresh(ActionEvent event) { //to refresh the feed
         EntityManager em = Database.getConnection().createEntityManager();
-        TypedQuery<Integer> check = em.createQuery("SELECT EventID FROM Event", Integer.class); //the first event of table Event is dummy event
-        int j = 0; //check empty event
-        for (int i : check.getResultList()) {
-            j = i;
-        }
-        System.out.println("Amount of event: " + j);
+        TypedQuery<Integer> check = em.createQuery("SELECT table FROM Event table WHERE table.EventID = :one", Integer.class);
+        check.setParameter("one",1);
+        System.out.println(check.getResultList());
 
-        if (j == 1) { //event is empty
+        if (check.getResultList().isEmpty()) { //event is empty
+            System.out.println("empty DB");
             blockPane1.setVisible(false);
             blockPane2.setVisible(false);
             blockPane3.setVisible(false);
             blockPane4.setVisible(false);
         }
-        else if (j > 1) { // event is not empty (ev.getEventID = 1 = dummy)
-            TypedQuery<Event> fromTable = em.createQuery("SELECT e FROM Event e WHERE EventID <> 1", Event.class);
+        else if (check.getResultList().isEmpty() == false) {
+            TypedQuery<Event> fromTable = em.createQuery("SELECT e FROM Event e", Event.class);
 
             for (Event ev : fromTable.getResultList()) {
-                if (ev.getEventID() == 2) {
+                if (ev.getEventID() == 1) {
                     System.out.println(ev.getTo());
                     System.out.println(ev.getFrom());
 
@@ -230,7 +229,7 @@ public class passengerFeedController {
                     }
 
                 }
-                else if (ev.getEventID() == 3) {
+                else if (ev.getEventID() == 2) {
 
                     blockPane2.setVisible(true);
                     to2.setText(ev.getTo());
@@ -303,7 +302,7 @@ public class passengerFeedController {
 
 
                 }
-                 if (ev.getEventID() == 4) {
+                 if (ev.getEventID() == 3) {
                     blockPane3.setVisible(true);
                     to3.setText(ev.getTo());
                     from3.setText(ev.getFrom());
@@ -373,7 +372,7 @@ public class passengerFeedController {
                     }
 
                 }
-                 if (ev.getEventID() == 5) {
+                 if (ev.getEventID() == 4) {
                     blockPane4.setVisible(true);
                     to4.setText(ev.getTo());
                     from4.setText(ev.getFrom());
