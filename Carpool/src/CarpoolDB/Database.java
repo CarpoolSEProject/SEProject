@@ -10,7 +10,7 @@ public class Database
     public static EntityManagerFactory emf;
 
     public static void connect() {
-        emf = Persistence.createEntityManagerFactory("objectdb://161.246.6.27/carpool.odb;user=admin;password=admin");
+        emf = Persistence.createEntityManagerFactory("objectdb://161.246.6.27:80/carpool.odb;user=admin;password=admin");
         EntityManager em = emf.createEntityManager();
     }
 

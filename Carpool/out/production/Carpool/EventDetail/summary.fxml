@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="406.0" style="-fx-background-color: #3f4e66;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EventDetail.summaryController">
+    <children>
+        <JFXButton fx:id="arrivedButton" contentDisplay="CENTER" focusTraversable="false" layoutX="89.0" layoutY="396.0" style="-fx-background-color: #39a368;" text="ARRIVED" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <JFXButton fx:id="homeButton" contentDisplay="CENTER" focusTraversable="false" layoutX="219.0" layoutY="395.0" style="-fx-border-color: #ffffff; -fx-border-radius: 5;" text="HOME" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <Text fx:id="TO" fill="#f38a27" layoutX="63.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TO:">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Text>
+        <Text fx:id="FROM" fill="#f38a27" layoutX="64.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM:">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Text>
+        <Text fx:id="arrive" fill="#f38a27" layoutX="64.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ARRIVE AT:">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Text>
+        <Text fx:id="placeToWait" fill="#f38a27" layoutX="65.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PLACE TO WAIT:">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="155.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SUMMARY" underline="true">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Text>
+        <ImageView fx:id="img" fitHeight="163.0" fitWidth="163.0" layoutX="119.0" layoutY="21.0" preserveRatio="true">
+            <image>
+                <Image url="@../place/A.png" />
+            </image>
+        </ImageView>
+      <Text fx:id="to" fill="WHITE" layoutX="98.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="to" visible="false">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="from" fill="WHITE" layoutX="125.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="from" visible="false">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="time" fill="WHITE" layoutX="163.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="time" visible="false">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="date" fill="WHITE" layoutX="237.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="date" visible="false">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="date1" fill="WHITE" layoutX="210.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="place" visible="false">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+    </children>
+</Pane>

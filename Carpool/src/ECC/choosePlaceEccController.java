@@ -27,7 +27,7 @@ public class choosePlaceEccController {
 
     @FXML
     void back(MouseEvent event) throws IOException {
-        Main.callStage.setScene(Main.ecc); // this does not work :(
+//        Main.callStage.setScene(Main.ecc); // this does not work :(
 
     }
 

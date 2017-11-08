@@ -158,6 +158,8 @@ public class passengerFeedController {
 
             for (Event ev : fromTable.getResultList()) {
                 if (ev.getEventID() == 2) {
+                    System.out.println(ev.getTo());
+                    System.out.println(ev.getFrom());
 
                     blockPane1.setVisible(true);
                     to1.setText(ev.getTo());
@@ -447,6 +449,9 @@ public class passengerFeedController {
 
     @FXML
     void clickBlock1(MouseEvent event) {
+        Main.callStage.setScene(Main.detail);
+        Main.detailController.test(img1.getImage(), to1.getText(), from1.getText(), time1.getText(), date1.getText(), seat1.getText(), car1.getText());
+
 
     }
 

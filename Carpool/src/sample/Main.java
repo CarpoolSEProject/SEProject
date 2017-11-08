@@ -1,4 +1,5 @@
 package sample;
+import EventDetail.*;
 
 import CarpoolDB.Database;
 import javafx.application.Application;
@@ -14,15 +15,23 @@ import javax.persistence.EntityManagerFactory;
 
 public class Main extends Application{
     public static Stage callStage;
+
     public static Scene sample;
-    public static Scene ecc;
-    public static Scene a;
-    public static Scene e12;
-    public static Scene rnp;
-    public static Scene choosePlaceEcc;
     public static Scene createPost;
     public static Scene feed;
     public static Scene driverFeed;
+    public static Scene detail;
+    public static Scene choosePlacetoWait;
+    public static Scene confirm;
+    public static Scene summary;
+
+    public static Controller controller;
+    public static createPostController createPostController;
+    public static driverFeedController driverFeedController;
+    public static detailController detailController;
+    public static choosePlaceToWaitController choosePlaceToWaitController;
+    public static confirmController confirmController;
+    public static summaryController summaryController;
 
     public static int checkLogin = 0;
     private static EntityManagerFactory emf;
@@ -32,24 +41,32 @@ public class Main extends Application{
     public void start(Stage primaryStage) throws Exception {
 
         callStage = primaryStage;
-        Parent sample = FXMLLoader.load(getClass().getResource("sample.fxml")); // login
-        Parent feed = FXMLLoader.load(getClass().getResource("feed.fxml"));
-        Parent ecc = FXMLLoader.load(getClass().getResource("../ECC/ecc.fxml"));
-        Parent a = FXMLLoader.load(getClass().getResource("../A/a.fxml"));
-        Parent e12 = FXMLLoader.load(getClass().getResource("../E12/e12.fxml"));
-        Parent rnp = FXMLLoader.load(getClass().getResource("../RNP/rnp.fxml"));
-        Parent choosePlaceEcc = FXMLLoader.load(getClass().getResource("../ECC/choosePlaceEcc.fxml"));
-        Parent createPost = FXMLLoader.load(getClass().getResource("createPost.fxml"));
-        Parent driverFeed = FXMLLoader.load(getClass().getResource("driverFeed.fxml"));
-        this.sample = new Scene(sample);
-        this.feed = new Scene(feed);
-        this.ecc = new Scene(ecc);
-        this.a = new Scene(a);
-        this.e12 = new Scene(e12);
-        this.rnp = new Scene(rnp);
-        this.choosePlaceEcc = new Scene(choosePlaceEcc);
-        this.createPost = new Scene(createPost);
-        this.driverFeed = new Scene(driverFeed);
+        FXMLLoader sample = new FXMLLoader(getClass().getResource("sample.fxml")); // login
+        FXMLLoader feed = new FXMLLoader(getClass().getResource("feed.fxml"));
+        FXMLLoader createPost = new FXMLLoader(getClass().getResource("createPost.fxml"));
+        FXMLLoader driverFeed = new FXMLLoader(getClass().getResource("driverFeed.fxml"));
+        FXMLLoader detail = new FXMLLoader(getClass().getResource("../EventDetail/detail.fxml"));
+        FXMLLoader choosePlaceToWait = new FXMLLoader(getClass().getResource("../EventDetail/choosePlaceToWait.fxml"));
+        FXMLLoader confirm = new FXMLLoader(getClass().getResource("../EventDetail/confirm.fxml"));
+        FXMLLoader summary = new FXMLLoader(getClass().getResource("../EventDetail/summary.fxml"));
+
+        this.sample = new Scene(sample.load());
+        this.feed = new Scene(feed.load());
+        this.createPost = new Scene(createPost.load());
+        this.driverFeed = new Scene(driverFeed.load());
+        this.detail = new Scene(detail.load());
+        this.choosePlacetoWait = new Scene(choosePlaceToWait.load());
+        this.confirm = new Scene(confirm.load());
+        this.summary = new Scene(summary.load());
+
+        this.controller = sample.getController();
+        this.createPostController = createPost.getController();
+        this.driverFeedController = driverFeed.getController();
+        this.detailController = detail.getController();
+        this.choosePlaceToWaitController = choosePlaceToWait.getController();
+        this.confirmController = confirm.getController();
+        this.summaryController = summary.getController();
+
 
         callStage.setTitle("CARPOOL");
         callStage.setScene(this.sample);

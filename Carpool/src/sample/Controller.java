@@ -95,30 +95,6 @@ public class Controller {
     }
 
 
-//
-//    @FXML
-//    void toEcc(MouseEvent event) {
-//
-//        Main.callStage.setScene(Main.ecc);
-//    }
-//
-//    @FXML
-//    void toA(MouseEvent event) {
-//
-//        Main.callStage.setScene(Main.a);
-//    }
-//
-//    @FXML
-//    void toE12(MouseEvent event) {
-//
-//        Main.callStage.setScene(Main.e12);
-//    }
-//
-//    @FXML
-//    void toRnp(MouseEvent event) {
-//        Main.callStage.setScene(Main.rnp);
-//
-//    }
 
 
 
