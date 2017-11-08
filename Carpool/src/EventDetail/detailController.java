@@ -1,6 +1,7 @@
 package EventDetail;
 
 import com.jfoenix.controls.JFXButton;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -8,6 +9,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
+import sample.Main;
 
 public class detailController {
 
@@ -104,6 +106,14 @@ public class detailController {
 
     @FXML
     private Rectangle line_car;
+
+    @FXML
+    private JFXButton joinButton;
+
+    @FXML
+    private JFXButton backButton;
+
+    String[] choicePlaceToWait;
 
 
     public void toDetail(Image img, String to, String from, String time, String date, String seat, String car, int[] locationWaiting){
@@ -288,16 +298,24 @@ public class detailController {
             }
         }
 
+
+
         // set visible to choice of place to wait
         if (countSize == 1){
             choice1.setVisible(true);
             line1.setVisible(true);
+            choicePlaceToWait = new String[1];
+            choicePlaceToWait[0] = choice1.getText();
+
         }
         else if (countSize == 2){
             choice1.setVisible(true);
             choice2.setVisible(true);
             line1.setVisible(true);
             line2.setVisible(true);
+            choicePlaceToWait = new String[2];
+            choicePlaceToWait[0] = choice1.getText();
+            choicePlaceToWait[1] = choice2.getText();
         }
         else if (countSize == 3){
             choice1.setVisible(true);
@@ -306,6 +324,10 @@ public class detailController {
             line1.setVisible(true);
             line2.setVisible(true);
             line3.setVisible(true);
+            choicePlaceToWait = new String[3];
+            choicePlaceToWait[0] = choice1.getText();
+            choicePlaceToWait[1] = choice2.getText();
+            choicePlaceToWait[2] = choice3.getText();
         }
         else if (countSize == 4){
             choice1.setVisible(true);
@@ -316,6 +338,11 @@ public class detailController {
             line2.setVisible(true);
             line3.setVisible(true);
             line4.setVisible(true);
+            choicePlaceToWait = new String[4];
+            choicePlaceToWait[0] = choice1.getText();
+            choicePlaceToWait[1] = choice2.getText();
+            choicePlaceToWait[2] = choice3.getText();
+            choicePlaceToWait[3] = choice4.getText();
         }
         else if (countSize == 5){
             choice1.setVisible(true);
@@ -328,13 +355,29 @@ public class detailController {
             line3.setVisible(true);
             line4.setVisible(true);
             line5.setVisible(true);
+            choicePlaceToWait = new String[5];
+            choicePlaceToWait[0] = choice1.getText();
+            choicePlaceToWait[1] = choice2.getText();
+            choicePlaceToWait[2] = choice3.getText();
+            choicePlaceToWait[3] = choice4.getText();
+            choicePlaceToWait[4] = choice5.getText();
         }
 
+    }
 
 
+    @FXML
+    void back(ActionEvent event) {
+        Main.callStage.setScene(Main.feed);
+    }
 
-
+    @FXML
+    void join(ActionEvent event) {
+        Main.callStage.setScene(Main.choosePlacetoWait);
+        Main.choosePlaceToWaitController.toChoosePlaceToWait(img.getImage(), to.getText(), from.getText(), time.getText(),
+                date.getText(), seat.getText(), car.getText(),choicePlaceToWait);
 
     }
+
 
 }
