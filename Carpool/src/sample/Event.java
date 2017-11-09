@@ -17,8 +17,8 @@ public class Event {
     public Integer EventID;
     @ManyToOne
     public String Driver;
-//    @OneToMany(cascade=CascadeType.ALL, mappedBy="event")
-//    private JoinEvent JoinEvent;
+    @OneToMany(cascade=CascadeType.ALL, mappedBy="event")
+    private JoinEvent JoinEvent;
     public String From;
     public String To;
     @Temporal(TemporalType.DATE)
@@ -100,15 +100,4 @@ public class Event {
         return LocationWaiting;
     }
 
-    public void setLocationWaiting(int[] locationWaiting) {
-        LocationWaiting = locationWaiting;
-    }
-
-//    public String getNotice() {
-//        return Notice;
-//    }
-//
-//    public void setNotice(String notice) {
-//        Notice = notice;
-//    }
 }

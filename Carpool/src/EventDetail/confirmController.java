@@ -149,8 +149,10 @@ public class confirmController {
         q.setParameter("car",car);
 
         String driverName = null ;
+        int id;
         for ( sample.Event driver : q.getResultList()) {
             driverName = driver.getDriver();
+            id = driver.getEventID();
         }
         System.out.println("test get result: "+q.getResultList());
 
@@ -165,11 +167,11 @@ public class confirmController {
         int locationWaitingForSend[] = convertLocation();
         String passenger = "Puttachart Srisuwankul";
 
-        JoinEvent toSend = new JoinEvent(driverName, from.getText(), to.getText(), date.getText(), time.getText(), car, seatForSend-1,
-                locationWaitingForSend, passenger);
-        em.getTransaction().begin();
-        em.persist(toSend);
-        em.getTransaction().commit();
+//        JoinEvent toSend = new JoinEvent(driverName, from.getText(), to.getText(), date.getText(), time.getText(), car,
+//                seatForSend-1, locationWaitingForSend, passenger);
+//        em.getTransaction().begin();
+//        em.persist(toSend);
+//        em.getTransaction().commit();
 
 
         // To next page

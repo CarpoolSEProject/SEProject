@@ -1,24 +1,36 @@
 package sample;
 
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
+import com.objectdb.o.INT;
+
+import javax.persistence.*;
 import java.sql.Time;
 import java.util.Date;
 import java.util.List;
 
 @Entity
-public class JoinEvent extends Event {
+public class JoinEvent {
 
-//    @ManyToOne
-//    private Passenger Passenger;
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    public Integer joinEventID;
+
+    @ManyToOne
+    private Event event;
     private String Passenger;
 
-    public JoinEvent(String Driver, String From, String To,String Date, String Time, String CarType, Integer SeatLeft, int[] LocationWaiting, String Passenger) {
-       super(Driver, From, To, Date, Time, CarType, SeatLeft, LocationWaiting);
+    public JoinEvent(Integer joinEventID, String Passenger) {
+        this.joinEventID = joinEventID;
         this.Passenger = Passenger;
     }
 
     public String getPassenger() { return Passenger; }
 
     public void setPassenger(String Passenger) { this.Passenger = Passenger; }
+
+    public Event getEvent() {
+        return event;
+    }
+
 }
+
+//j.getEvent.get ...
