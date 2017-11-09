@@ -160,7 +160,7 @@ public class passengerFeedController {
             blockPane4.setVisible(false);
         }
         else if (check.getResultList().isEmpty() == false) { //event is not empty
-            TypedQuery<Event> fromTable = em.createQuery("SELECT e FROM Event e", Event.class);
+            TypedQuery<Event> fromTable = em.createQuery("SELECT e FROM Event e WHERE e.SeatLeft <> 0", Event.class);
 
             for (Event ev : fromTable.getResultList()) {
                 if (ev.getEventID() == 1) {
