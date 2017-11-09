@@ -9,6 +9,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
 import javax.persistence.EntityManager;
@@ -136,6 +137,7 @@ public class passengerFeedController {
 
     @FXML
     private JFXButton refresh;
+
 
     int[] location1 = new int[8];
     int[] location2 = new int[8];
@@ -541,7 +543,9 @@ public class passengerFeedController {
 
     @FXML
     void clickBlock2(MouseEvent event) {
-
+        Main.callStage.setScene(Main.detail);
+        Main.detailController.toDetail(img2.getImage(), to2.getText(), from2.getText(), time2.getText(),
+                date2.getText(), seat2.getText(), car2.getText(),location2);
     }
 
     @FXML

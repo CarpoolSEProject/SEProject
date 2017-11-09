@@ -225,19 +225,5 @@ public class createPostController {
         return count;
     }
 
-//    public int[] checkLocation() {
-//        locationWaiting[0] = "wait_KaeKi";
-//        locationWaiting[1] = "wait_E12";
-//        locationWaiting[2] = "wait_A";
-//        locationWaiting[3] = "wait_lib";
-//        locationWaiting[4] = "wait_sci";
-//        locationWaiting[5] = "wait_prathep";
-//        locationWaiting[6] = "wait_ecc";
-//        locationWaiting[7] = "wait_RNP";
-//
-//        return checkLocation;
-//    }
-
-
 
 }

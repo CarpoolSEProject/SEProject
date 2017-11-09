@@ -147,7 +147,7 @@
                 <Font size="17.0" />
             </font>
         </Text>
-        <Pane fx:id="aPane" layoutX="14.0" layoutY="126.0" prefHeight="451.0" prefWidth="402.0">
+        <Pane fx:id="Pane" layoutX="14.0" layoutY="126.0" prefHeight="451.0" prefWidth="402.0">
             <children>
                 <Text fill="WHITE" layoutX="200.0" layoutY="31.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="TO">
                     <font>

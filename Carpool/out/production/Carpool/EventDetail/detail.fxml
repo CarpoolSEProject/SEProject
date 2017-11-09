@@ -147,7 +147,7 @@
                 <Font size="17.0" />
             </font>
         </Text>
-        <Pane fx:id="aPane" layoutX="14.0" layoutY="126.0" prefHeight="451.0" prefWidth="402.0">
+        <Pane fx:id="Pane" layoutX="14.0" layoutY="126.0" prefHeight="451.0" prefWidth="402.0">
             <children>
                 <Text fill="WHITE" layoutX="200.0" layoutY="31.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="TO">
                     <font>
@@ -159,7 +159,7 @@
                         <Font size="17.0" />
                     </font>
                 </Text>
-                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff9129" height="25.0" layoutX="195.0" layoutY="122.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
+                <Rectangle fx:id="line_car" arcHeight="5.0" arcWidth="5.0" fill="#ff9129" height="25.0" layoutX="195.0" layoutY="122.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
                 <Text fill="WHITE" layoutX="202.0" layoutY="63.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM">
                     <font>
                         <Font size="15.0" />
@@ -186,7 +186,6 @@
                         <Font size="15.0" />
                     </font>
                 </Text>
-                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff9129" height="25.0" layoutX="195.0" layoutY="153.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
                 <Text fx:id="car" fill="#ff9129" layoutX="287.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="car" visible="false">
                     <font>
                         <Font size="17.0" />
@@ -197,36 +196,26 @@
                         <Font size="17.0" />
                     </font>
                 </Text>
-                <Text fill="WHITE" layoutX="34.0" layoutY="200.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="SEAT LEFT">
+                <Text fill="WHITE" layoutX="205.0" layoutY="169.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="SEAT LEFT">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </Text>
-                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff9129" height="25.0" layoutX="24.0" layoutY="183.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
-                <Text fx:id="seat" fill="#ff9129" layoutX="134.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" visible="false">
+                <Rectangle fx:id="line_seat" arcHeight="5.0" arcWidth="5.0" fill="#ff9129" height="25.0" layoutX="195.0" layoutY="152.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
+                <Text fx:id="seat" fill="#ff9129" layoutX="294.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" visible="false">
                     <font>
                         <Font size="17.0" />
                     </font>
                 </Text>
-                <Text fill="WHITE" layoutX="204.0" layoutY="171.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="NOTICE">
-                    <font>
-                        <Font size="15.0" />
-                    </font>
-                </Text>
-                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff9129" height="25.0" layoutX="194.0" layoutY="13.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
-                <Text fill="#ff9129" layoutX="273.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="None">
+                <Rectangle fx:id="line_to" arcHeight="5.0" arcWidth="5.0" fill="#ff9129" height="25.0" layoutX="194.0" layoutY="13.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
+                <Text fill="WHITE" layoutX="121.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PLACE TO WAIT" underline="true">
                     <font>
                         <Font size="17.0" />
                     </font>
                 </Text>
-                <Text fill="WHITE" layoutX="133.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PLACE TO WAIT" underline="true">
-                    <font>
-                        <Font size="17.0" />
-                    </font>
-                </Text>
-                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff9129" height="25.0" layoutX="194.0" layoutY="45.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
-                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff9129" height="25.0" layoutX="194.0" layoutY="77.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
-                <JFXButton fx:id="join_A" contentDisplay="CENTER" focusTraversable="false" layoutX="97.0" layoutY="395.0" style="-fx-background-color: #44a0ef;" text="JOIN" textAlignment="CENTER" textFill="WHITE">
+                <Rectangle fx:id="line_from" arcHeight="5.0" arcWidth="5.0" fill="#ff9129" height="25.0" layoutX="194.0" layoutY="45.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
+                <Rectangle fx:id="line_arrive" arcHeight="5.0" arcWidth="5.0" fill="#ff9129" height="25.0" layoutX="194.0" layoutY="77.0" stroke="#ffffff00" strokeType="INSIDE" width="2.0" />
+                <JFXButton fx:id="joinButton" contentDisplay="CENTER" focusTraversable="false" layoutX="103.0" layoutY="395.0" onAction="#join" style="-fx-background-color: #44a0ef;" text="JOIN" textAlignment="CENTER" textFill="WHITE">
                     <font>
                         <Font size="20.0" />
                     </font>
@@ -234,7 +223,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </JFXButton>
-                <JFXButton fx:id="back_A" contentDisplay="CENTER" focusTraversable="false" layoutX="188.0" layoutY="394.0" style="-fx-border-color: #ffffff; -fx-border-radius: 5;" text="BACK" textAlignment="CENTER" textFill="WHITE">
+                <JFXButton fx:id="backButton" contentDisplay="CENTER" focusTraversable="false" layoutX="194.0" layoutY="394.0" onAction="#back" style="-fx-border-color: #ffffff; -fx-border-radius: 5;" text="BACK" textAlignment="CENTER" textFill="WHITE">
                     <font>
                         <Font size="20.0" />
                     </font>
@@ -259,27 +248,27 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                      <Text fx:id="choice1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="choice1" visible="false">
+                      <Text fx:id="choice1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" visible="false">
                           <font>
                               <Font size="15.0" />
                           </font>
                       </Text>
-                      <Text fx:id="choice2" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="choice2" visible="false" GridPane.rowIndex="1">
+                      <Text fx:id="choice2" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" visible="false" GridPane.rowIndex="1">
                           <font>
                               <Font size="15.0" />
                           </font>
                       </Text>
-                  <Text fx:id="choice3" fill="WHITE" layoutX="10.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="choice3" visible="false" GridPane.rowIndex="2">
+                  <Text fx:id="choice3" fill="WHITE" layoutX="10.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" visible="false" GridPane.rowIndex="2">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Text>
-                  <Text fx:id="choice4" fill="WHITE" layoutX="10.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="choice4" visible="false" GridPane.rowIndex="3">
+                  <Text fx:id="choice4" fill="WHITE" layoutX="10.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" visible="false" GridPane.rowIndex="3">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Text>
-                  <Text fx:id="choice5" fill="WHITE" layoutX="10.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="choice5" visible="false" GridPane.rowIndex="4">
+                  <Text fx:id="choice5" fill="WHITE" layoutX="10.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" visible="false" GridPane.rowIndex="4">
                      <font>
                         <Font size="15.0" />
                      </font>
