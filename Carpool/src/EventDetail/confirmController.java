@@ -163,9 +163,13 @@ public class confirmController {
 
         int seatForSend = Integer.parseInt(seat); //convert seat before send to db
         int locationWaitingForSend[] = convertLocation();
+        String passenger = "Puttachart Srisuwankul";
 
         JoinEvent toSend = new JoinEvent(driverName, from.getText(), to.getText(), date.getText(), time.getText(), car, seatForSend-1,
-//                locationWaitingForSend, );
+                locationWaitingForSend, passenger);
+        em.getTransaction().begin();
+        em.persist(toSend);
+        em.getTransaction().commit();
 
 
         // To next page

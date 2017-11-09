@@ -205,6 +205,8 @@ public class createPostController {
             warning.setVisible(true);
         }
 
+        Main.callStage.setScene(Main.feed);
+
     }
 
 
