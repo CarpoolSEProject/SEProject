@@ -364,13 +364,17 @@ public class detailController {
 
     @FXML
     void join(ActionEvent event) throws IOException {
-        Pane.getChildren().clear();
+//        Pane.getChildren().clear();
         Pane.getChildren().add(Main.choosePlacetoWait.getRoot());
 
         Main.choosePlaceToWaitController.toChoosePlaceToWait(img.getImage(), to.getText(), from.getText(), time.getText(),
                 date.getText(), seat.getText(), car.getText(), choicePlaceToWait);
+        Main.choosePlaceToWaitController.myParent = this;
 
+    }
 
+    public void removeMe() {
+        Pane.getChildren().remove(Main.choosePlacetoWait.getRoot());
     }
 
 

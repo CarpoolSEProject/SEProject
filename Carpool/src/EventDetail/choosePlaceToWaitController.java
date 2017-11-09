@@ -47,6 +47,8 @@ public class choosePlaceToWaitController {
     String car;
     String[] choicePlaceToWait;
 
+    public detailController myParent;
+
     public void toChoosePlaceToWait(Image img, String to, String from, String time, String date, String seat, String car, String[] choicePlaceToWait){
 
         this.to = to;
@@ -162,15 +164,15 @@ public class choosePlaceToWaitController {
         }
     }
 
-//test
+
     @FXML
     void back(ActionEvent event) {
-        Main.callStage.setScene(Main.detail);
+        myParent.removeMe();
     }
 
     @FXML
     void ok(ActionEvent event) {
-
+        
     }
 
 
