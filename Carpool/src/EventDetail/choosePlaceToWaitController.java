@@ -162,7 +162,7 @@ public class choosePlaceToWaitController {
         }
     }
 
-
+//test
     @FXML
     void back(ActionEvent event) {
         Main.callStage.setScene(Main.detail);
