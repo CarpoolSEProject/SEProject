@@ -50,8 +50,9 @@ public class choosePlaceToWaitController {
     String seat;
     String car;
     String[] choicePlaceToWait;
+    String placeToWait;
 
-    public detailController myParent;
+    public detailController choosePlaceParent;
 
     public void toChoosePlaceToWait(Image img, String to, String from, String time, String date, String seat, String car, String[] choicePlaceToWait){
 
@@ -171,7 +172,7 @@ public class choosePlaceToWaitController {
 
     @FXML
     void back(ActionEvent event) {
-        myParent.removeMe();
+        choosePlaceParent.removeMe();
     }
 
     @FXML
@@ -182,18 +183,24 @@ public class choosePlaceToWaitController {
         for (int i = 0; i<5; i++){
             if (arrCount[i].isSelected() == true) {
                 count++;
+                placeToWait = arrCount[i].getText();
             }
         }
-
         // check if no choice is selected or select more than one
         if (count == 0 || count > 1){
             warning.setVisible(true);
         }
 
         else {
-
+            pane.getChildren().add(Main.confirm.getRoot());
+            Main.confirmController.toConfirm(img.getImage(), to, from, time,
+                    date, seat, car, placeToWait);
         }
 
+    }
+
+    public void removeMe() {
+        pane.getChildren().remove(Main.confirm.getRoot());
     }
 
 

@@ -369,7 +369,7 @@ public class detailController {
 
         Main.choosePlaceToWaitController.toChoosePlaceToWait(img.getImage(), to.getText(), from.getText(), time.getText(),
                 date.getText(), seat.getText(), car.getText(), choicePlaceToWait);
-        Main.choosePlaceToWaitController.myParent = this;
+        Main.choosePlaceToWaitController.choosePlaceParent = this;
 
     }
 
