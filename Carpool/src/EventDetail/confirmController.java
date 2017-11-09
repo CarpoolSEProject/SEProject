@@ -174,10 +174,13 @@ public class confirmController {
 //        em.persist(toSend);
 //        em.getTransaction().commit();
 
+        em.getTransaction().begin();
         Query query = em.createQuery(
                 "UPDATE Event SET SeatLeft = SeatLeft - 1 " +
-                        "WHERE EventID = :theId");
-        int updateCount = query.setParameter("theId", id).executeUpdate();
+                        "WHERE EventID = " + String.valueOf(id));
+        int updateCount = query.executeUpdate();
+        em.getTransaction().commit();
+        em.close();
 
 
         // To next page
