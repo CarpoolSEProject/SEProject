@@ -197,6 +197,8 @@ public class choosePlaceToWaitController {
                     date, seat, car, placeToWait);
         }
 
+        Main.confirmController.confirmParent = this;
+
     }
 
     public void removeMe() {
