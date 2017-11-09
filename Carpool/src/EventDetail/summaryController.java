@@ -123,11 +123,13 @@ public class summaryController {
 
     @FXML
     void arrrived(ActionEvent event) {
+        System.out.println("ARRIVED");
         Main.callStage.setScene(Main.feed);
     }
 
     @FXML
     void home(ActionEvent event) {
+        System.out.println("HOME");
         Main.callStage.setScene(Main.feed);
     }
 

@@ -11,6 +11,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import sample.JoinEvent;
 import sample.Main;
+import sample.Passenger;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
@@ -139,25 +140,127 @@ public class confirmController {
 
         // send event to database
         EntityManager em = Database.getConnection().createEntityManager();
-        TypedQuery<String> q = em.createQuery("SELECT table FROM Event table WHERE table.To = :to AND table.From = :from " +
-                "AND table.Date = :date AND table.Time = :time AND table.CarType = :car" , String.class);
-        q.setParameter("to",this.to).toString();
-        q.setParameter("from",this.from.toString());
-        q.setParameter("date",this.date.toString());
-        q.setParameter("time",this.time.toString());
-        q.setParameter("car",this.car.toString());
+        TypedQuery<sample.Event> q = em.createQuery("SELECT table FROM Event table WHERE table.To = :to AND table.From = :from " +
+                "AND table.Date = :date AND table.Time = :time AND table.CarType = :car" , sample.Event.class);
+        q.setParameter("to",to.getText());
+        q.setParameter("from",from.getText());
+        q.setParameter("date",date.getText());
+        q.setParameter("time",time.getText());
+        q.setParameter("car",car);
 
-        for (String i : q.getResultList()){
-            System.out.println("from table: "+i);
+        String driverName = null ;
+        for ( sample.Event driver : q.getResultList()) {
+            driverName = driver.getDriver();
         }
+        System.out.println("test get result: "+q.getResultList());
+
+        System.out.println("look! to: "+ to.getText());
+        System.out.println("look! from: "+ from.getText());
+        System.out.println("look! date: "+ date.getText());
+        System.out.println("look! time: "+ time.getText());
+        System.out.println("look! car: "+ car);
+        System.out.println("look! driver: "+ driverName);
+
+        int seatForSend = Integer.parseInt(seat); //convert seat before send to db
+        int locationWaitingForSend[] = convertLocation();
+
+        JoinEvent toSend = new JoinEvent(driverName, from.getText(), to.getText(), date.getText(), time.getText(), car, seatForSend-1,
+//                locationWaitingForSend, );
 
 
-//        JoinEvent toSend = new JoinEvent(driverName, );
-
-
-
+        // To next page
         pane.getChildren().add(Main.summary.getRoot());
         Main.summaryController.toSummary(img.getImage(), to.getText(), from.getText(), time.getText(),
                 date.getText(), seat, car, placeToWait.getText());
+    }
+
+
+
+
+    public int[] convertLocation(){
+        int[] arr = new int[8];
+
+        if (placeToWait.equals("Kae Ki")){
+            for (int i = 0; i<8 ;i++) {
+                if (i == 0) {
+                    arr[i] = 1;
+                }
+                else {
+                    arr[i] = 0;
+                }
+            }
+        }
+        else if (placeToWait.equals("E12 Building")){
+            for (int i = 0; i<8 ;i++) {
+                if (i == 1) {
+                    arr[i] = 1;
+                }
+                else {
+                    arr[i] = 0;
+                }
+            }
+        }
+        else if (placeToWait.equals("A Cafeteria")){
+            for (int i = 0; i<8 ;i++) {
+                if (i == 2) {
+                    arr[i] = 1;
+                }
+                else {
+                    arr[i] = 0;
+                }
+            }
+        }
+        else if (placeToWait.equals("Central Library")){
+            for (int i = 0; i<8 ;i++) {
+                if (i == 3) {
+                    arr[i] = 1;
+                }
+                else {
+                    arr[i] = 0;
+                }
+            }
+        }
+        else if (placeToWait.equals("Faculty of Science")){
+            for (int i = 0; i<8 ;i++) {
+                if (i == 4) {
+                    arr[i] = 1;
+                }
+                else {
+                    arr[i] = 0;
+                }
+            }
+        }
+        else if (placeToWait.equals("Prathep Building")){
+            for (int i = 0; i<8 ;i++) {
+                if (i == 5) {
+                    arr[i] = 1;
+                }
+                else {
+                    arr[i] = 0;
+                }
+            }
+        }
+        else if (placeToWait.equals("ECC Building")){
+            for (int i = 0; i<8 ;i++) {
+                if (i == 6) {
+                    arr[i] = 1;
+                }
+                else {
+                    arr[i] = 0;
+                }
+            }
+        }
+        else if (placeToWait.equals("RNP")){
+            for (int i = 0; i<8 ;i++) {
+                if (i == 7) {
+                    arr[i] = 1;
+                }
+                else {
+                    arr[i] = 0;
+                }
+            }
+        }
+
+        return arr;
     }
 }
