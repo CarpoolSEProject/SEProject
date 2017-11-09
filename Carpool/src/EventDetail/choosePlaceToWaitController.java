@@ -8,6 +8,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import sample.Main;
 
 public class choosePlaceToWaitController {
@@ -38,6 +39,9 @@ public class choosePlaceToWaitController {
 
     @FXML
     private JFXCheckBox choice5;
+
+    @FXML
+    private Text warning;
 
     String to;
     String from;
@@ -172,7 +176,24 @@ public class choosePlaceToWaitController {
 
     @FXML
     void ok(ActionEvent event) {
-        
+
+        JFXCheckBox[] arrCount = {choice1, choice2, choice3, choice4, choice5};
+        int count = 0;
+        for (int i = 0; i<5; i++){
+            if (arrCount[i].isSelected() == true) {
+                count++;
+            }
+        }
+
+        // check if no choice is selected or select more than one
+        if (count == 0 || count > 1){
+            warning.setVisible(true);
+        }
+
+        else {
+
+        }
+
     }
 
 
