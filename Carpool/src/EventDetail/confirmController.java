@@ -14,6 +14,7 @@ import sample.Main;
 import sample.Passenger;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 public class confirmController {
@@ -149,7 +150,7 @@ public class confirmController {
         q.setParameter("car",car);
 
         String driverName = null ;
-        int id;
+        int id = 0;
         for ( sample.Event driver : q.getResultList()) {
             driverName = driver.getDriver();
             id = driver.getEventID();
@@ -172,6 +173,11 @@ public class confirmController {
 //        em.getTransaction().begin();
 //        em.persist(toSend);
 //        em.getTransaction().commit();
+
+        Query query = em.createQuery(
+                "UPDATE Event SET SeatLeft = SeatLeft - 1 " +
+                        "WHERE EventID = :theId");
+        int updateCount = query.setParameter("theId", id).executeUpdate();
 
 
         // To next page
