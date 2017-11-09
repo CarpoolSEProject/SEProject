@@ -157,7 +157,7 @@
             </JFXButton>
             <Pane layoutX="-4.0" layoutY="33.0" prefHeight="458.0" prefWidth="495.0">
                <children>
-                  <Pane fx:id="blockPane1" prefHeight="104.0" prefWidth="494.0" visible="false">
+                  <Pane fx:id="blockPane1" layoutX="-3.0" prefHeight="104.0" prefWidth="494.0" visible="false">
                      <children>
                         <ImageView fx:id="img1" fitHeight="80.0" fitWidth="80.0" layoutX="17.0" layoutY="14.0" onMouseClicked="#clickBlock1" preserveRatio="true">
                            <image>
@@ -226,7 +226,7 @@
                         </GridPane>
                      </children>
                   </Pane>
-                  <Pane fx:id="blockPane2" layoutX="-4.0" layoutY="111.0" prefHeight="104.0" prefWidth="494.0" visible="false">
+                  <Pane fx:id="blockPane2" layoutX="-3.0" layoutY="111.0" prefHeight="104.0" prefWidth="494.0" visible="false">
                      <children>
                         <ImageView fx:id="img2" fitHeight="80.0" fitWidth="80.0" layoutX="17.0" layoutY="14.0" onMouseClicked="#clickBlock2" preserveRatio="true">
                            <image>
@@ -296,7 +296,7 @@
                         </GridPane>
                      </children>
                   </Pane>
-                  <Pane fx:id="blockPane3" layoutX="-4.0" layoutY="220.0" prefHeight="104.0" prefWidth="494.0" visible="false">
+                  <Pane fx:id="blockPane3" layoutX="-3.0" layoutY="220.0" prefHeight="104.0" prefWidth="494.0" visible="false">
                      <children>
                         <ImageView fx:id="img3" fitHeight="80.0" fitWidth="80.0" layoutX="17.0" layoutY="14.0" onMouseClicked="#clickBlock3" preserveRatio="true">
                            <image>
@@ -366,7 +366,7 @@
                         </GridPane>
                      </children>
                   </Pane>
-                  <Pane fx:id="blockPane4" layoutX="-2.0" layoutY="330.0" prefHeight="104.0" prefWidth="494.0" visible="false">
+                  <Pane fx:id="blockPane4" layoutX="-3.0" layoutY="330.0" prefHeight="104.0" prefWidth="494.0" visible="false">
                      <children>
                         <ImageView fx:id="img4" fitHeight="80.0" fitWidth="80.0" layoutX="17.0" layoutY="14.0" onMouseClicked="#clickBlock4" preserveRatio="true">
                            <image>

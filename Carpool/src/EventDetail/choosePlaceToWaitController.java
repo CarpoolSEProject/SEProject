@@ -7,6 +7,8 @@ import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import sample.Main;
 
 public class choosePlaceToWaitController {
 
@@ -76,7 +78,6 @@ public class choosePlaceToWaitController {
             choice1.setVisible(true);
             choice2.setVisible(true);
             choice3.setVisible(true);
-
         }
         else if (countSize == 4){
             choice1.setText(choicePlaceToWait[0]);
@@ -102,16 +103,69 @@ public class choosePlaceToWaitController {
         }
 
 
+    setColor();
 
     }
 
+    public void setColor (){
+        if (to.equals("Kae Ki")){
 
-
+        }
+        else if (to.equals("E12 Building")){
+            choice1.setTextFill(Color.valueOf("#cf2e51"));
+            choice2.setTextFill(Color.valueOf("#cf2e51"));
+            choice3.setTextFill(Color.valueOf("#cf2e51"));
+            choice4.setTextFill(Color.valueOf("#cf2e51"));
+            choice5.setTextFill(Color.valueOf("#cf2e51"));
+        }
+        else if (to.equals("A Cafeteria")){
+            choice1.setTextFill(Color.valueOf("#fd9139"));
+            choice2.setTextFill(Color.valueOf("#fd9139"));
+            choice3.setTextFill(Color.valueOf("#fd9139"));
+            choice4.setTextFill(Color.valueOf("#fd9139"));
+            choice5.setTextFill(Color.valueOf("#fd9139"));
+        }
+        else if (to.equals("Central Library")){
+            choice1.setTextFill(Color.valueOf("#a12fb5"));
+            choice2.setTextFill(Color.valueOf("#a12fb5"));
+            choice3.setTextFill(Color.valueOf("#a12fb5"));
+            choice4.setTextFill(Color.valueOf("#a12fb5"));
+            choice5.setTextFill(Color.valueOf("#a12fb5"));
+        }
+        else if (to.equals("Faculty of Science")){
+            choice1.setTextFill(Color.valueOf("#92b923"));
+            choice2.setTextFill(Color.valueOf("#92b923"));
+            choice3.setTextFill(Color.valueOf("#92b923"));
+            choice4.setTextFill(Color.valueOf("#92b923"));
+            choice5.setTextFill(Color.valueOf("#92b923"));
+        }
+//        else if (to.equals("Prathep Building")){
+//            choice1.setTextFill(Color.valueOf("#92b923"));
+//            choice2.setTextFill(Color.valueOf("#92b923"));
+//            choice3.setTextFill(Color.valueOf("#92b923"));
+//            choice4.setTextFill(Color.valueOf("#92b923"));
+//            choice5.setTextFill(Color.valueOf("#92b923"));
+//        }
+        else if (to.equals("ECC Building")){
+            choice1.setTextFill(Color.valueOf("#cf2e51"));
+            choice2.setTextFill(Color.valueOf("#cf2e51"));
+            choice3.setTextFill(Color.valueOf("#cf2e51"));
+            choice4.setTextFill(Color.valueOf("#cf2e51"));
+            choice5.setTextFill(Color.valueOf("#cf2e51"));
+        }
+        else if (to.equals("RNP")){
+            choice1.setTextFill(Color.valueOf("#1274d2"));
+            choice2.setTextFill(Color.valueOf("#1274d2"));
+            choice3.setTextFill(Color.valueOf("#1274d2"));
+            choice4.setTextFill(Color.valueOf("#1274d2"));
+            choice5.setTextFill(Color.valueOf("#1274d2"));
+        }
+    }
 
 
     @FXML
     void back(ActionEvent event) {
-
+        Main.callStage.setScene(Main.detail);
     }
 
     @FXML
