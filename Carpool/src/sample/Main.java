@@ -42,6 +42,8 @@ public class Main extends Application{
     @Override
     public void start(Stage primaryStage) throws Exception {
 
+        Database.connect();
+
         callStage = primaryStage;
         FXMLLoader sample = new FXMLLoader(getClass().getResource("sample.fxml")); // login
         FXMLLoader feed = new FXMLLoader(getClass().getResource("feed.fxml"));
@@ -80,7 +82,7 @@ public class Main extends Application{
         callStage.show();
 
         // DB TEST
-        Database.connect();
+//        Database.connect();
         emf = Database.getConnection();
 
         Driver kong = new Driver("kongza", "1234", "kong@hotmail.com", "Witsarut Kavidum", "Male", 21, "0910719895","Private Car","AB1234","4",null);

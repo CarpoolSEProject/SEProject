@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.Group?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -19,7 +20,10 @@
     <children>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="500.0" layoutX="13.0" layoutY="80.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="613.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="57.0" layoutX="13.0" layoutY="13.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" width="875.0" />
-        <Text fx:id="navBar_home" accessibleRole="BUTTON" fill="WHITE" layoutX="622.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HOME" />
+        <Text fx:id="navBar_home" accessibleRole="BUTTON" fill="WHITE" layoutX="622.0" layoutY="48.0" onMouseClicked="#toHome" strokeType="OUTSIDE" strokeWidth="0.0" text="HOME">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Text>
         <Circle fill="WHITE" layoutX="681.0" layoutY="42.0" opacity="0.4" radius="3.0" stroke="WHITE" strokeType="INSIDE" />
         <Text fx:id="navBar_profile" accessibleRole="BUTTON" fill="WHITE" layoutX="704.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFILE" />
         <Circle fill="WHITE" layoutX="779.0" layoutY="42.0" opacity="0.4" radius="3.0" stroke="WHITE" strokeType="INSIDE" />
@@ -126,7 +130,7 @@
             <Image url="@../img/kong.png" />
          </image>
       </ImageView>
-      <Pane fx:id="block1" layoutX="638.0" layoutY="126.0" prefHeight="104.0" prefWidth="250.0" visible="false">
+      <Pane fx:id="block1" layoutX="638.0" layoutY="126.0" prefHeight="104.0" prefWidth="250.0">
          <children>
             <ImageView fx:id="img1" fitHeight="80.0" fitWidth="80.0" layoutX="10.0" layoutY="12.0" preserveRatio="true">
                <image>
@@ -137,9 +141,9 @@
             <Text fx:id="FROM_1" fill="#d12b4f" layoutX="95.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM:" />
             <Text fx:id="Arrive_1" fill="#d12b4f" layoutX="95.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ARRIVE AT:" />
             <Text fx:id="date1" fill="WHITE" layoutX="96.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="date1" />
-            <Text fx:id="time1" fill="WHITE" layoutX="170.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="time1" />
-            <Text fx:id="from1" fill="WHITE" layoutX="142.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="from1" />
-            <Text fx:id="to1" fill="WHITE" layoutX="122.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="to1" />
+            <Text fx:id="time1" fill="WHITE" layoutX="171.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="time1" />
+            <Text fx:id="from1" fill="WHITE" layoutX="143.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="from1" />
+            <Text fx:id="to1" fill="WHITE" layoutX="123.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="to1" />
             <Line endX="148.0" layoutX="100.0" layoutY="105.0" opacity="0.13" startX="-100.0" stroke="WHITE" />
          </children>
       </Pane>
