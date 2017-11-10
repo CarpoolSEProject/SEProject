@@ -179,25 +179,17 @@ public class driverProfileController {
                     TO_1.setFill(Color.valueOf("#cf2e51"));
                     FROM_1.setFill(Color.valueOf("#cf2e51"));
                     Arrive_1.setFill(Color.valueOf("#cf2e51"));
+                } else if (ev.getTo().equals("Prathep Building")) {
+                    img1.setImage(new Image("place/prathep.png"));
+                    TO_1.setFill(Color.valueOf("#ffda2e"));
+                    FROM_1.setFill(Color.valueOf("#ffda2e"));
+                    Arrive_1.setFill(Color.valueOf("#ffda2e"));
+                } else if (ev.getTo().equals("Kae Ki")) {
+                    img1.setImage(new Image("place/kaeki.png"));
+                    TO_1.setFill(Color.valueOf("#55b4f1"));
+                    FROM_1.setFill(Color.valueOf("#55b4f1"));
+                    Arrive_1.setFill(Color.valueOf("#55b4f1"));
                 }
-//                    else if (ev.getTo().equals("Prathep Building")){
-//                        img1.setImage(new Image("place/ECC.png"));
-//                        to1.setFill(Color.valueOf("#cf2e51"));
-//                        from1.setFill(Color.valueOf("#cf2e51"));
-//                        time1.setFill(Color.valueOf("#cf2e51"));
-//                        date1.setFill(Color.valueOf("#cf2e51"));
-//                        seat1.setFill(Color.valueOf("#cf2e51"));
-//                        car1.setFill(Color.valueOf("#cf2e51"));
-//                    }
-//                    else if (ev.getTo().equals("Kae Ki")){
-//                        img1.setImage(new Image("place/ECC.png"));
-//                        to1.setFill(Color.valueOf("#cf2e51"));
-//                        from1.setFill(Color.valueOf("#cf2e51"));
-//                        time1.setFill(Color.valueOf("#cf2e51"));
-//                        date1.setFill(Color.valueOf("#cf2e51"));
-//                        seat1.setFill(Color.valueOf("#cf2e51"));
-//                        car1.setFill(Color.valueOf("#cf2e51"));
-//                    }
             } else if (ev.getEventID() == 2) {
                 block2.setVisible(true);
                 to2.setText(ev.getTo());
@@ -283,25 +275,17 @@ public class driverProfileController {
                     TO_3.setFill(Color.valueOf("#cf2e51"));
                     FROM_3.setFill(Color.valueOf("#cf2e51"));
                     Arrive_3.setFill(Color.valueOf("#cf2e51"));
+                } else if (ev.getTo().equals("Prathep Building")) {
+                    img3.setImage(new Image("place/prathep.png"));
+                    TO_3.setFill(Color.valueOf("#ffda2e"));
+                    FROM_3.setFill(Color.valueOf("#ffda2e"));
+                    Arrive_3.setFill(Color.valueOf("#ffda2e"));
+                } else if (ev.getTo().equals("Kae Ki")) {
+                    img3.setImage(new Image("place/kaeki.png"));
+                    TO_3.setFill(Color.valueOf("#55b4f1"));
+                    FROM_3.setFill(Color.valueOf("#55b4f1"));
+                    Arrive_3.setFill(Color.valueOf("#55b4f1"));
                 }
-                //                    else if (ev.getTo().equals("Prathep Building")){
-                //                        img1.setImage(new Image("place/ECC.png"));
-                //                        to1.setFill(Color.valueOf("#cf2e51"));
-                //                        from1.setFill(Color.valueOf("#cf2e51"));
-                //                        time1.setFill(Color.valueOf("#cf2e51"));
-                //                        date1.setFill(Color.valueOf("#cf2e51"));
-                //                        seat1.setFill(Color.valueOf("#cf2e51"));
-                //                        car1.setFill(Color.valueOf("#cf2e51"));
-                //                    }
-                //                    else if (ev.getTo().equals("Kae Ki")){
-                //                        img1.setImage(new Image("place/ECC.png"));
-                //                        to1.setFill(Color.valueOf("#cf2e51"));
-                //                        from1.setFill(Color.valueOf("#cf2e51"));
-                //                        time1.setFill(Color.valueOf("#cf2e51"));
-                //                        date1.setFill(Color.valueOf("#cf2e51"));
-                //                        seat1.setFill(Color.valueOf("#cf2e51"));
-                //                        car1.setFill(Color.valueOf("#cf2e51"));
-                //                    }
             } else if (ev.getEventID() == 4) {
                 block4.setVisible(true);
                 to4.setText(ev.getTo());
@@ -339,25 +323,17 @@ public class driverProfileController {
                     TO_4.setFill(Color.valueOf("#cf2e51"));
                     FROM_4.setFill(Color.valueOf("#cf2e51"));
                     Arrive_4.setFill(Color.valueOf("#cf2e51"));
+                } else if (ev.getTo().equals("Prathep Building")) {
+                    img4.setImage(new Image("place/prathep.png"));
+                    TO_4.setFill(Color.valueOf("#ffda2e"));
+                    FROM_4.setFill(Color.valueOf("#ffda2e"));
+                    Arrive_4.setFill(Color.valueOf("#ffda2e"));
+                } else if (ev.getTo().equals("Kae Ki")) {
+                    img4.setImage(new Image("place/kaeki.png"));
+                    TO_4.setFill(Color.valueOf("#55b4f1"));
+                    FROM_4.setFill(Color.valueOf("#55b4f1"));
+                    Arrive_4.setFill(Color.valueOf("#55b4f1"));
                 }
-                //                    else if (ev.getTo().equals("Prathep Building")){
-                //                        img1.setImage(new Image("place/ECC.png"));
-                //                        to1.setFill(Color.valueOf("#cf2e51"));
-                //                        from1.setFill(Color.valueOf("#cf2e51"));
-                //                        time1.setFill(Color.valueOf("#cf2e51"));
-                //                        date1.setFill(Color.valueOf("#cf2e51"));
-                //                        seat1.setFill(Color.valueOf("#cf2e51"));
-                //                        car1.setFill(Color.valueOf("#cf2e51"));
-                //                    }
-                //                    else if (ev.getTo().equals("Kae Ki")){
-                //                        img1.setImage(new Image("place/ECC.png"));
-                //                        to1.setFill(Color.valueOf("#cf2e51"));
-                //                        from1.setFill(Color.valueOf("#cf2e51"));
-                //                        time1.setFill(Color.valueOf("#cf2e51"));
-                //                        date1.setFill(Color.valueOf("#cf2e51"));
-                //                        seat1.setFill(Color.valueOf("#cf2e51"));
-                //                        car1.setFill(Color.valueOf("#cf2e51"));
-                //                    }
             }
 
 
