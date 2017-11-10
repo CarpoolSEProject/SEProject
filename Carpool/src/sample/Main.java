@@ -24,6 +24,7 @@ public class Main extends Application{
     public static Scene choosePlacetoWait;
     public static Scene confirm;
     public static Scene summary;
+    public static Scene driverProfile;
 
     public static Controller controller;
     public static createPostController createPostController;
@@ -32,6 +33,7 @@ public class Main extends Application{
     public static choosePlaceToWaitController choosePlaceToWaitController;
     public static confirmController confirmController;
     public static summaryController summaryController;
+    public static driverProfileController driverProfileController;
 
     public static int checkLogin = 0;
     private static EntityManagerFactory emf;
@@ -49,6 +51,7 @@ public class Main extends Application{
         FXMLLoader choosePlaceToWait = new FXMLLoader(getClass().getResource("../EventDetail/choosePlaceToWait.fxml"));
         FXMLLoader confirm = new FXMLLoader(getClass().getResource("../EventDetail/confirm.fxml"));
         FXMLLoader summary = new FXMLLoader(getClass().getResource("../EventDetail/summary.fxml"));
+        FXMLLoader driverProfile = new FXMLLoader(getClass().getResource("driverProfile.fxml"));
 
         this.sample = new Scene(sample.load());
         this.feed = new Scene(feed.load());
@@ -58,6 +61,7 @@ public class Main extends Application{
         this.choosePlacetoWait = new Scene(choosePlaceToWait.load());
         this.confirm = new Scene(confirm.load());
         this.summary = new Scene(summary.load());
+        this.driverProfile = new Scene(driverProfile.load());
 
         this.controller = sample.getController();
         this.createPostController = createPost.getController();
@@ -66,6 +70,7 @@ public class Main extends Application{
         this.choosePlaceToWaitController = choosePlaceToWait.getController();
         this.confirmController = confirm.getController();
         this.summaryController = summary.getController();
+        this.driverProfileController = driverProfile.getController();
 
 
         callStage.setTitle("CARPOOL");
