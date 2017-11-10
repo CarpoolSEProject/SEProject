@@ -158,7 +158,8 @@ public class driverFeedController {
     @FXML
     void refresh(ActionEvent event) { //to refresh the feed
         EntityManager em = Database.getConnection().createEntityManager();
-        TypedQuery<Integer> check = em.createQuery("SELECT table FROM Event table WHERE table.EventID = :one", Integer.class);
+        TypedQuery<Integer> check = em.createQuery("SELECT table FROM Event table WHERE table.EventID = :one " +
+                "AND table.SeatLeft <> 0", Integer.class);
         check.setParameter("one",1);
         System.out.println(check.getResultList());
 
@@ -170,7 +171,7 @@ public class driverFeedController {
             blockPane4.setVisible(false);
         }
         else if (check.getResultList().isEmpty() == false) { //event is not empty
-            TypedQuery<Event> fromTable = em.createQuery("SELECT e FROM Event e", Event.class);
+            TypedQuery<Event> fromTable = em.createQuery("SELECT e FROM Event e WHERE e.SeatLeft <> 0", Event.class);
 
             for (Event ev : fromTable.getResultList()) {
                 if (ev.getEventID() == 1) {
