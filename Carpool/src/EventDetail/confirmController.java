@@ -85,10 +85,10 @@ public class confirmController {
 
         }
         else if (to.equals("E12 Building")){
-            TO.setFill(Color.valueOf("#cf2e51"));
-            FROM.setFill(Color.valueOf("#cf2e51"));
-            arrive.setFill(Color.valueOf("#cf2e51"));
-            place.setFill(Color.valueOf("#cf2e51"));
+            TO.setFill(Color.valueOf("#1bb64f"));
+            FROM.setFill(Color.valueOf("#1bb64f"));
+            arrive.setFill(Color.valueOf("#1bb64f"));
+            place.setFill(Color.valueOf("#1bb64f"));
         }
         else if (to.equals("A Cafeteria")){
             TO.setFill(Color.valueOf("#fd9139"));
