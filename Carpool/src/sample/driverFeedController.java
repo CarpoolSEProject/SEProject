@@ -25,8 +25,6 @@ public class driverFeedController {
     @FXML
     private Text navBar_logout;
 
-    @FXML
-    private ImageView profile;
 
     @FXML
     private ImageView setting;
@@ -135,6 +133,9 @@ public class driverFeedController {
 
     @FXML
     private JFXButton refresh;
+
+    @FXML
+    private Pane profile;
 
 
     int[] location1 = new int[8];
@@ -541,6 +542,11 @@ public class driverFeedController {
             }
 
         }
+    }
+
+    @FXML
+    void toProfile(MouseEvent event) {
+        Main.callStage.setScene(Main.driverProfile);
     }
 
 

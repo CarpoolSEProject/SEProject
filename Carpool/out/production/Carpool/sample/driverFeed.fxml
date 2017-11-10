@@ -63,7 +63,7 @@
         <Line endX="65.0" layoutX="112.0" layoutY="404.0" opacity="0.13" startX="-100.0" stroke="WHITE" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="231.0" layoutX="699.0" layoutY="113.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="188.0" />
         <Text fill="WHITE" layoutX="738.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Witsarut Kawidam" />
-        <ImageView fx:id="profile" accessibleRole="BUTTON" fitHeight="29.0" fitWidth="29.0" layoutX="714.0" layoutY="308.0" opacity="0.78" preserveRatio="true">
+        <ImageView accessibleRole="BUTTON" fitHeight="29.0" fitWidth="29.0" layoutX="714.0" layoutY="308.0" opacity="0.78" preserveRatio="true">
             <image>
                 <Image url="@../img/man.png" />
             </image>
@@ -425,5 +425,10 @@
             </Pane>
          </children>
       </Group>
+      <Pane fx:id="profile" accessibleRole="BUTTON" layoutX="699.0" layoutY="300.0" onMouseClicked="#toProfile" prefHeight="44.0" prefWidth="62.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
     </children>
 </Pane>

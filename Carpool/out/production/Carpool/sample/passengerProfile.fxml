@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane blendMode="DARKEN" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #2c323f;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<Pane blendMode="DARKEN" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #2c323f;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.passengerProfileController">
     <children>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="500.0" layoutX="13.0" layoutY="80.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="613.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="57.0" layoutX="13.0" layoutY="13.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" width="875.0" />
@@ -29,7 +29,7 @@
                 <Image url="@../img/logo.png" />
             </image>
         </ImageView>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="468.0" layoutX="637.0" layoutY="113.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="250.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="461.0" layoutX="637.0" layoutY="120.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="250.0" />
         <ImageView fitHeight="142.0" fitWidth="156.0" layoutX="41.0" layoutY="142.0" preserveRatio="true">
             <image>
                 <Image url="@../img/avatar.png" />
@@ -126,28 +126,74 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="647.0" layoutY="133.0" preserveRatio="true">
-         <image>
-            <Image url="@../place/ECC.png" />
-         </image>
-      </ImageView>
-      <GridPane layoutX="735.0" layoutY="130.0" prefHeight="85.0" prefWidth="100.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
+      <Pane fx:id="block1" layoutX="638.0" layoutY="125.0" prefHeight="104.0" prefWidth="250.0" visible="false">
          <children>
-            <Text fill="#d12b4f" strokeType="OUTSIDE" strokeWidth="0.0" text="TO: ECC Building" />
-            <Text fill="#d12b4f" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM: RNP" GridPane.rowIndex="1" />
-            <Text fill="#d12b4f" strokeType="OUTSIDE" strokeWidth="0.0" text="ARRIVE AT: 09.00 AM" GridPane.rowIndex="2" />
-            <Text fill="#d12b4f" strokeType="OUTSIDE" strokeWidth="0.0" text="25/10/2017" GridPane.rowIndex="3" />
+            <ImageView fx:id="img1" fitHeight="80.0" fitWidth="80.0" layoutX="10.0" layoutY="12.0" preserveRatio="true">
+               <image>
+                  <Image url="@../place/ECC.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="TO_1" fill="#d12b4f" layoutX="95.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TO:" />
+            <Text fx:id="FROM_1" fill="#d12b4f" layoutX="95.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM:" />
+            <Text fx:id="Arrive_1" fill="#d12b4f" layoutX="95.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ARRIVE AT:" />
+            <Text fx:id="date1" fill="WHITE" layoutX="96.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="date1" />
+            <Text fx:id="time1" fill="WHITE" layoutX="170.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="time1" />
+            <Text fx:id="from1" fill="WHITE" layoutX="142.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="from1" />
+            <Text fx:id="to1" fill="WHITE" layoutX="122.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="to1" />
+            <Line endX="148.0" layoutX="100.0" layoutY="105.0" opacity="0.13" startX="-100.0" stroke="WHITE" />
          </children>
-      </GridPane>
+      </Pane>
+      <Pane fx:id="block2" layoutX="635.0" layoutY="230.0" prefHeight="104.0" prefWidth="250.0" visible="false">
+         <children>
+            <ImageView fx:id="img2" fitHeight="80.0" fitWidth="80.0" layoutX="10.0" layoutY="12.0" preserveRatio="true">
+               <image>
+                  <Image url="@../place/ECC.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="TO_2" fill="#d12b4f" layoutX="95.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TO:" />
+            <Text fx:id="FROM_2" fill="#d12b4f" layoutX="95.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM:" />
+            <Text fx:id="Arrive_2" fill="#d12b4f" layoutX="95.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ARRIVE AT:" />
+            <Text fx:id="date2" fill="WHITE" layoutX="96.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="date2" />
+            <Text fx:id="time2" fill="WHITE" layoutX="170.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="time2" />
+            <Text fx:id="from2" fill="WHITE" layoutX="142.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="from2" />
+            <Text fx:id="to2" fill="WHITE" layoutX="122.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="to2" />
+            <Line endX="148.0" layoutX="100.0" layoutY="105.0" opacity="0.13" startX="-100.0" stroke="WHITE" />
+         </children>
+      </Pane>
+      <Pane fx:id="block3" layoutX="637.0" layoutY="336.0" prefHeight="104.0" prefWidth="250.0" visible="false">
+         <children>
+            <ImageView fx:id="img3" fitHeight="80.0" fitWidth="80.0" layoutX="10.0" layoutY="12.0" preserveRatio="true">
+               <image>
+                  <Image url="@../place/ECC.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="TO_3" fill="#d12b4f" layoutX="95.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TO:" />
+            <Text fx:id="FROM_3" fill="#d12b4f" layoutX="95.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM:" />
+            <Text fx:id="Arrive_3" fill="#d12b4f" layoutX="95.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ARRIVE AT:" />
+            <Text fx:id="date3" fill="WHITE" layoutX="96.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="date3" />
+            <Text fx:id="time3" fill="WHITE" layoutX="170.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="time3" />
+            <Text fx:id="from3" fill="WHITE" layoutX="142.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="from3" />
+            <Text fx:id="to3" fill="WHITE" layoutX="122.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="to3" />
+            <Line endX="148.0" layoutX="100.0" layoutY="105.0" opacity="0.13" startX="-100.0" stroke="WHITE" />
+         </children>
+      </Pane>
+      <Pane fx:id="block4" layoutX="637.0" layoutY="442.0" prefHeight="104.0" prefWidth="250.0" visible="false">
+         <children>
+            <ImageView fx:id="img4" fitHeight="80.0" fitWidth="80.0" layoutX="10.0" layoutY="12.0" preserveRatio="true">
+               <image>
+                  <Image url="@../place/ECC.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="TO_4" fill="#d12b4f" layoutX="95.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TO:" />
+            <Text fx:id="FROM_4" fill="#d12b4f" layoutX="95.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM:" />
+            <Text fx:id="Arrive_4" fill="#d12b4f" layoutX="95.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ARRIVE AT:" />
+            <Text fx:id="date4" fill="WHITE" layoutX="96.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="date4" />
+            <Text fx:id="time4" fill="WHITE" layoutX="170.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="time4" />
+            <Text fx:id="from4" fill="WHITE" layoutX="142.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="from4" />
+            <Text fx:id="to4" fill="WHITE" layoutX="122.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="to4" />
+            <Line endX="148.0" layoutX="100.0" layoutY="105.0" opacity="0.13" startX="-100.0" stroke="WHITE" />
+         </children>
+      </Pane>
 
     </children>
 </Pane>
