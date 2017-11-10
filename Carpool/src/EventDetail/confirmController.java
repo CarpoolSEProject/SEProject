@@ -171,10 +171,8 @@ public class confirmController {
         JoinEvent toSend = new JoinEvent(passenger, String.valueOf(id));
         em.getTransaction().begin();
         em.persist(toSend);
-        em.getTransaction().commit();
-        em.close();
 
-        em.getTransaction().begin();
+
         Query query = em.createQuery(
                 "UPDATE Event SET SeatLeft = SeatLeft - 1 " +
                         "WHERE EventID = " + String.valueOf(id));
