@@ -148,7 +148,8 @@ public class passengerFeedController {
     @FXML
     void refresh(ActionEvent event) { //to refresh the feed
         EntityManager em = Database.getConnection().createEntityManager();
-        TypedQuery<Integer> check = em.createQuery("SELECT table FROM Event table WHERE table.EventID = :one", Integer.class);
+        TypedQuery<Integer> check = em.createQuery("SELECT table FROM Event table WHERE table.EventID = :one " +
+                "AND table.SeatLeft <> 0", Integer.class);
         check.setParameter("one",1);
         System.out.println(check.getResultList());
 
