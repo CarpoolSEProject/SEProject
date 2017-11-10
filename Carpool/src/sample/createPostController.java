@@ -142,7 +142,7 @@ public class createPostController {
         }
 
         if((choicePlace_to.getValue() != null) && (choicePlace_from.getValue() != null) && (choiceCarType.getValue() != null) && (seatLeft.getValue() != null)
-                && (time.getText() != null) && (date.getValue() != null) && countCheckBox()==1){
+                && (time.getText() != null) && (date.getValue() != null) && countCheckBox()==1) {
             System.out.println("Form Accepted");
             warning.setVisible(false);
 
@@ -198,25 +198,25 @@ public class createPostController {
                 em.getTransaction().commit();
             }
 
-
+            Main.callStage.setScene(Main.driverFeed);
 
         }
+
         else {
             warning.setVisible(true);
         }
 
-        Main.callStage.setScene(Main.driverFeed);
+
 
     }
 
 
     public int countCheckBox (){
-        int count = 0;
+        int count;
         if (wait_KaeKi.isSelected() == true || wait_E12.isSelected() == true || wait_A.isSelected() == true ||
                 wait_lib.isSelected() == true || wait_sci.isSelected() == true || wait_prathep.isSelected() == true ||
                 wait_ecc.isSelected() == true || wait_RNP.isSelected() == true){
             count = 1;
-            int i = 0;
 
         }
 
