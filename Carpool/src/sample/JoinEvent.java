@@ -19,9 +19,11 @@ public class JoinEvent {
 
     private String Passenger;
 
-    public JoinEvent(Integer joinEventID, String Passenger) {
-        this.joinEventID = joinEventID;
+    private String eventJoined;
+
+    public JoinEvent(String Passenger, String eventJoined) {
         this.Passenger = Passenger;
+        this.eventJoined = eventJoined;
     }
 
     public String getPassenger() { return Passenger; }
@@ -32,6 +34,9 @@ public class JoinEvent {
         return event;
     }
 
+    public String getEventJoined() {
+        return eventJoined;
+    }
 }
 
 //j.getEvent.get ...

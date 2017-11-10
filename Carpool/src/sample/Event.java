@@ -17,8 +17,10 @@ public class Event {
     public Integer EventID;
     @ManyToOne
     public String Driver;
+
     @OneToMany(cascade=CascadeType.ALL, mappedBy="event")
     private JoinEvent JoinEvent;
+
     public String From;
     public String To;
     @Temporal(TemporalType.DATE)
