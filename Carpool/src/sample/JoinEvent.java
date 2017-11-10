@@ -16,6 +16,7 @@ public class JoinEvent {
 
     @ManyToOne
     private Event event;
+
     private String Passenger;
 
     public JoinEvent(Integer joinEventID, String Passenger) {

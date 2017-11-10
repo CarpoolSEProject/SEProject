@@ -164,15 +164,10 @@ public class confirmController {
         System.out.println("look! car: "+ car);
         System.out.println("look! driver: "+ driverName);
 
-        int seatForSend = Integer.parseInt(seat); //convert seat before send to db
-        int locationWaitingForSend[] = convertLocation();
-        String passenger = "Puttachart Srisuwankul";
-
-//        JoinEvent toSend = new JoinEvent(driverName, from.getText(), to.getText(), date.getText(), time.getText(), car,
-//                seatForSend-1, locationWaitingForSend, passenger);
-//        em.getTransaction().begin();
-//        em.persist(toSend);
-//        em.getTransaction().commit();
+//        int seatForSend = Integer.parseInt(seat); //convert seat before send to db
+//        int locationWaitingForSend[] = convertLocation();
+//        String passenger = "Puttachart Srisuwankul";
+        
 
         em.getTransaction().begin();
         Query query = em.createQuery(
