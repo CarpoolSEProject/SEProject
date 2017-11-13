@@ -340,4 +340,16 @@ public class driverProfileController {
         }
     }
 
+
+    @FXML
+    void LogOut(MouseEvent event) {
+        Main.callStage.setScene(Main.sample);
+    }
+
+    @FXML
+    void Profile(MouseEvent event) {
+        Main.callStage.setScene(Main.driverProfile);
+    }
+
+
 }

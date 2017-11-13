@@ -245,18 +245,49 @@ public class detailController {
             this.seat.setFill(Color.valueOf("#cf2e51"));
             this.car.setFill(Color.valueOf("#cf2e51"));
         }
-//        else if (to == "Prathep Building"){
-//
-//
-//
-//
-//        }
-//        else if (to == "Kae Ki"){
-//
-//
-//
-//
-//        }
+        else if (to.equals("Prathep Building")){
+            line_to.setFill(Color.valueOf("#ffda2e"));
+            line_from.setFill(Color.valueOf("#ffda2e"));
+            line_arrive.setFill(Color.valueOf("#ffda2e"));
+            line_car.setFill(Color.valueOf("#ffda2e"));
+            line_seat.setFill(Color.valueOf("#ffda2e"));
+            line1.setFill(Color.valueOf("#ffda2e"));
+            line2.setFill(Color.valueOf("#ffda2e"));
+            line3.setFill(Color.valueOf("#ffda2e"));
+            line4.setFill(Color.valueOf("#ffda2e"));
+            line5.setFill(Color.valueOf("#ffda2e"));
+
+            this.to.setFill(Color.valueOf("#ffda2e"));
+            this.from.setFill(Color.valueOf("#ffda2e"));
+            this.time.setFill(Color.valueOf("#ffda2e"));
+            this.date.setFill(Color.valueOf("#ffda2e"));
+            this.seat.setFill(Color.valueOf("#ffda2e"));
+            this.car.setFill(Color.valueOf("#ffda2e"));
+
+        }
+        else if (to.equals("Kae Ki")){
+            line_to.setFill(Color.valueOf("#55b4f1"));
+            line_from.setFill(Color.valueOf("#55b4f1"));
+            line_arrive.setFill(Color.valueOf("#55b4f1"));
+            line_car.setFill(Color.valueOf("#55b4f1"));
+            line_seat.setFill(Color.valueOf("#55b4f1"));
+            line1.setFill(Color.valueOf("#55b4f1"));
+            line2.setFill(Color.valueOf("#55b4f1"));
+            line3.setFill(Color.valueOf("#55b4f1"));
+            line4.setFill(Color.valueOf("#55b4f1"));
+            line5.setFill(Color.valueOf("#55b4f1"));
+
+            this.to.setFill(Color.valueOf("#55b4f1"));
+            this.from.setFill(Color.valueOf("#55b4f1"));
+            this.time.setFill(Color.valueOf("#55b4f1"));
+            this.date.setFill(Color.valueOf("#55b4f1"));
+            this.seat.setFill(Color.valueOf("#55b4f1"));
+            this.car.setFill(Color.valueOf("#55b4f1"));
+        }
+
+
+
+       // }
 
         //locationWaiting[0] = "wait_KaeKi";
 //        locationWaiting[1] = "wait_E12";

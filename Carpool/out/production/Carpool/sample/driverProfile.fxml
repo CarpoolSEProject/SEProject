@@ -25,9 +25,9 @@
             <Cursor fx:constant="HAND" />
          </cursor></Text>
         <Circle fill="WHITE" layoutX="681.0" layoutY="42.0" opacity="0.4" radius="3.0" stroke="WHITE" strokeType="INSIDE" />
-        <Text fx:id="navBar_profile" accessibleRole="BUTTON" fill="WHITE" layoutX="704.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFILE" />
+        <Text fx:id="navBar_profile" accessibleRole="BUTTON" fill="WHITE" layoutX="704.0" layoutY="48.0" onMouseClicked="#Profile" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFILE" />
         <Circle fill="WHITE" layoutX="779.0" layoutY="42.0" opacity="0.4" radius="3.0" stroke="WHITE" strokeType="INSIDE" />
-        <Text fx:id="navBar_logout" accessibleRole="BUTTON" fill="WHITE" layoutX="798.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOG OUT" />
+        <Text fx:id="navBar_logout" accessibleRole="BUTTON" fill="WHITE" layoutX="798.0" layoutY="48.0" onMouseClicked="#LogOut" strokeType="OUTSIDE" strokeWidth="0.0" text="LOG OUT" />
         <ImageView fitHeight="75.0" fitWidth="131.0" layoutX="26.0" layoutY="3.0">
             <image>
                 <Image url="@../img/logo.png" />

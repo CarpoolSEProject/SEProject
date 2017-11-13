@@ -19,7 +19,7 @@
     <children>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374255" height="95.0" layoutX="699.0" layoutY="81.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="188.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="57.0" layoutX="13.0" layoutY="13.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" width="875.0" />
-        <Text fx:id="navBar_home" accessibleRole="BUTTON" fill="WHITE" layoutX="622.0" layoutY="48.0" onMouseClicked="#Home" strokeType="OUTSIDE" strokeWidth="0.0" text="HOME">
+        <Text fx:id="navBar_home" accessibleRole="BUTTON" fill="WHITE" layoutX="622.0" layoutY="48.0"  strokeType="OUTSIDE" strokeWidth="0.0" text="HOME">
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor></Text>
