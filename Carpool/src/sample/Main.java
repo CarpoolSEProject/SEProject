@@ -92,7 +92,6 @@ public class Main extends Application{
 
         Driver kong = new Driver("kongza", "1234", "kong@hotmail.com", "Witsarut Kavidum", "Male", 21, "0910719895","Private Car","AB1234","4",null);
         Passenger tangkwa = new Passenger("tangkwaaa", "5678", "tangkwa@hotmail.com", "Putthachart Srisuwankul", "Female", 21, "0875933814");
-        //Event dummy = new Event(kong.getName(),"dummy","dummy","00-00-00","00:00 AM","Private Car",0,null);
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         em.getMetamodel().entity(Person.class);
@@ -101,11 +100,8 @@ public class Main extends Application{
         em.createQuery("DELETE FROM Driver").executeUpdate();
         em.getMetamodel().entity(Passenger.class);
         em.createQuery("DELETE FROM Passenger").executeUpdate();
-//        em.getMetamodel().entity(Event.class);
-//        em.createQuery("DELETE FROM Event").executeUpdate();
         em.persist(kong);
         em.persist(tangkwa);
-        //em.persist(dummy);
         em.getTransaction().commit();
         em.close();
 
