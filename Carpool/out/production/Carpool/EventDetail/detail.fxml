@@ -22,11 +22,20 @@
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="500.0" layoutX="13.0" layoutY="80.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="407.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374255" height="95.0" layoutX="699.0" layoutY="81.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="188.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="57.0" layoutX="13.0" layoutY="13.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" width="875.0" />
-        <Text fx:id="navBar_home" accessibleRole="BUTTON" fill="WHITE" layoutX="622.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HOME" />
+        <Text fx:id="navBar_home" accessibleRole="BUTTON" fill="WHITE" layoutX="622.0" layoutY="48.0" onMouseClicked="#Home" strokeType="OUTSIDE" strokeWidth="0.0" text="HOME">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Text>
         <Circle fill="WHITE" layoutX="681.0" layoutY="42.0" opacity="0.4" radius="3.0" stroke="WHITE" strokeType="INSIDE" />
-        <Text fx:id="navBar_profile" accessibleRole="BUTTON" fill="WHITE" layoutX="704.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFILE" />
+        <Text fx:id="navBar_profile" accessibleRole="BUTTON" fill="WHITE" layoutX="704.0" layoutY="48.0" onMouseClicked="#Profile" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFILE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Text>
         <Circle fill="WHITE" layoutX="779.0" layoutY="42.0" opacity="0.4" radius="3.0" stroke="WHITE" strokeType="INSIDE" />
-        <Text fx:id="navBar_logout" accessibleRole="BUTTON" fill="WHITE" layoutX="798.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOG OUT" />
+        <Text fx:id="navBar_logout" accessibleRole="BUTTON" fill="WHITE" layoutX="798.0" layoutY="48.0" onMouseClicked="#LogOut" strokeType="OUTSIDE" strokeWidth="0.0" text="LOG OUT">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Text>
         <ImageView fitHeight="75.0" fitWidth="131.0" layoutX="26.0" layoutY="3.0">
             <image>
                 <Image url="@../img/logo.png" />
@@ -281,6 +290,16 @@
             <Rectangle fx:id="line5" arcHeight="5.0" arcWidth="5.0" fill="#ff9129" height="20.0" layoutX="152.0" layoutY="357.0" stroke="#ffffff00" strokeType="INSIDE" visible="false" width="2.0" />
             </children>
         </Pane>
+      <Pane fx:id="profilePane" layoutX="701.0" layoutY="299.0" onMouseClicked="#Home" prefHeight="44.0" prefWidth="59.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Pane fx:id="logoutPane" layoutX="827.0" layoutY="299.0" onMouseClicked="#LogOut" prefHeight="44.0" prefWidth="59.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
 
     </children>
 </Pane>

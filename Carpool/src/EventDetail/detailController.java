@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -112,7 +113,7 @@ public class detailController {
     String[] choicePlaceToWait;
 
 
-    public void toDetail(Image img, String to, String from, String time, String date, String seat, String car, int[] locationWaiting){
+    public void toDetail(Image img, String to, String from, String time, String date, String seat, String car, int[] locationWaiting) {
 //        set img and other texts
         this.img.setImage(img);
         this.to.setText(to);
@@ -131,7 +132,7 @@ public class detailController {
 
         System.out.println(to);
 
-        if (to.equals("E12 Building")){
+        if (to.equals("E12 Building")) {
             line_to.setFill(Color.valueOf("#1bb64f"));
             line_from.setFill(Color.valueOf("#1bb64f"));
             line_arrive.setFill(Color.valueOf("#1bb64f"));
@@ -149,8 +150,7 @@ public class detailController {
             this.date.setFill(Color.valueOf("#1bb64f"));
             this.seat.setFill(Color.valueOf("#1bb64f"));
             this.car.setFill(Color.valueOf("#1bb64f"));
-        }
-        else if (to.equals("RNP")){
+        } else if (to.equals("RNP")) {
             line_to.setFill(Color.valueOf("#1274d2"));
             line_from.setFill(Color.valueOf("#1274d2"));
             line_arrive.setFill(Color.valueOf("#1274d2"));
@@ -168,8 +168,7 @@ public class detailController {
             this.date.setFill(Color.valueOf("#1274d2"));
             this.seat.setFill(Color.valueOf("#1274d2"));
             this.car.setFill(Color.valueOf("#1274d2"));
-        }
-        else if (to.equals("A Cafeteria")){
+        } else if (to.equals("A Cafeteria")) {
             line_to.setFill(Color.valueOf("#fd9139"));
             line_from.setFill(Color.valueOf("#fd9139"));
             line_arrive.setFill(Color.valueOf("#fd9139"));
@@ -187,8 +186,7 @@ public class detailController {
             this.date.setFill(Color.valueOf("#fd9139"));
             this.seat.setFill(Color.valueOf("#fd9139"));
             this.car.setFill(Color.valueOf("#fd9139"));
-        }
-        else if (to.equals("Central Library")){
+        } else if (to.equals("Central Library")) {
             line_to.setFill(Color.valueOf("#a12fb5"));
             line_from.setFill(Color.valueOf("#a12fb5"));
             line_arrive.setFill(Color.valueOf("#a12fb5"));
@@ -206,8 +204,7 @@ public class detailController {
             this.date.setFill(Color.valueOf("#a12fb5"));
             this.seat.setFill(Color.valueOf("#a12fb5"));
             this.car.setFill(Color.valueOf("#a12fb5"));
-        }
-        else if (to.equals("Faculty of Science")){
+        } else if (to.equals("Faculty of Science")) {
             line_to.setFill(Color.valueOf("#92b923"));
             line_from.setFill(Color.valueOf("#92b923"));
             line_arrive.setFill(Color.valueOf("#92b923"));
@@ -225,8 +222,7 @@ public class detailController {
             this.date.setFill(Color.valueOf("#92b923"));
             this.seat.setFill(Color.valueOf("#92b923"));
             this.car.setFill(Color.valueOf("#92b923"));
-        }
-        else if (to.equals("ECC Building")){
+        } else if (to.equals("ECC Building")) {
             line_to.setFill(Color.valueOf("#cf2e51"));
             line_from.setFill(Color.valueOf("#cf2e51"));
             line_arrive.setFill(Color.valueOf("#cf2e51"));
@@ -244,8 +240,7 @@ public class detailController {
             this.date.setFill(Color.valueOf("#cf2e51"));
             this.seat.setFill(Color.valueOf("#cf2e51"));
             this.car.setFill(Color.valueOf("#cf2e51"));
-        }
-        else if (to.equals("Prathep Building")){
+        } else if (to.equals("Prathep Building")) {
             line_to.setFill(Color.valueOf("#ffda2e"));
             line_from.setFill(Color.valueOf("#ffda2e"));
             line_arrive.setFill(Color.valueOf("#ffda2e"));
@@ -264,8 +259,7 @@ public class detailController {
             this.seat.setFill(Color.valueOf("#ffda2e"));
             this.car.setFill(Color.valueOf("#ffda2e"));
 
-        }
-        else if (to.equals("Kae Ki")){
+        } else if (to.equals("Kae Ki")) {
             line_to.setFill(Color.valueOf("#55b4f1"));
             line_from.setFill(Color.valueOf("#55b4f1"));
             line_arrive.setFill(Color.valueOf("#55b4f1"));
@@ -286,8 +280,7 @@ public class detailController {
         }
 
 
-
-       // }
+        // }
 
         //locationWaiting[0] = "wait_KaeKi";
 //        locationWaiting[1] = "wait_E12";
@@ -302,17 +295,17 @@ public class detailController {
         // count number of available location waiting
         int count = 0;
         int countSize = 0;
-        Text[] choiceArr = {choice1,choice2,choice3,choice4,choice5};
+        Text[] choiceArr = {choice1, choice2, choice3, choice4, choice5};
         String[] choicePlace = {"Kae Ki", "E12 Building", "A Cafeteria", "Central Library", "Faculty of Science", "Prathep Building", "ECC Building", "RNP"};
 
-        for(int i = 0; i <8; i++){
-            if (locationWaiting[i] == 1){
+        for (int i = 0; i < 8; i++) {
+            if (locationWaiting[i] == 1) {
                 countSize++;
             }
         }
 
-        for (int i = 0; i< 8; i++){
-            if (locationWaiting[i] == 1){
+        for (int i = 0; i < 8; i++) {
+            if (locationWaiting[i] == 1) {
 
                 choiceArr[count].setText(choicePlace[i]);
                 count++;
@@ -322,14 +315,13 @@ public class detailController {
 
 
         // set visible to choice of place to wait
-        if (countSize == 1){
+        if (countSize == 1) {
             choice1.setVisible(true);
             line1.setVisible(true);
             choicePlaceToWait = new String[1];
             choicePlaceToWait[0] = choiceArr[0].getText();
 
-        }
-        else if (countSize == 2){
+        } else if (countSize == 2) {
             choice1.setVisible(true);
             choice2.setVisible(true);
             line1.setVisible(true);
@@ -337,8 +329,7 @@ public class detailController {
             choicePlaceToWait = new String[2];
             choicePlaceToWait[0] = choiceArr[0].getText();
             choicePlaceToWait[1] = choiceArr[1].getText();
-        }
-        else if (countSize == 3){
+        } else if (countSize == 3) {
             choice1.setVisible(true);
             choice2.setVisible(true);
             choice3.setVisible(true);
@@ -349,8 +340,7 @@ public class detailController {
             choicePlaceToWait[0] = choiceArr[0].getText();
             choicePlaceToWait[1] = choiceArr[1].getText();
             choicePlaceToWait[2] = choiceArr[2].getText();
-        }
-        else if (countSize == 4){
+        } else if (countSize == 4) {
             choice1.setVisible(true);
             choice2.setVisible(true);
             choice3.setVisible(true);
@@ -364,8 +354,7 @@ public class detailController {
             choicePlaceToWait[1] = choiceArr[1].getText();
             choicePlaceToWait[2] = choiceArr[2].getText();
             choicePlaceToWait[3] = choiceArr[3].getText();
-        }
-        else if (countSize == 5){
+        } else if (countSize == 5) {
             choice1.setVisible(true);
             choice2.setVisible(true);
             choice3.setVisible(true);
@@ -409,4 +398,20 @@ public class detailController {
     }
 
 
+    @FXML
+    void Home(MouseEvent event) {
+        Main.callStage.setScene(Main.feed);
+    }
+
+    @FXML
+    void LogOut(MouseEvent event) {
+        Main.callStage.setScene(Main.sample);
+    }
+
+    @FXML
+    void Profile(MouseEvent event) {
+        Main.callStage.setScene(Main.passengerProfile);
+
+
+    }
 }

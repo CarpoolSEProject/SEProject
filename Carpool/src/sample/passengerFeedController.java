@@ -564,5 +564,20 @@ public class passengerFeedController {
                 date4.getText(), seat4.getText(), car4.getText(),location4);
     }
 
+    @FXML
+    void Home(MouseEvent event) {
+        Main.callStage.setScene(Main.feed);
+    }
+
+    @FXML
+    void LogOut(MouseEvent event) {
+        Main.callStage.setScene(Main.sample);
+    }
+
+    @FXML
+    void Profile(MouseEvent event) {
+        Main.callStage.setScene(Main.passengerProfile);
+    }
+
 
 }

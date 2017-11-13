@@ -25,6 +25,7 @@ public class Main extends Application{
     public static Scene confirm;
     public static Scene summary;
     public static Scene driverProfile;
+    public static Scene passengerProfile;
 
     public static Controller controller;
     public static createPostController createPostController;
@@ -34,6 +35,7 @@ public class Main extends Application{
     public static confirmController confirmController;
     public static summaryController summaryController;
     public static driverProfileController driverProfileController;
+    public static passengerProfileController passengerProfileController;
 
     public static int checkLogin = 0;
     private static EntityManagerFactory emf;
@@ -54,6 +56,7 @@ public class Main extends Application{
         FXMLLoader confirm = new FXMLLoader(getClass().getResource("../EventDetail/confirm.fxml"));
         FXMLLoader summary = new FXMLLoader(getClass().getResource("../EventDetail/summary.fxml"));
         FXMLLoader driverProfile = new FXMLLoader(getClass().getResource("driverProfile.fxml"));
+        FXMLLoader passengerProfile = new FXMLLoader(getClass().getResource("passengerProfile.fxml"));
 
         this.sample = new Scene(sample.load());
         this.feed = new Scene(feed.load());
@@ -64,6 +67,7 @@ public class Main extends Application{
         this.confirm = new Scene(confirm.load());
         this.summary = new Scene(summary.load());
         this.driverProfile = new Scene(driverProfile.load());
+        this.passengerProfile = new Scene(passengerProfile.load());
 
         this.controller = sample.getController();
         this.createPostController = createPost.getController();
@@ -73,6 +77,7 @@ public class Main extends Application{
         this.confirmController = confirm.getController();
         this.summaryController = summary.getController();
         this.driverProfileController = driverProfile.getController();
+        this.passengerProfileController = passengerProfile.getController();
 
 
         callStage.setTitle("CARPOOL");
