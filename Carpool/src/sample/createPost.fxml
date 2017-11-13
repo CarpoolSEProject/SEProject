@@ -26,11 +26,11 @@
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="500.0" layoutX="13.0" layoutY="80.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="670.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374255" height="95.0" layoutX="699.0" layoutY="81.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="188.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e66" height="57.0" layoutX="13.0" layoutY="13.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" width="875.0" />
-        <Text fx:id="navBar_home" accessibleRole="BUTTON" fill="WHITE" layoutX="622.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HOME" />
+        <Text fx:id="navBar_home" accessibleRole="BUTTON" fill="WHITE" layoutX="622.0" layoutY="48.0" onMouseClicked="#Home" strokeType="OUTSIDE" strokeWidth="0.0" text="HOME" />
         <Circle fill="WHITE" layoutX="681.0" layoutY="42.0" opacity="0.4" radius="3.0" stroke="WHITE" strokeType="INSIDE" />
-        <Text fx:id="navBar_profile" accessibleRole="BUTTON" fill="WHITE" layoutX="704.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFILE" />
+        <Text fx:id="navBar_profile" accessibleRole="BUTTON" fill="WHITE" layoutX="704.0" layoutY="48.0" onMouseClicked="#Profile" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFILE" />
         <Circle fill="WHITE" layoutX="779.0" layoutY="42.0" opacity="0.4" radius="3.0" stroke="WHITE" strokeType="INSIDE" />
-        <Text fx:id="navBar_logout" accessibleRole="BUTTON" fill="WHITE" layoutX="798.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOG OUT" />
+        <Text fx:id="navBar_logout" accessibleRole="BUTTON" fill="WHITE" layoutX="798.0" layoutY="48.0" onMouseClicked="#LogOut" strokeType="OUTSIDE" strokeWidth="0.0" text="LOG OUT" />
         <ImageView fitHeight="75.0" fitWidth="131.0" layoutX="26.0" layoutY="3.0">
             <image>
                 <Image url="@../img/logo.png" />
@@ -215,6 +215,9 @@
          </fill>
       </Rectangle>
       <Text fx:id="warning" fill="#f84343" layoutX="274.0" layoutY="566.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please fill up all information" visible="false" />
+      <Pane fx:id="iconProfile" accessibleRole="BUTTON" layoutX="700.0" layoutY="301.0" onMouseClicked="#Profile" prefHeight="42.0" prefWidth="61.0" />
+      <Pane layoutX="764.0" layoutY="302.0" prefHeight="42.0" prefWidth="61.0" />
+      <Pane fx:id="iconLogOut" layoutX="827.0" layoutY="301.0" onMouseClicked="#LogOut" prefHeight="42.0" prefWidth="61.0" />
 
     </children>
 </Pane>

@@ -6,6 +6,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import com.jfoenix.controls.JFXDatePicker;
 
@@ -88,6 +90,12 @@ public class createPostController {
 
     @FXML
     private Text warning;
+
+    @FXML
+    private Pane iconProfile;
+
+    @FXML
+    private Pane iconLogOut;
 
     String[] locationWaiting = new String[8];
     int[] checkLocation = new int[8];
@@ -227,5 +235,20 @@ public class createPostController {
         return count;
     }
 
+
+    @FXML
+    void Home(MouseEvent event) {
+        Main.callStage.setScene(Main.driverFeed);
+    }
+
+    @FXML
+    void LogOut(MouseEvent event) {
+        Main.callStage.setScene(Main.sample);
+    }
+
+    @FXML
+    void Profile(MouseEvent event) {
+        Main.callStage.setScene(Main.driverProfile);
+    }
 
 }
