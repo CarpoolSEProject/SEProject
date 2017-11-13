@@ -218,6 +218,7 @@
       <Pane fx:id="iconProfile" accessibleRole="BUTTON" layoutX="700.0" layoutY="301.0" onMouseClicked="#Profile" prefHeight="42.0" prefWidth="61.0" />
       <Pane layoutX="764.0" layoutY="302.0" prefHeight="42.0" prefWidth="61.0" />
       <Pane fx:id="iconLogOut" layoutX="827.0" layoutY="301.0" onMouseClicked="#LogOut" prefHeight="42.0" prefWidth="61.0" />
+      <Text fx:id="warning2" fill="#f84343" layoutX="248.0" layoutY="566.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To, From can not be the same place" visible="false" />
 
     </children>
 </Pane>

@@ -92,6 +92,9 @@ public class createPostController {
     private Text warning;
 
     @FXML
+    private Text warning2;
+
+    @FXML
     private Pane iconProfile;
 
     @FXML
@@ -151,70 +154,88 @@ public class createPostController {
 
         if((choicePlace_to.getValue() != null) && (choicePlace_from.getValue() != null) && (choiceCarType.getValue() != null) && (seatLeft.getValue() != null)
                 && (time.getText() != null) && (date.getValue() != null) && countCheckBox()==1) {
-            System.out.println("Form Accepted");
-            warning.setVisible(false);
 
-            String to = choicePlace_to.getValue().getText();
-            String from = choicePlace_from.getValue().getText();
-            String timee = time.getText();
-            LocalDate datee = date.getValue();
-            String carType = choiceCarType.getValue().getText();
-            String seat = seatLeft.getValue().getText();
-            int seatNo = Integer.parseInt(seat);
+            System.out.println("TO: "+ choicePlace_to.getValue().toString());
+            System.out.println("FROM: "+ choicePlace_from.getValue().toString());
 
-            if (wait_KaeKi.isSelected() == true) {
-                checkLocation[0] = 1;
+            System.out.println(choiceCarType.getValue());
+            System.out.println(seatLeft.getValue());
+
+            if (choicePlace_to.getValue().toString().equals(choicePlace_from.getValue().toString())) { // to - from cannot be the same place
+                System.out.println("To - From are the same place");
+                warning2.setVisible(true);
             }
-            if (wait_E12.isSelected() == true) {
-                checkLocation[1] = 1;
+            if (choiceCarType.equals("Motorcycle") && (seatLeft.getValue().equals("3") || seatLeft.getValue().equals("4"))){
+                System.out.println("Motorcycle and seatleft > 2");
+                warning2.setVisible(true);
             }
-            if (wait_A.isSelected() == true) {
-                checkLocation[2] = 1;
-            }
-            if (wait_lib.isSelected() == true) {
-                checkLocation[3] = 1;
-            }
-            if (wait_sci.isSelected() == true) {
-                checkLocation[4] = 1;
-            }
-            if (wait_prathep.isSelected() == true) {
-                checkLocation[5] = 1;
-            }
-            if (wait_ecc.isSelected() == true) {
-                checkLocation[6] = 1;
-            }
-            if (wait_RNP.isSelected() == true) {
-                checkLocation[7] = 1;
+            else {
+
+                System.out.println("Form Accepted");
+                warning.setVisible(false);
+                warning2.setVisible(false);
+
+                String to = choicePlace_to.getValue().getText();
+                String from = choicePlace_from.getValue().getText();
+                String timee = time.getText();
+                LocalDate datee = date.getValue();
+                String carType = choiceCarType.getValue().getText();
+                String seat = seatLeft.getValue().getText();
+                int seatNo = Integer.parseInt(seat);
+
+                if (wait_KaeKi.isSelected() == true) {
+                    checkLocation[0] = 1;
+                }
+                if (wait_E12.isSelected() == true) {
+                    checkLocation[1] = 1;
+                }
+                if (wait_A.isSelected() == true) {
+                    checkLocation[2] = 1;
+                }
+                if (wait_lib.isSelected() == true) {
+                    checkLocation[3] = 1;
+                }
+                if (wait_sci.isSelected() == true) {
+                    checkLocation[4] = 1;
+                }
+                if (wait_prathep.isSelected() == true) {
+                    checkLocation[5] = 1;
+                }
+                if (wait_ecc.isSelected() == true) {
+                    checkLocation[6] = 1;
+                }
+                if (wait_RNP.isSelected() == true) {
+                    checkLocation[7] = 1;
+                }
+
+
+                // Send event to Database (Event Class)
+                if (carType == "Motorcycle") {
+                    Car c = new Motorcycle("Motorcycle", 2);
+//                    System.out.println(c.getTypeName());
+                    Event toSend = new Event(driverName, from, to, datee.toString(), timee, c.getTypeName(), seatNo, checkLocation);
+                    em.getTransaction().begin();
+                    em.persist(toSend);
+                    em.getTransaction().commit();
+
+                }
+                else if (carType == "Private Car") {
+                    Car c = new PrivateCar("Private Car", 4);
+                    Event toSend = new Event(driverName, from, to, datee.toString(), timee, c.getTypeName(), seatNo, checkLocation);
+                    em.getTransaction().begin();
+                    em.persist(toSend);
+                    em.getTransaction().commit();
+                }
+                Main.callStage.setScene(Main.driverFeed);
             }
 
 
-            // Send event to Database (Event Class)
-            if (carType == "Motorcycle"){
-                Car c = new Motorcycle("Motorcycle",2);
-                System.out.println(c.getTypeName());
-                Event toSend = new Event(driverName, from, to, datee.toString(), timee, c.getTypeName(), seatNo, checkLocation);
-                em.getTransaction().begin();
-                em.persist(toSend);
-                em.getTransaction().commit();
-
-            }
-            else if (carType == "Private Car"){
-                Car c = new PrivateCar("Private Car",4);
-                Event toSend = new Event(driverName, from, to, datee.toString(), timee, c.getTypeName(), seatNo, checkLocation);
-                em.getTransaction().begin();
-                em.persist(toSend);
-                em.getTransaction().commit();
-            }
-
-            Main.callStage.setScene(Main.driverFeed);
 
         }
 
         else {
             warning.setVisible(true);
         }
-
-
 
     }
 
