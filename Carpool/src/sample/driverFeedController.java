@@ -547,5 +547,10 @@ public class driverFeedController {
         Main.callStage.setScene(Main.driverProfile);
     }
 
+    @FXML
+    void LogOut(MouseEvent event) {
+        Main.callStage.setScene(Main.sample);
+    }
+
 
 }
