@@ -95,6 +95,10 @@ public class createPostController {
     private Text warning2;
 
     @FXML
+    private Text warning3;
+
+
+    @FXML
     private Pane iconProfile;
 
     @FXML
@@ -161,13 +165,14 @@ public class createPostController {
             System.out.println(choiceCarType.getValue());
             System.out.println(seatLeft.getValue());
 
-            if (choicePlace_to.getValue().toString().equals(choicePlace_from.getValue().toString())) { // to - from cannot be the same place
+            if (choicePlace_to.getValue().getText().equals(choicePlace_from.getValue().getText())) { // to - from cannot be the same place
                 System.out.println("To - From are the same place");
                 warning2.setVisible(true);
             }
-            if (choiceCarType.equals("Motorcycle") && (seatLeft.getValue().equals("3") || seatLeft.getValue().equals("4"))){
-                System.out.println("Motorcycle and seatleft > 2");
-                warning2.setVisible(true);
+            if (choiceCarType.getValue().getText().equals("Motorcycle") && (seatLeft.getValue().getText().equals("3") || seatLeft.getValue().getText().equals("4")
+                    || seatLeft.getValue().getText().equals("2"))){
+                System.out.println("Motorcycle and seatleft > 1");
+                warning3.setVisible(true);
             }
             else {
 
