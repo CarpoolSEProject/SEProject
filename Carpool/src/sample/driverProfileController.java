@@ -142,6 +142,7 @@ public class driverProfileController {
 
     @FXML
     public void initialize() {
+        //Query event from event table to show on feed
         EntityManager em = Database.getConnection().createEntityManager();
         TypedQuery<Event> pull = em.createQuery("SELECT e FROM Event e", Event.class);
         for (Event ev : pull.getResultList()) {

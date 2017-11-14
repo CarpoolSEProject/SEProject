@@ -153,7 +153,6 @@ public class passengerFeedController {
         EntityManager em = Database.getConnection().createEntityManager();
         TypedQuery<Integer> check = em.createQuery("SELECT table FROM Event table WHERE " +
                 "table.SeatLeft <> 0", Integer.class);
-//        check.setParameter("one",1);
         System.out.println(check.getResultList());
 
         if (check.getResultList().isEmpty()) { //event is empty
@@ -543,7 +542,7 @@ public class passengerFeedController {
         TypedQuery<JoinEvent> q = em2.createQuery("SELECT e FROM JoinEvent e WHERE e.event.EventID = 1", JoinEvent.class);
         JoinEvent j = null;
 
-        if (q.getResultList().isEmpty() == false) { //if this event is already joined then go to summary page
+        if (q.getResultList().isEmpty() == false) { //if this event is already joined, set j to keep data of the join event
             System.out.println("q.getResultList() != null");
             for (JoinEvent ev : q.getResultList()) {
                 j = ev;

@@ -137,13 +137,15 @@ public class driverFeedController {
     @FXML
     private Pane profile;
 
+    @FXML
+    private JFXButton createPost_Feed;
+
 
     int[] location1 = new int[8];
     int[] location2 = new int[8];
     int[] location3 = new int[8];
     int[] location4 = new int[8];
-    @FXML
-    private JFXButton createPost_Feed;
+
 
     @FXML
     void logout(MouseEvent event) {
@@ -158,10 +160,10 @@ public class driverFeedController {
 
     @FXML
     void refresh(ActionEvent event) { //to refresh the feed
+        //Query event from Event table to show on feed
         EntityManager em = Database.getConnection().createEntityManager();
-        TypedQuery<Integer> check = em.createQuery("SELECT table FROM Event table WHERE table.EventID = :one " +
-                "AND table.SeatLeft <> 0", Integer.class);
-        check.setParameter("one",1);
+        TypedQuery<Integer> check = em.createQuery("SELECT table FROM Event table WHERE " +
+                "table.SeatLeft <> 0", Integer.class);
         System.out.println(check.getResultList());
 
         if (check.getResultList().isEmpty()) { //event is empty
