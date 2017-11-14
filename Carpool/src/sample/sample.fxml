@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.Group?>
@@ -45,15 +46,23 @@
          </children>
       </Group>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="173.0" layoutX="229.0" layoutY="250.0" opacity="0.76" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="496.0" />
-      <JFXTextField fx:id="enterUsername" layoutX="280.0" layoutY="260.0" prefHeight="55.0" prefWidth="400.0" promptText="Username" unFocusColor="WHITE">
+      <JFXTextField fx:id="enterUsername" layoutX="280.0" layoutY="260.0" onKeyPressed="#pressEnter" prefHeight="55.0" prefWidth="400.0" promptText="Username" unFocusColor="WHITE">
          <font>
             <Font size="20.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </JFXTextField>
-      <JFXTextField fx:id="enterPassword" layoutX="281.0" layoutY="329.0" prefHeight="55.0" prefWidth="400.0" promptText="Password" unFocusColor="WHITE">
+      <JFXPasswordField fx:id="enterPassword" layoutX="281.0" layoutY="329.0" onKeyPressed="#pressEnter" prefHeight="55.0" prefWidth="400.0" promptText="Password" unFocusColor="WHITE">
          <font>
             <Font size="20.0" />
          </font>
-      </JFXTextField>
+      </JFXPasswordField>
+      <Text fx:id="userOrPassIncorrect" fill="#ff2e2e" layoutX="229.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username or Password incorrect" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
    </children>
 </Pane>

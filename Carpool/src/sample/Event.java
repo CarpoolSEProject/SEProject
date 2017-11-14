@@ -1,99 +1,114 @@
 package sample;
 
+import com.objectdb.o.TOL;
+
+import javax.persistence.*;
+
+
+import java.util.List;
+
+import static javax.persistence.CascadeType.PERSIST;
+import static javax.persistence.FetchType.EAGER;
+
+@Entity
+//@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Event {
 
-    public static String EventID;
-    public static String DriverName;
-    public static String DriverPhone;
-    public static String From;
-    public static String To;
-    public static String TimetoArrive;
-    public static Car CarType;
-    public static int SeatLeft;
-    public static String LocationWaiting;
-    public static String Notice;
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    public Integer EventID;
+    @ManyToOne
+    public String Driver;
 
-    public Event() {
+    @OneToMany (cascade=CascadeType.ALL, mappedBy="event")
+    private List<JoinEvent> JoinEvent;
 
+    public String From;
+    public String To;
+    @Temporal(TemporalType.DATE)
+    public String Date;
+    public String Time;
+    @OneToOne (fetch=EAGER, cascade=PERSIST)
+    public String CarType;
+    public Integer SeatLeft;
+    public int[] LocationWaiting;
+
+
+    public Event(String Driver, String From, String To,String Date, String Time, String CarType, Integer SeatLeft, int[] LocationWaiting) {
+        this.Driver = Driver;
+//        this.JoinEvent = JoinEvent;
+        this.From = From;
+        this.To = To;
+        this.Date = Date;
+        this.Time = Time;
+        this.CarType = CarType;
+        this.SeatLeft = SeatLeft;
+        this.LocationWaiting = LocationWaiting;
     }
 
-    public static String getEventID() {
+    public Integer getEventID() {
         return EventID;
     }
 
-    public static void setEventID(String eventID) {
-        EventID = eventID;
+    public void setEventID(Integer eventID) { EventID = eventID; }
+
+    public String getDriver() {
+        return Driver;
     }
 
-    public static String getDriverName() {
-        return DriverName;
-    }
+    public void setDriver(String driver) { Driver = driver; }
 
-    public static void setDriverName(String driverName) {
-        DriverName = driverName;
-    }
-
-    public static String getDriverPhone() {
-        return DriverPhone;
-    }
-
-    public static void setDriverPhone(String driverPhone) {
-        DriverPhone = driverPhone;
-    }
-
-    public static String getFrom() {
+    public String getFrom() {
         return From;
     }
 
-    public static void setFrom(String from) {
+    public void setFrom(String from) {
         From = from;
     }
 
-    public static String getTo() {
+    public String getTo() {
         return To;
     }
 
-    public static void setTo(String to) {
+    public void setTo(String to) {
         To = to;
     }
 
-    public static String getTimetoArrive() {
-        return TimetoArrive;
+    public String getDate() {return Date;}
+
+    public String getTime() {
+        return Time;
     }
 
-    public static void setTimetoArrive(String timetoArrive) {
-        TimetoArrive = timetoArrive;
+    public void setTime(String timetoArrive) {
+        Time = Time;
     }
 
-    public static Car getCarType() {
+    public String getCarType() {
         return CarType;
     }
 
-    public static void setCarType(Car carType) {
+    public void setCarType(String carType) {
         CarType = carType;
     }
 
-    public static int getSeatLeft() {
+    public int getSeatLeft() {
         return SeatLeft;
     }
 
-    public static void setSeatLeft(int seatLeft) {
+    public void setSeatLeft(int seatLeft) {
         SeatLeft = seatLeft;
     }
 
-    public static String getLocationWaiting() {
+    public int[] getLocationWaiting() {
         return LocationWaiting;
     }
 
-    public static void setLocationWaiting(String locationWaiting) {
-        LocationWaiting = locationWaiting;
+    public List<sample.JoinEvent> getJoinEvent() {
+        return JoinEvent;
     }
 
-    public static String getNotice() {
-        return Notice;
-    }
-
-    public static void setNotice(String notice) {
-        Notice = notice;
+    public void addJoinEvent(sample.JoinEvent joinEvent) {
+        JoinEvent.add(joinEvent);
     }
 }

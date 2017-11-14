@@ -5,7 +5,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import sample.Main;
 
 import java.io.IOException;
 
@@ -24,9 +26,8 @@ public class choosePlaceEccController {
     private JFXButton back_ecc;
 
     @FXML
-    void back(ActionEvent event) throws IOException {
-        pane.getChildren().clear();
-        pane.getChildren().add(FXMLLoader.load(getClass().getResource("../ECC/ecc.fxml")));
+    void back(MouseEvent event) throws IOException {
+//        Main.callStage.setScene(Main.ecc); // this does not work :(
 
     }
 

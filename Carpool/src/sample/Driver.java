@@ -1,37 +1,32 @@
 package sample;
 
+import javax.persistence.*;
+
+@Entity
 public class Driver extends Person {
 
-    public static String carType;
-    public static String carLicense;
-    public static String Rating;
-    public static Event DriverEvent;
+    private String carType;
+    private String carLicense;
+    private String Rating;
+    @OneToMany(cascade=CascadeType.ALL, mappedBy="Driver")
+    private Event DriverEvent;
 
-    public Driver() {
 
+    public Driver(String Username, String Password, String Email, String Name, String Gender, Integer Age, String PhoneNo,String carType, String carLicense, String Rating, Event DriverEvent) {
+        super(Username, Password, Email, Name, Gender, Age, PhoneNo);
+        this.carType = carType;
+        this.carLicense = carLicense;
+        this.Rating = Rating;
+        this.DriverEvent = DriverEvent;
     }
 
-    public static String getCarType() {
-        return carType;
-    }
+    public String getCarType() { return carType; }
 
-    public static void setCarType(String carType) {
-        Driver.carType = carType;
-    }
+    public String getCarLicense() { return carLicense; }
 
-    public static String getCarLicense() {
-        return carLicense;
-    }
+    public String getRating() { return Rating; }
 
-    public static void setCarLicense(String carLicense) {
-        Driver.carLicense = carLicense;
-    }
+    public Event getDriverEvent() { return DriverEvent; }
 
-    public static String getRating() {
-        return Rating;
-    }
 
-    public static void setRating(String rating) {
-        Rating = rating;
-    }
 }

@@ -1,18 +1,29 @@
 package sample;
 
-public class Car {
-    public static String typeName;
-    public static int seatNo;
+import javax.persistence.*;
 
-    public Car() {
+import static javax.persistence.CascadeType.ALL;
 
+@Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+public abstract class Car {
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Integer id;
+    private String typeName;
+    private int seatNo;
+
+    public Car(String typeName, int seatNo) {
+        this.typeName = typeName;
+        this.seatNo = seatNo;
     }
 
-    public static String getTypeName() {
+    public String getTypeName() {
         return typeName;
     }
 
-    public static int getSeatNo() {
+    public int getSeatNo() {
         return seatNo;
     }
 }
