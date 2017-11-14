@@ -139,5 +139,9 @@ public class summaryController {
     public JFXButton getHomeButton() {
         return homeButton;
     }
+    public JFXButton getArrivedButton() {
+        return arrivedButton;
+    }
+
 
 }

@@ -560,7 +560,6 @@ public class passengerFeedController {
                     public void handle(MouseEvent event) {
                         centerPane.getChildren().remove(centerPane.getChildren().size()-1);
                         Main.summaryController.getHomeButton().setOnMouseClicked(null);
-                        System.out.println(Main.summaryController.getHomeButton().getOnMouseClicked());
                         Main.summary.getRoot().relocate(0,0);
                         for (int i = 0; i<centerPane.getChildren().size()-1; i++) {
                             centerPane.getChildren().get(i).setOpacity(1.0);
@@ -568,35 +567,10 @@ public class passengerFeedController {
                     }
                 };
 
-                String place = null;
-                if (j.getEvent().getLocationWaiting()[0] == 1) {
-                    place = "Kae Ki";
-                }
-                else if (j.getEvent().getLocationWaiting()[1] == 1) {
-                    place = "E12 Building";
-                }
-                else if (j.getEvent().getLocationWaiting()[2] == 1) {
-                    place = "A Cafeteria";
-                }
-                else if (j.getEvent().getLocationWaiting()[3] == 1) {
-                    place = "Central Library";
-                }
-                else if (j.getEvent().getLocationWaiting()[4] == 1) {
-                    place = "Faculty of Science";
-                }
-                else if (j.getEvent().getLocationWaiting()[5] == 1) {
-                    place = "Prathep Building";
-                }
-                else if (j.getEvent().getLocationWaiting()[6] == 1) {
-                    place = "ECC Building";
-                }
-                else if (j.getEvent().getLocationWaiting()[7] == 1) {
-                    place = "RNP";
-                }
-
                 Main.summaryController.getHomeButton().setOnMouseClicked(ev);
+                Main.summaryController.getArrivedButton().setOnMouseClicked(ev);
                 Main.summaryController.toSummary(img1.getImage(), j.getEvent().getTo(),  j.getEvent().getFrom(),  j.getEvent().getTime(),
-                        j.getEvent().getDate(), String.valueOf(j.getEvent().getSeatLeft()), j.getEvent().getCarType(), place);
+                        j.getEvent().getDate(), String.valueOf(j.getEvent().getSeatLeft()), j.getEvent().getCarType(), mapPlace(j.getEvent().getLocationWaiting()));
             }
         }
 
@@ -611,24 +585,143 @@ public class passengerFeedController {
 
     @FXML
     void clickBlock2(MouseEvent event) {
-        Main.callStage.setScene(Main.detail);
-        Main.detailController.toDetail(img2.getImage(), to2.getText(), from2.getText(), time2.getText(),
-                date2.getText(), seat2.getText(), car2.getText(),location2);
+        EntityManager em2 = Database.getConnection().createEntityManager();
+        TypedQuery<JoinEvent> q = em2.createQuery("SELECT e FROM JoinEvent e WHERE e.event.EventID = 2", JoinEvent.class);
+        JoinEvent j = null;
+
+        if (q.getResultList().isEmpty() == false) { //if this event is already joined then go to summary page
+            System.out.println("q.getResultList() != null");
+            for (JoinEvent ev : q.getResultList()) {
+                j = ev;
+            }
+            if (q.getResultList() != null) { //if this event is already joined then go to summary page
+                centerPane.getChildren().add(Main.summary.getRoot());
+                Main.summary.getRoot().relocate(40,3);
+                for (int i = 0; i<centerPane.getChildren().size()-2; i++) {
+                    centerPane.getChildren().get(i).setOpacity(0.0);
+                }
+
+                EventHandler<MouseEvent> ev = new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent event) {
+                        centerPane.getChildren().remove(centerPane.getChildren().size()-1);
+                        Main.summaryController.getHomeButton().setOnMouseClicked(null);
+                        Main.summary.getRoot().relocate(0,0);
+                        for (int i = 0; i<centerPane.getChildren().size()-1; i++) {
+                            centerPane.getChildren().get(i).setOpacity(1.0);
+                        }
+                    }
+                };
+
+
+                Main.summaryController.getHomeButton().setOnMouseClicked(ev);
+                Main.summaryController.getArrivedButton().setOnMouseClicked(ev);
+                Main.summaryController.toSummary(img2.getImage(), j.getEvent().getTo(),  j.getEvent().getFrom(),  j.getEvent().getTime(),
+                        j.getEvent().getDate(), String.valueOf(j.getEvent().getSeatLeft()), j.getEvent().getCarType(), mapPlace(j.getEvent().getLocationWaiting()));
+            }
+        }
+
+        else {
+            System.out.println("There is no join event");
+            Main.callStage.setScene(Main.detail);
+            Main.detailController.toDetail(img2.getImage(), to2.getText(), from2.getText(), time2.getText(),
+                    date2.getText(), seat2.getText(), car2.getText(),location2);
+        }
+
     }
 
     @FXML
     void clickBlock3(MouseEvent event) {
-        Main.callStage.setScene(Main.detail);
-        Main.detailController.toDetail(img3.getImage(), to3.getText(), from3.getText(), time3.getText(),
-                date3.getText(), seat3.getText(), car3.getText(),location3);
+        EntityManager em2 = Database.getConnection().createEntityManager();
+        TypedQuery<JoinEvent> q = em2.createQuery("SELECT e FROM JoinEvent e WHERE e.event.EventID = 3", JoinEvent.class);
+        JoinEvent j = null;
+
+        if (q.getResultList().isEmpty() == false) { //if this event is already joined then go to summary page
+            System.out.println("q.getResultList() != null");
+            for (JoinEvent ev : q.getResultList()) {
+                j = ev;
+            }
+            if (q.getResultList() != null) { //if this event is already joined then go to summary page
+                centerPane.getChildren().add(Main.summary.getRoot());
+                Main.summary.getRoot().relocate(40,3);
+                for (int i = 0; i<centerPane.getChildren().size()-2; i++) {
+                    centerPane.getChildren().get(i).setOpacity(0.0);
+                }
+
+                EventHandler<MouseEvent> ev = new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent event) {
+                        centerPane.getChildren().remove(centerPane.getChildren().size()-1);
+                        Main.summaryController.getHomeButton().setOnMouseClicked(null);
+                        Main.summary.getRoot().relocate(0,0);
+                        for (int i = 0; i<centerPane.getChildren().size()-1; i++) {
+                            centerPane.getChildren().get(i).setOpacity(1.0);
+                        }
+                    }
+                };
+
+
+                Main.summaryController.getHomeButton().setOnMouseClicked(ev);
+                Main.summaryController.getArrivedButton().setOnMouseClicked(ev);
+                Main.summaryController.toSummary(img3.getImage(), j.getEvent().getTo(),  j.getEvent().getFrom(),  j.getEvent().getTime(),
+                        j.getEvent().getDate(), String.valueOf(j.getEvent().getSeatLeft()), j.getEvent().getCarType(), mapPlace(j.getEvent().getLocationWaiting()));
+            }
+        }
+
+        else {
+            System.out.println("There is no join event");
+            Main.callStage.setScene(Main.detail);
+            Main.detailController.toDetail(img3.getImage(), to3.getText(), from3.getText(), time3.getText(),
+                    date3.getText(), seat3.getText(), car3.getText(),location3);
+        }
+
 
     }
 
     @FXML
     void clickBlock4(MouseEvent event) {
-        Main.callStage.setScene(Main.detail);
-        Main.detailController.toDetail(img4.getImage(), to4.getText(), from4.getText(), time4.getText(),
-                date4.getText(), seat4.getText(), car4.getText(),location4);
+        EntityManager em2 = Database.getConnection().createEntityManager();
+        TypedQuery<JoinEvent> q = em2.createQuery("SELECT e FROM JoinEvent e WHERE e.event.EventID = 4", JoinEvent.class);
+        JoinEvent j = null;
+
+        if (q.getResultList().isEmpty() == false) { //if this event is already joined then go to summary page
+            System.out.println("q.getResultList() != null");
+            for (JoinEvent ev : q.getResultList()) {
+                j = ev;
+            }
+            if (q.getResultList() != null) { //if this event is already joined then go to summary page
+                centerPane.getChildren().add(Main.summary.getRoot());
+                Main.summary.getRoot().relocate(40,3);
+                for (int i = 0; i<centerPane.getChildren().size()-2; i++) {
+                    centerPane.getChildren().get(i).setOpacity(0.0);
+                }
+
+                EventHandler<MouseEvent> ev = new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent event) {
+                        centerPane.getChildren().remove(centerPane.getChildren().size()-1);
+                        Main.summaryController.getHomeButton().setOnMouseClicked(null);
+                        Main.summary.getRoot().relocate(0,0);
+                        for (int i = 0; i<centerPane.getChildren().size()-1; i++) {
+                            centerPane.getChildren().get(i).setOpacity(1.0);
+                        }
+                    }
+                };
+
+
+                Main.summaryController.getHomeButton().setOnMouseClicked(ev);
+                Main.summaryController.getArrivedButton().setOnMouseClicked(ev);
+                Main.summaryController.toSummary(img3.getImage(), j.getEvent().getTo(),  j.getEvent().getFrom(),  j.getEvent().getTime(),
+                        j.getEvent().getDate(), String.valueOf(j.getEvent().getSeatLeft()), j.getEvent().getCarType(), mapPlace(j.getEvent().getLocationWaiting()));
+            }
+        }
+
+        else {
+            System.out.println("There is no join event");
+            Main.callStage.setScene(Main.detail);
+            Main.detailController.toDetail(img4.getImage(), to4.getText(), from4.getText(), time4.getText(),
+                    date4.getText(), seat4.getText(), car4.getText(),location4);
+        }
     }
 
     @FXML
@@ -646,5 +739,34 @@ public class passengerFeedController {
         Main.callStage.setScene(Main.passengerProfile);
     }
 
+    public String mapPlace (int[] locationWaiting) {
+        String place = null;
 
+        if (locationWaiting[0] == 1) {
+            place = "Kae Ki";
+        }
+        else if (locationWaiting[1] == 1) {
+            place = "E12 Building";
+        }
+        else if (locationWaiting[2] == 1) {
+            place = "A Cafeteria";
+        }
+        else if (locationWaiting[3] == 1) {
+            place = "Central Library";
+        }
+        else if (locationWaiting[4] == 1) {
+            place = "Faculty of Science";
+        }
+        else if (locationWaiting[5] == 1) {
+            place = "Prathep Building";
+        }
+        else if (locationWaiting[6] == 1) {
+            place = "ECC Building";
+        }
+        else if (locationWaiting[7] == 1) {
+            place = "RNP";
+        }
+
+        return place;
+    }
 }
