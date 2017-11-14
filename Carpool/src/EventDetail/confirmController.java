@@ -149,7 +149,6 @@ public class confirmController {
         q.setParameter("time",time.getText());
         q.setParameter("car",car);
 
-//        String driverName = null ;
         sample.Event ev = q.getResultList().get(0);
 
         System.out.println("test get result: "+q.getResultList());
@@ -159,7 +158,6 @@ public class confirmController {
         System.out.println("look! date: "+ date.getText());
         System.out.println("look! time: "+ time.getText());
         System.out.println("look! car: "+ car);
-//        System.out.println("look! driver: "+ driverName);
 
 //        int seatForSend = Integer.parseInt(seat); //convert seat before send to db
 //        int locationWaitingForSend[] = convertLocation();
@@ -169,27 +167,8 @@ public class confirmController {
 
 
         em.getTransaction().begin();
-
-//        Query query = em.createQuery(
-//                "UPDATE Event SET SeatLeft = SeatLeft - 1 " +
-//                        "WHERE EventID = " + String.valueOf(ev.getEventID()));
-//
-//        int updateCount = query.executeUpdate();
-
         ev.setSeatLeft(ev.getSeatLeft()-1);
         ev.addJoinEvent(toSend);
-        //em.persist(toSend);
-
-
-//        Query query2 = em.createQuery(
-//                "UPDATE Event SET JoinEvent = :je " +
-//                        "WHERE EventID = " + String.valueOf(ev.getEventID()));
-//
-//        query2.setParameter("je", toSend);
-
-
-       // query2.executeUpdate();
-        //ev.setJoinEvent(toSend);
         em.getTransaction().commit();
         em.close();
 
@@ -199,9 +178,6 @@ public class confirmController {
         Main.summaryController.toSummary(img.getImage(), to.getText(), from.getText(), time.getText(),
                 date.getText(), seat, car, placeToWait.getText());
     }
-
-
-
 
     public int[] convertLocation(){
         int[] arr = new int[8];
