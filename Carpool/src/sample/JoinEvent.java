@@ -13,16 +13,15 @@ public class JoinEvent {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     public Integer joinEventID;
 
-    @OneToOne (mappedBy="JoinEvent")
+    @ManyToOne
     private Event event;
 
     private String Passenger;
 
-    private String eventJoined;
 
-    public JoinEvent(String Passenger, String eventJoined) {
+    public JoinEvent(String Passenger, Event event) {
         this.Passenger = Passenger;
-        this.eventJoined = eventJoined;
+        this.event = event;
     }
 
     public String getPassenger() { return Passenger; }
@@ -33,9 +32,7 @@ public class JoinEvent {
         return event;
     }
 
-    public String getEventJoined() {
-        return eventJoined;
-    }
+
 }
 
 //j.getEvent.get ...

@@ -104,7 +104,7 @@ public class Main extends Application{
         em.persist(tangkwa);
         em.getTransaction().commit();
         em.close();
-        emf.close();
+
 
     }
 

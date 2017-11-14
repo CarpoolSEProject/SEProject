@@ -5,11 +5,13 @@ import com.objectdb.o.TOL;
 import javax.persistence.*;
 
 
+import java.util.List;
+
 import static javax.persistence.CascadeType.PERSIST;
 import static javax.persistence.FetchType.EAGER;
 
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+//@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Event {
 
     @Id
@@ -18,8 +20,8 @@ public class Event {
     @ManyToOne
     public String Driver;
 
-    @OneToOne (cascade=CascadeType.ALL, mappedBy="event")
-    private JoinEvent JoinEvent;
+    @OneToMany (cascade=CascadeType.ALL, mappedBy="event")
+    private List<JoinEvent> JoinEvent;
 
     public String From;
     public String To;
@@ -30,7 +32,7 @@ public class Event {
     public String CarType;
     public Integer SeatLeft;
     public int[] LocationWaiting;
-    //public String Notice;
+
 
     public Event(String Driver, String From, String To,String Date, String Time, String CarType, Integer SeatLeft, int[] LocationWaiting) {
         this.Driver = Driver;
@@ -102,4 +104,11 @@ public class Event {
         return LocationWaiting;
     }
 
+    public List<sample.JoinEvent> getJoinEvent() {
+        return JoinEvent;
+    }
+
+    public void addJoinEvent(sample.JoinEvent joinEvent) {
+        JoinEvent.add(joinEvent);
+    }
 }

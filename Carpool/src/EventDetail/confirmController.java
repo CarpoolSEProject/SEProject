@@ -149,12 +149,9 @@ public class confirmController {
         q.setParameter("time",time.getText());
         q.setParameter("car",car);
 
-        String driverName = null ;
-        int id = 0;
-        for ( sample.Event driver : q.getResultList()) {
-            driverName = driver.getDriver();
-            id = driver.getEventID();
-        }
+//        String driverName = null ;
+        sample.Event ev = q.getResultList().get(0);
+
         System.out.println("test get result: "+q.getResultList());
 
         System.out.println("look! to: "+ to.getText());
@@ -162,21 +159,37 @@ public class confirmController {
         System.out.println("look! date: "+ date.getText());
         System.out.println("look! time: "+ time.getText());
         System.out.println("look! car: "+ car);
-        System.out.println("look! driver: "+ driverName);
+//        System.out.println("look! driver: "+ driverName);
 
 //        int seatForSend = Integer.parseInt(seat); //convert seat before send to db
 //        int locationWaitingForSend[] = convertLocation();
         String passenger = "Puttachart Srisuwankul";
 
-        JoinEvent toSend = new JoinEvent(passenger, String.valueOf(id));
+        JoinEvent toSend = new JoinEvent(passenger, ev);
+
+
         em.getTransaction().begin();
-        em.persist(toSend);
+
+//        Query query = em.createQuery(
+//                "UPDATE Event SET SeatLeft = SeatLeft - 1 " +
+//                        "WHERE EventID = " + String.valueOf(ev.getEventID()));
+//
+//        int updateCount = query.executeUpdate();
+
+        ev.setSeatLeft(ev.getSeatLeft()-1);
+        ev.addJoinEvent(toSend);
+        //em.persist(toSend);
 
 
-        Query query = em.createQuery(
-                "UPDATE Event SET SeatLeft = SeatLeft - 1 " +
-                        "WHERE EventID = " + String.valueOf(id));
-        int updateCount = query.executeUpdate();
+//        Query query2 = em.createQuery(
+//                "UPDATE Event SET JoinEvent = :je " +
+//                        "WHERE EventID = " + String.valueOf(ev.getEventID()));
+//
+//        query2.setParameter("je", toSend);
+
+
+       // query2.executeUpdate();
+        //ev.setJoinEvent(toSend);
         em.getTransaction().commit();
         em.close();
 
