@@ -541,7 +541,6 @@ public class passengerFeedController {
     void clickBlock1(MouseEvent event) {
         EntityManager em2 = Database.getConnection().createEntityManager();
         TypedQuery<JoinEvent> q = em2.createQuery("SELECT e FROM JoinEvent e WHERE e.event.EventID = 1", JoinEvent.class);
-        System.out.println("!!!!!"+q.getResultList());
         JoinEvent j = null;
 
         if (q.getResultList().isEmpty() == false) { //if this event is already joined then go to summary page
@@ -569,9 +568,35 @@ public class passengerFeedController {
                     }
                 };
 
+                String place = null;
+                if (j.getEvent().getLocationWaiting()[0] == 1) {
+                    place = "Kae Ki";
+                }
+                else if (j.getEvent().getLocationWaiting()[1] == 1) {
+                    place = "E12 Building";
+                }
+                else if (j.getEvent().getLocationWaiting()[2] == 1) {
+                    place = "A Cafeteria";
+                }
+                else if (j.getEvent().getLocationWaiting()[3] == 1) {
+                    place = "Central Library";
+                }
+                else if (j.getEvent().getLocationWaiting()[4] == 1) {
+                    place = "Faculty of Science";
+                }
+                else if (j.getEvent().getLocationWaiting()[5] == 1) {
+                    place = "Prathep Building";
+                }
+                else if (j.getEvent().getLocationWaiting()[6] == 1) {
+                    place = "ECC Building";
+                }
+                else if (j.getEvent().getLocationWaiting()[7] == 1) {
+                    place = "RNP";
+                }
+
                 Main.summaryController.getHomeButton().setOnMouseClicked(ev);
                 Main.summaryController.toSummary(img1.getImage(), j.getEvent().getTo(),  j.getEvent().getFrom(),  j.getEvent().getTime(),
-                        j.getEvent().getDate(), String.valueOf(j.getEvent().getSeatLeft()), j.getEvent().getCarType(), "test");
+                        j.getEvent().getDate(), String.valueOf(j.getEvent().getSeatLeft()), j.getEvent().getCarType(), place);
             }
         }
 

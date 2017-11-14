@@ -46,7 +46,6 @@ public class confirmController {
     @FXML
     private Text placeToWait;
 
-
     @FXML
     private Text TO;
 
@@ -82,6 +81,10 @@ public class confirmController {
         this.placeToWait.setVisible(true);
 
         if (to.equals("Kae Ki")){
+            TO.setFill(Color.valueOf("#55b4f1"));
+            FROM.setFill(Color.valueOf("#55b4f1"));
+            arrive.setFill(Color.valueOf("#55b4f1"));
+            place.setFill(Color.valueOf("#55b4f1"));
 
         }
         else if (to.equals("E12 Building")){
@@ -108,13 +111,12 @@ public class confirmController {
             arrive.setFill(Color.valueOf("#92b923"));
             place.setFill(Color.valueOf("#92b923"));
         }
-//        else if (to.equals("Prathep Building")){
-//            choice1.setTextFill(Color.valueOf("#92b923"));
-//            choice2.setTextFill(Color.valueOf("#92b923"));
-//            choice3.setTextFill(Color.valueOf("#92b923"));
-//            choice4.setTextFill(Color.valueOf("#92b923"));
-//            choice5.setTextFill(Color.valueOf("#92b923"));
-//        }
+        else if (to.equals("Prathep Building")){
+            TO.setFill(Color.valueOf("#ffda2e"));
+            FROM.setFill(Color.valueOf("#ffda2e"));
+            arrive.setFill(Color.valueOf("#ffda2e"));
+            place.setFill(Color.valueOf("#ffda2e"));
+        }
         else if (to.equals("ECC Building")){
             TO.setFill(Color.valueOf("#cf2e51"));
             FROM.setFill(Color.valueOf("#cf2e51"));
@@ -265,4 +267,5 @@ public class confirmController {
 
         return arr;
     }
+
 }
