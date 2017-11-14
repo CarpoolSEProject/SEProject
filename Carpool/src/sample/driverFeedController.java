@@ -540,6 +540,7 @@ public class driverFeedController {
             }
 
         }
+        em.close();
     }
 
     @FXML

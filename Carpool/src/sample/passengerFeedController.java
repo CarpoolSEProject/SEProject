@@ -531,6 +531,7 @@ public class passengerFeedController {
             }
 
         }
+        em.close();
     }
 
 

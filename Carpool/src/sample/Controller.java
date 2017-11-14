@@ -59,6 +59,7 @@ public class Controller {
         else {
             userOrPassIncorrect.setVisible(true);
         }
+        em.close();
 
     }
 
@@ -89,9 +90,11 @@ public class Controller {
                     else {
                         userOrPassIncorrect.setVisible(true);
                     }
+                    em.close();
                 }
             }
         });
+
     }
 
 

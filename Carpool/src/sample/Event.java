@@ -18,7 +18,7 @@ public class Event {
     @ManyToOne
     public String Driver;
 
-    @OneToMany(cascade=CascadeType.ALL, mappedBy="event")
+    @OneToOne (cascade=CascadeType.ALL, mappedBy="event")
     private JoinEvent JoinEvent;
 
     public String From;

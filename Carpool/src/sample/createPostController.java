@@ -232,8 +232,9 @@ public class createPostController {
                     em.getTransaction().commit();
                 }
                 Main.callStage.setScene(Main.driverFeed);
-            }
 
+            }
+            em.close();
 
 
         }

@@ -1,6 +1,5 @@
 package sample;
 
-import com.objectdb.o.INT;
 
 import javax.persistence.*;
 import java.sql.Time;
@@ -14,7 +13,7 @@ public class JoinEvent {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     public Integer joinEventID;
 
-    @ManyToOne
+    @OneToOne (mappedBy="JoinEvent")
     private Event event;
 
     private String Passenger;

@@ -73,6 +73,10 @@ public class summaryController {
         this.placeToWait.setVisible(true);
 
         if (to.equals("Kae Ki")){
+            TO.setFill(Color.valueOf("#55b4f1"));
+            FROM.setFill(Color.valueOf("#55b4f1"));
+            arrive.setFill(Color.valueOf("#55b4f1"));
+            this.place.setFill(Color.valueOf("#55b4f1"));
 
         }
         else if (to.equals("E12 Building")){
@@ -99,13 +103,12 @@ public class summaryController {
             arrive.setFill(Color.valueOf("#92b923"));
             this.place.setFill(Color.valueOf("#92b923"));
         }
-//        else if (to.equals("Prathep Building")){
-//            choice1.setTextFill(Color.valueOf("#92b923"));
-//            choice2.setTextFill(Color.valueOf("#92b923"));
-//            choice3.setTextFill(Color.valueOf("#92b923"));
-//            choice4.setTextFill(Color.valueOf("#92b923"));
-//            choice5.setTextFill(Color.valueOf("#92b923"));
-//        }
+        else if (to.equals("Prathep Building")){
+            TO.setFill(Color.valueOf("#ffda2e"));
+            FROM.setFill(Color.valueOf("#ffda2e"));
+            arrive.setFill(Color.valueOf("#ffda2e"));
+            this.place.setFill(Color.valueOf("#ffda2e"));
+        }
         else if (to.equals("ECC Building")){
             TO.setFill(Color.valueOf("#cf2e51"));
             FROM.setFill(Color.valueOf("#cf2e51"));
