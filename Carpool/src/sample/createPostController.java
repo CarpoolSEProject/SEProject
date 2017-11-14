@@ -38,7 +38,6 @@ public class createPostController {
     @FXML
     private ImageView logout;
 
-
     @FXML
     private JFXComboBox<Label> choicePlace_to;
 
@@ -110,6 +109,7 @@ public class createPostController {
 
     @FXML
     public void initialize() {
+        //initial for choice
         choicePlace_to.getItems().add(new Label("RNP"));
         choicePlace_to.getItems().add(new Label("Kae Ki"));
         choicePlace_to.getItems().add(new Label("E12 Building"));
