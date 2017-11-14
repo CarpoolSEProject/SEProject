@@ -550,11 +550,11 @@ public class passengerFeedController {
             if (q.getResultList() != null) { //if this event is already joined then go to summary page
                 centerPane.getChildren().add(Main.summary.getRoot());
                 Main.summary.getRoot().relocate(40,3);
-                for (int i = 0; i<centerPane.getChildren().size()-2; i++) {
+                for (int i = 0; i<centerPane.getChildren().size()-2; i++) { //set centerpane to disappear
                     centerPane.getChildren().get(i).setOpacity(0.0);
                 }
 
-                EventHandler<MouseEvent> ev = new EventHandler<MouseEvent>() {
+                EventHandler<MouseEvent> ev = new EventHandler<MouseEvent>() { //create handle event for mouse clicked
                     @Override
                     public void handle(MouseEvent event) {
                         centerPane.getChildren().remove(centerPane.getChildren().size()-1);
@@ -566,14 +566,14 @@ public class passengerFeedController {
                     }
                 };
 
-                Main.summaryController.getHomeButton().setOnMouseClicked(ev);
-                Main.summaryController.getArrivedButton().setOnMouseClicked(ev);
+                Main.summaryController.getHomeButton().setOnMouseClicked(ev); //call ev
+                Main.summaryController.getArrivedButton().setOnMouseClicked(ev); //call ev
                 Main.summaryController.toSummary(img1.getImage(), j.getEvent().getTo(),  j.getEvent().getFrom(),  j.getEvent().getTime(),
                         j.getEvent().getDate(), String.valueOf(j.getEvent().getSeatLeft()), j.getEvent().getCarType(), mapPlace(j.getEvent().getLocationWaiting()));
             }
         }
 
-        else {
+        else { //if the event is not joined by passenger
             System.out.println("There is no join event");
             Main.callStage.setScene(Main.detail);
             Main.detailController.toDetail(img1.getImage(), to1.getText(), from1.getText(), time1.getText(),
@@ -738,7 +738,7 @@ public class passengerFeedController {
         Main.callStage.setScene(Main.passengerProfile);
     }
 
-    public String mapPlace (int[] locationWaiting) {
+    public String mapPlace (int[] locationWaiting) { //map array locationwaiting to place
         String place = null;
 
         if (locationWaiting[0] == 1) {
