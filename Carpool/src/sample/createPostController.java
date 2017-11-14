@@ -145,7 +145,7 @@ public class createPostController {
     }
 
     @FXML
-    void confirm(ActionEvent event) { //press confirm
+    void confirm(ActionEvent event) { //press confirm button
         String witsarut = "Witsarut Kavidum";
         EntityManager em = Database.getConnection().createEntityManager();
         TypedQuery<String> q = em.createQuery("SELECT Name FROM Driver", String.class);
@@ -156,6 +156,7 @@ public class createPostController {
             }
         }
 
+        // check if any information is incomplete
         if((choicePlace_to.getValue() != null) && (choicePlace_from.getValue() != null) && (choiceCarType.getValue() != null) && (seatLeft.getValue() != null)
                 && (time.getText() != null) && (date.getValue() != null) && countCheckBox()==1) {
 
@@ -165,16 +166,18 @@ public class createPostController {
             System.out.println(choiceCarType.getValue());
             System.out.println(seatLeft.getValue());
 
-            if (choicePlace_to.getValue().getText().equals(choicePlace_from.getValue().getText())) { // to - from cannot be the same place
+            // to - from cannot be the same place
+            if (choicePlace_to.getValue().getText().equals(choicePlace_from.getValue().getText())) {
                 System.out.println("To - From are the same place");
                 warning2.setVisible(true);
             }
+            // check if motorcycle has more than 1 seat left
             if (choiceCarType.getValue().getText().equals("Motorcycle") && (seatLeft.getValue().getText().equals("3") || seatLeft.getValue().getText().equals("4")
                     || seatLeft.getValue().getText().equals("2"))){
                 System.out.println("Motorcycle and seatleft > 1");
                 warning3.setVisible(true);
             }
-            else {
+            else { //everything is okay
 
                 System.out.println("Form Accepted");
                 warning.setVisible(false);
@@ -217,7 +220,6 @@ public class createPostController {
                 // Send event to Database (Event Class)
                 if (carType == "Motorcycle") {
                     Car c = new Motorcycle("Motorcycle", 2);
-//                    System.out.println(c.getTypeName());
                     Event toSend = new Event(driverName, from, to, datee.toString(), timee, c.getTypeName(), seatNo, checkLocation);
                     em.getTransaction().begin();
                     em.persist(toSend);
@@ -234,31 +236,27 @@ public class createPostController {
                 Main.callStage.setScene(Main.driverFeed);
 
             }
-            em.close();
-
 
         }
 
-        else {
+        else { //if there is any incomplete option, show warning
             warning.setVisible(true);
         }
 
     }
 
 
-    public int countCheckBox (){
+    public int countCheckBox (){ //count number of selected checkbox
         int count;
         if (wait_KaeKi.isSelected() == true || wait_E12.isSelected() == true || wait_A.isSelected() == true ||
                 wait_lib.isSelected() == true || wait_sci.isSelected() == true || wait_prathep.isSelected() == true ||
                 wait_ecc.isSelected() == true || wait_RNP.isSelected() == true){
             count = 1;
-
         }
 
         else {
             count = 0;
         }
-
         return count;
     }
 
