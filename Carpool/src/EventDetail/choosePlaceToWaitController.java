@@ -116,7 +116,11 @@ public class choosePlaceToWaitController {
 
     public void setColor (){
         if (to.equals("Kae Ki")){
-
+            choice1.setTextFill(Color.valueOf("#55b4f1"));
+            choice2.setTextFill(Color.valueOf("#55b4f1"));
+            choice3.setTextFill(Color.valueOf("#55b4f1"));
+            choice4.setTextFill(Color.valueOf("#55b4f1"));
+            choice5.setTextFill(Color.valueOf("#55b4f1"));
         }
         else if (to.equals("E12 Building")){
             choice1.setTextFill(Color.valueOf("#cf2e51"));
@@ -146,13 +150,13 @@ public class choosePlaceToWaitController {
             choice4.setTextFill(Color.valueOf("#92b923"));
             choice5.setTextFill(Color.valueOf("#92b923"));
         }
-//        else if (to.equals("Prathep Building")){
-//            choice1.setTextFill(Color.valueOf("#92b923"));
-//            choice2.setTextFill(Color.valueOf("#92b923"));
-//            choice3.setTextFill(Color.valueOf("#92b923"));
-//            choice4.setTextFill(Color.valueOf("#92b923"));
-//            choice5.setTextFill(Color.valueOf("#92b923"));
-//        }
+        else if (to.equals("Prathep Building")){
+            choice1.setTextFill(Color.valueOf("#ffda2e"));
+            choice2.setTextFill(Color.valueOf("#ffda2e"));
+            choice3.setTextFill(Color.valueOf("#ffda2e"));
+            choice4.setTextFill(Color.valueOf("#ffda2e"));
+            choice5.setTextFill(Color.valueOf("#ffda2e"));
+        }
         else if (to.equals("ECC Building")){
             choice1.setTextFill(Color.valueOf("#cf2e51"));
             choice2.setTextFill(Color.valueOf("#cf2e51"));

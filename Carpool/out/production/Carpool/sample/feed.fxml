@@ -155,7 +155,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <Pane layoutX="-4.0" layoutY="33.0" prefHeight="458.0" prefWidth="495.0">
+            <Pane fx:id="centerPane" layoutX="-4.0" layoutY="33.0" prefHeight="458.0" prefWidth="495.0">
                <children>
                   <Pane fx:id="blockPane1" layoutX="-3.0" prefHeight="104.0" prefWidth="494.0" visible="false">
                      <children>

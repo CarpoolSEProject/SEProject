@@ -152,7 +152,6 @@ public class passengerProfileController {
         TypedQuery<JoinEvent> pull = em.createQuery("SELECT e FROM JoinEvent e", JoinEvent.class);
         for (JoinEvent ev : pull.getResultList()){
             System.out.println("List of EventID Joined: " + ev.getEvent());
-            System.out.println("Test here: "+ ev.getEvent());
             System.out.println("Event ID: "+ev.getEvent().getEventID());
         }
         for (JoinEvent ev : pull.getResultList()) {

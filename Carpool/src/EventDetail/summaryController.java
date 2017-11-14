@@ -136,4 +136,8 @@ public class summaryController {
         Main.callStage.setScene(Main.feed);
     }
 
+    public JFXButton getHomeButton() {
+        return homeButton;
+    }
+
 }
