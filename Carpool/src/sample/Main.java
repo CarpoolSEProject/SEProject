@@ -60,12 +60,6 @@ public class Main extends Application{
         this.feed = new Scene(feed.load());
         this.createPost = new Scene(createPost.load());
         this.driverFeed = new Scene(driverFeed.load());
-
-//        URL test = getClass().getResource("../sample.EventDetail/detail.fxml");
-//        detail.setLocation(test);
-//        System.out.println(detail.getLocation().getPath());
-
-
         this.detail = new Scene(detail.load());
         this.choosePlacetoWait = new Scene(choosePlaceToWait.load());
         this.confirm = new Scene(confirm.load());
