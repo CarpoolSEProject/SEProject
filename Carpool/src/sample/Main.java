@@ -1,5 +1,5 @@
 package sample;
-import EventDetail.*;
+import sample.EventDetail.*;
 
 import CarpoolDB.Database;
 import javafx.application.Application;
@@ -9,7 +9,6 @@ import javafx.stage.Stage;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-
 
 
 public class Main extends Application{
@@ -50,10 +49,10 @@ public class Main extends Application{
         FXMLLoader feed = new FXMLLoader(getClass().getResource("feed.fxml"));
         FXMLLoader createPost = new FXMLLoader(getClass().getResource("createPost.fxml"));
         FXMLLoader driverFeed = new FXMLLoader(getClass().getResource("driverFeed.fxml"));
-        FXMLLoader detail = new FXMLLoader(getClass().getResource("../EventDetail/detail.fxml"));
-        FXMLLoader choosePlaceToWait = new FXMLLoader(getClass().getResource("../EventDetail/choosePlaceToWait.fxml"));
-        FXMLLoader confirm = new FXMLLoader(getClass().getResource("../EventDetail/confirm.fxml"));
-        FXMLLoader summary = new FXMLLoader(getClass().getResource("../EventDetail/summary.fxml"));
+        FXMLLoader detail = new FXMLLoader(getClass().getResource("EventDetail/detail.fxml"));
+        FXMLLoader choosePlaceToWait = new FXMLLoader(getClass().getResource("EventDetail/choosePlaceToWait.fxml"));
+        FXMLLoader confirm = new FXMLLoader(getClass().getResource("EventDetail/confirm.fxml"));
+        FXMLLoader summary = new FXMLLoader(getClass().getResource("EventDetail/summary.fxml"));
         FXMLLoader driverProfile = new FXMLLoader(getClass().getResource("driverProfile.fxml"));
         FXMLLoader passengerProfile = new FXMLLoader(getClass().getResource("passengerProfile.fxml"));
 
@@ -61,6 +60,12 @@ public class Main extends Application{
         this.feed = new Scene(feed.load());
         this.createPost = new Scene(createPost.load());
         this.driverFeed = new Scene(driverFeed.load());
+
+//        URL test = getClass().getResource("../sample.EventDetail/detail.fxml");
+//        detail.setLocation(test);
+//        System.out.println(detail.getLocation().getPath());
+
+
         this.detail = new Scene(detail.load());
         this.choosePlacetoWait = new Scene(choosePlaceToWait.load());
         this.confirm = new Scene(confirm.load());
