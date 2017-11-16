@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_carpool" default="compile.module.carpool">
+  <dirname property="module.carpool.basedir" file="${ant.file.module_carpool}"/>
+  
+  <property name="module.jdk.home.carpool" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.carpool" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.carpool" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.carpool" value="-encoding UTF-8 -source 9 -target 9 ${compiler.args}"/>
+  
+  <property name="carpool.output.dir" value="${module.carpool.basedir}/out/production/Carpool"/>
+  <property name="carpool.testoutput.dir" value="${module.carpool.basedir}/out/test/Carpool"/>
+  
+  <path id="carpool.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="carpool.module.production.classpath">
+    <path refid="${module.jdk.classpath.carpool}"/>
+    <pathelement location="${basedir}/jfoenix-9.0.0.jar"/>
+    <path refid="library.jfoenix-9.0.0.classpath"/>
+    <pathelement location="${basedir}/jfoenix-0.0.0-SNAPSHOT-retrolambda.jar"/>
+    <path refid="library.objectdb.classpath"/>
+  </path>
+  
+  <path id="carpool.runtime.production.module.classpath">
+    <pathelement location="${carpool.output.dir}"/>
+    <pathelement location="${basedir}/jfoenix-9.0.0.jar"/>
+    <path refid="library.jfoenix-9.0.0.classpath"/>
+    <pathelement location="${basedir}/jfoenix-0.0.0-SNAPSHOT-retrolambda.jar"/>
+    <path refid="library.objectdb.classpath"/>
+  </path>
+  
+  <path id="carpool.module.classpath">
+    <path refid="${module.jdk.classpath.carpool}"/>
+    <pathelement location="${carpool.output.dir}"/>
+    <pathelement location="${basedir}/jfoenix-9.0.0.jar"/>
+    <path refid="library.jfoenix-9.0.0.classpath"/>
+    <pathelement location="${basedir}/jfoenix-0.0.0-SNAPSHOT-retrolambda.jar"/>
+    <path refid="library.objectdb.classpath"/>
+  </path>
+  
+  <path id="carpool.runtime.module.classpath">
+    <pathelement location="${carpool.testoutput.dir}"/>
+    <pathelement location="${carpool.output.dir}"/>
+    <pathelement location="${basedir}/jfoenix-9.0.0.jar"/>
+    <path refid="library.jfoenix-9.0.0.classpath"/>
+    <pathelement location="${basedir}/jfoenix-0.0.0-SNAPSHOT-retrolambda.jar"/>
+    <path refid="library.objectdb.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.carpool">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.carpool">
+    <patternset refid="excluded.from.module.carpool"/>
+  </patternset>
+  
+  <path id="carpool.module.sourcepath">
+    <dirset dir="${module.carpool.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.carpool" depends="compile.module.carpool.production,compile.module.carpool.tests" description="Compile module Carpool"/>
+  
+  <target name="compile.module.carpool.production" depends="register.custom.compilers" description="Compile module Carpool; production classes">
+    <mkdir dir="${carpool.output.dir}"/>
+    <javac2 destdir="${carpool.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.carpool}/javac">
+      <compilerarg line="${compiler.args.carpool}"/>
+      <bootclasspath refid="carpool.module.bootclasspath"/>
+      <classpath refid="carpool.module.production.classpath"/>
+      <src refid="carpool.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.carpool"/>
+    </javac2>
+    
+    <copy todir="${carpool.output.dir}">
+      <fileset dir="${module.carpool.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.carpool.tests" depends="register.custom.compilers,compile.module.carpool.production" description="compile module Carpool; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.carpool" description="cleanup module">
+    <delete dir="${carpool.output.dir}"/>
+    <delete dir="${carpool.testoutput.dir}"/>
+  </target>
+</project>

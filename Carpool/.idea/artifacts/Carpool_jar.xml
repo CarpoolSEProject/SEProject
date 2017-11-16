@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Carpool:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Carpool_jar</output-path>
+    <root id="archive" name="Carpool.jar">
+      <element id="module-output" name="Carpool" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jfoenix-9.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jfoenix-0.0.0-SNAPSHOT-retrolambda.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/objectdb.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
