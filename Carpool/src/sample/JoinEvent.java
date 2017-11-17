@@ -34,5 +34,3 @@ public class JoinEvent {
 
 
 }
-
-//j.getEvent.get ...

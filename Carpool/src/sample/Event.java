@@ -1,6 +1,5 @@
 package sample;
 
-import com.objectdb.o.TOL;
 
 import javax.persistence.*;
 
@@ -11,7 +10,6 @@ import static javax.persistence.CascadeType.PERSIST;
 import static javax.persistence.FetchType.EAGER;
 
 @Entity
-//@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Event {
 
     @Id
@@ -36,7 +34,6 @@ public class Event {
 
     public Event(String Driver, String From, String To,String Date, String Time, String CarType, Integer SeatLeft, int[] LocationWaiting) {
         this.Driver = Driver;
-//        this.JoinEvent = JoinEvent;
         this.From = From;
         this.To = To;
         this.Date = Date;
@@ -50,7 +47,6 @@ public class Event {
         return EventID;
     }
 
-    public void setEventID(Integer eventID) { EventID = eventID; }
 
     public String getDriver() {
         return Driver;
@@ -86,10 +82,6 @@ public class Event {
 
     public String getCarType() {
         return CarType;
-    }
-
-    public void setCarType(String carType) {
-        CarType = carType;
     }
 
     public int getSeatLeft() {

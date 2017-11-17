@@ -105,6 +105,8 @@ public class createPostController {
 
     String[] locationWaiting = new String[8];
     int[] checkLocation = new int[8];
+    boolean checkSamePlace;
+    boolean checkMotorcycle;
 
 
     @FXML
@@ -169,15 +171,21 @@ public class createPostController {
             // to - from cannot be the same place
             if (choicePlace_to.getValue().getText().equals(choicePlace_from.getValue().getText())) {
                 System.out.println("To - From are the same place");
+                warning.setVisible(false);
                 warning2.setVisible(true);
+                warning3.setVisible(false);
+                checkSamePlace = true;
             }
             // check if motorcycle has more than 1 seat left
             if (choiceCarType.getValue().getText().equals("Motorcycle") && (seatLeft.getValue().getText().equals("3") || seatLeft.getValue().getText().equals("4")
                     || seatLeft.getValue().getText().equals("2"))){
                 System.out.println("Motorcycle and seatleft > 1");
+                warning.setVisible(false);
+                warning2.setVisible(false);
                 warning3.setVisible(true);
+                checkMotorcycle = true;
             }
-            else { //everything is okay
+            if (checkSamePlace == false && checkMotorcycle == false) { //everything is okay
 
                 System.out.println("Form Accepted");
                 warning.setVisible(false);
@@ -233,6 +241,7 @@ public class createPostController {
                     em.persist(toSend);
                     em.getTransaction().commit();
                 }
+
                 Main.callStage.setScene(Main.driverFeed);
 
             }
