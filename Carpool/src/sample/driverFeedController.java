@@ -147,16 +147,6 @@ public class driverFeedController {
     int[] location4 = new int[8];
 
 
-    @FXML
-    void logout(MouseEvent event) {
-        Main.callStage.setScene(Main.sample);
-    }
-
-
-    @FXML
-    void createPost(ActionEvent event) {
-        Main.callStage.setScene(Main.createPost);
-    }
 
     @FXML
     void refresh(ActionEvent event) { //to refresh the feed
@@ -555,6 +545,9 @@ public class driverFeedController {
         Main.controller.clearText();
         Main.callStage.setScene(Main.sample);
     }
-
+    @FXML
+    void createPost(ActionEvent event) {
+        Main.callStage.setScene(Main.createPost);
+    }
 
 }
