@@ -108,12 +108,12 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="TO:">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="TO:" GridPane.rowIndex="1">
                <font>
                   <Font size="20.0" />
                </font>
             </Text>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM:" GridPane.rowIndex="1">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM:">
                <font>
                   <Font size="20.0" />
                </font>
@@ -134,11 +134,11 @@
                </font>
             </Text>
             <JFXDatePicker fx:id="date" defaultColor="#0082d5" focusTraversable="false" prefHeight="36.0" prefWidth="213.0" promptText="Date" style="-fx-background-color: #cad3df;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <JFXComboBox fx:id="choicePlace_to" focusColor="#405aa800" prefHeight="36.0" prefWidth="213.0" promptText="Choose Place" style="-fx-background-color: #cad3df;" unFocusColor="#ffffff00" visibleRowCount="4" GridPane.columnIndex="1" />
-            <JFXComboBox fx:id="choicePlace_from" focusColor="#405aa800" prefHeight="36.0" prefWidth="213.0" promptText="Choose Place" style="-fx-background-color: #cad3df;" unFocusColor="#ffffff00" visibleRowCount="4" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <JFXComboBox fx:id="choicePlace_to" focusColor="#405aa800" prefHeight="36.0" prefWidth="213.0" promptText="Choose Place" style="-fx-background-color: #cad3df;" unFocusColor="#ffffff00" visibleRowCount="4" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <JFXComboBox fx:id="choiceCarType" focusColor="#405aa800" prefHeight="36.0" prefWidth="213.0" promptText="Choose Car Type" style="-fx-background-color: #cad3df;" unFocusColor="#ffffff00" visibleRowCount="2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <JFXComboBox fx:id="seatLeft" focusColor="#405aa800" prefHeight="36.0" prefWidth="213.0" promptText="choose seat left" style="-fx-background-color: #cad3df;" unFocusColor="#ffffff00" visibleRowCount="4" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <JFXTextField fx:id="time" focusColor="#405aa800" prefHeight="36.0" prefWidth="213.0" promptText="Ex. 09.00 AM" style="-fx-background-color: #cad3df;" unFocusColor="#4d4d4d00" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <JFXComboBox fx:id="choicePlace_from" focusColor="#405aa800" prefHeight="36.0" prefWidth="213.0" promptText="Choose Place" style="-fx-background-color: #cad3df;" unFocusColor="#ffffff00" visibleRowCount="4" GridPane.columnIndex="1" />
          </children>
       </GridPane>
       <GridPane layoutX="450.0" layoutY="145.0" prefHeight="314.0" prefWidth="177.0">
