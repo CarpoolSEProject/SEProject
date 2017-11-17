@@ -96,7 +96,10 @@ public class Controller {
 
     }
 
-
+    public void clearText (){
+        enterUsername.clear();
+        enterPassword.clear();
+    }
 
 
 
