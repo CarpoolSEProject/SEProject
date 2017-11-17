@@ -55,7 +55,7 @@
         </Text>
         <ImageView fx:id="img" fitHeight="163.0" fitWidth="163.0" layoutX="120.0" layoutY="23.0" preserveRatio="true">
             <image>
-                <Image url="@../place/A.png" />
+                <Image url="@/place/A.png" />
             </image>
         </ImageView>
       <Text fx:id="to" fill="WHITE" layoutX="99.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="to" visible="false">

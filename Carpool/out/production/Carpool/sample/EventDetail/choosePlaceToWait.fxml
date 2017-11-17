@@ -37,7 +37,7 @@
         </JFXButton>
         <ImageView fx:id="img" fitHeight="163.0" fitWidth="163.0" layoutX="122.0" layoutY="25.0" preserveRatio="true">
             <image>
-                <Image url="@../place/A.png" />
+                <Image url="@/place/A.png" />
             </image>
         </ImageView>
       <GridPane layoutX="155.0" layoutY="230.0" prefHeight="144.0" prefWidth="182.0">

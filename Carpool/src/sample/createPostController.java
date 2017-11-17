@@ -107,6 +107,7 @@ public class createPostController {
     int[] checkLocation = new int[8];
     boolean checkSamePlace;
     boolean checkMotorcycle;
+    boolean checkToAndChoosePlace;
 
 
     @FXML
@@ -177,14 +178,16 @@ public class createPostController {
                 checkSamePlace = true;
             }
             // check if motorcycle has more than 1 seat left
-            if (choiceCarType.getValue().getText().equals("Motorcycle") && (seatLeft.getValue().getText().equals("3") || seatLeft.getValue().getText().equals("4")
-                    || seatLeft.getValue().getText().equals("2"))){
+            if (choiceCarType.getValue().getText().equals("Motorcycle") && (seatLeft.getValue().getText().equals("3")
+                    || seatLeft.getValue().getText().equals("4") || seatLeft.getValue().getText().equals("2"))){
                 System.out.println("Motorcycle and seatleft > 1");
                 warning.setVisible(false);
                 warning2.setVisible(false);
                 warning3.setVisible(true);
                 checkMotorcycle = true;
             }
+
+
             if (checkSamePlace == false && checkMotorcycle == false) { //everything is okay
 
                 System.out.println("Form Accepted");
@@ -199,6 +202,7 @@ public class createPostController {
                 String seat = seatLeft.getValue().getText();
                 int seatNo = Integer.parseInt(seat);
 
+                //map location with array
                 if (wait_KaeKi.isSelected() == true) {
                     checkLocation[0] = 1;
                 }
