@@ -176,6 +176,6 @@ public class ConfirmController {
         Main.SummaryController.toSummary(img.getImage(), to.getText(), from.getText(), time.getText(),
                 date.getText(), seat, car, placeToWait.getText());
     }
-    
+
 
 }

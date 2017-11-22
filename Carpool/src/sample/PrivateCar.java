@@ -1,13 +1,13 @@
 package sample;
 
 import javax.persistence.Entity;
-import javax.persistence.MappedSuperclass;
 
 
 @Entity
 public class PrivateCar extends Car {
 
     public PrivateCar(String typeName, int seatNo) {
+
         super(typeName,seatNo);
     }
 

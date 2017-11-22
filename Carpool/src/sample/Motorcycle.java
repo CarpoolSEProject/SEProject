@@ -9,6 +9,7 @@ public class Motorcycle extends Car {
 
 
     public Motorcycle(String typeName, int seatNo) {
+
         super(typeName,seatNo);
     }
 
