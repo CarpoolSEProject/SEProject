@@ -14,7 +14,7 @@ import javafx.scene.text.Text;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
-public class driverFeedController {
+public class DriverFeedController {
 
     @FXML
     private Text navBar_home;

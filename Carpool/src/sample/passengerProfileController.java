@@ -11,7 +11,7 @@ import javafx.scene.text.Text;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
-public class passengerProfileController {
+public class PassengerProfileController {
 
     @FXML
     private Text navBar_home;

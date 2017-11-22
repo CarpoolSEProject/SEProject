@@ -15,7 +15,7 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 
-public class createPostController {
+public class CreatePostController {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)

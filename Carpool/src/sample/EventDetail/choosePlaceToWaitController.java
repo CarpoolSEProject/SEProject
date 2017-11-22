@@ -11,7 +11,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import sample.Main;
 
-public class choosePlaceToWaitController {
+public class ChoosePlaceToWaitController {
 
     @FXML
     private Pane pane;
@@ -52,7 +52,7 @@ public class choosePlaceToWaitController {
     String[] choicePlaceToWait;
     String placeToWait;
 
-    public detailController choosePlaceParent;
+    public DetailController choosePlaceParent;
 
     public void toChoosePlaceToWait(Image img, String to, String from, String time, String date, String seat, String car, String[] choicePlaceToWait){
 
@@ -197,11 +197,11 @@ public class choosePlaceToWaitController {
 
         else {
             pane.getChildren().add(Main.confirm.getRoot());
-            Main.confirmController.toConfirm(img.getImage(), to, from, time,
+            Main.ConfirmController.toConfirm(img.getImage(), to, from, time,
                     date, seat, car, placeToWait);
         }
 
-        Main.confirmController.confirmParent = this;
+        Main.ConfirmController.confirmParent = this;
 
     }
 

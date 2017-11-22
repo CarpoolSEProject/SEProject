@@ -14,7 +14,7 @@ import sample.Main;
 
 import java.io.IOException;
 
-public class detailController {
+public class DetailController {
 
     @FXML
     private Text navBar_home;
@@ -386,9 +386,9 @@ public class detailController {
 //        Pane.getChildren().clear();
         Pane.getChildren().add(Main.choosePlacetoWait.getRoot());
 
-        Main.choosePlaceToWaitController.toChoosePlaceToWait(img.getImage(), to.getText(), from.getText(), time.getText(),
+        Main.ChoosePlaceToWaitController.toChoosePlaceToWait(img.getImage(), to.getText(), from.getText(), time.getText(),
                 date.getText(), seat.getText(), car.getText(), choicePlaceToWait);
-        Main.choosePlaceToWaitController.choosePlaceParent = this;
+        Main.ChoosePlaceToWaitController.choosePlaceParent = this;
 
     }
 

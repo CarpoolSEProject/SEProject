@@ -10,7 +10,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import sample.Main;
 
-public class summaryController {
+public class SummaryController {
 
     @FXML
     private Pane pane;
@@ -51,7 +51,7 @@ public class summaryController {
     @FXML
     private Text place;
 
-    public confirmController myParent;
+    public ConfirmController myParent;
     String seat;
     String car;
 

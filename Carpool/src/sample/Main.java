@@ -26,14 +26,14 @@ public class Main extends Application{
     public static Scene passengerProfile;
 
     public static Controller controller;
-    public static createPostController createPostController;
-    public static driverFeedController driverFeedController;
-    public static detailController detailController;
-    public static choosePlaceToWaitController choosePlaceToWaitController;
-    public static confirmController confirmController;
-    public static summaryController summaryController;
-    public static driverProfileController driverProfileController;
-    public static passengerProfileController passengerProfileController;
+    public static CreatePostController CreatePostController;
+    public static DriverFeedController DriverFeedController;
+    public static DetailController DetailController;
+    public static ChoosePlaceToWaitController ChoosePlaceToWaitController;
+    public static ConfirmController ConfirmController;
+    public static SummaryController SummaryController;
+    public static DriverProfileController DriverProfileController;
+    public static PassengerProfileController PassengerProfileController;
 
     public static int checkLogin = 0;
     private static EntityManagerFactory emf;
@@ -68,14 +68,14 @@ public class Main extends Application{
         this.passengerProfile = new Scene(passengerProfile.load());
 
         this.controller = sample.getController();
-        this.createPostController = createPost.getController();
-        this.driverFeedController = driverFeed.getController();
-        this.detailController = detail.getController();
-        this.choosePlaceToWaitController = choosePlaceToWait.getController();
-        this.confirmController = confirm.getController();
-        this.summaryController = summary.getController();
-        this.driverProfileController = driverProfile.getController();
-        this.passengerProfileController = passengerProfile.getController();
+        this.CreatePostController = createPost.getController();
+        this.DriverFeedController = driverFeed.getController();
+        this.DetailController = detail.getController();
+        this.ChoosePlaceToWaitController = choosePlaceToWait.getController();
+        this.ConfirmController = confirm.getController();
+        this.SummaryController = summary.getController();
+        this.DriverProfileController = driverProfile.getController();
+        this.PassengerProfileController = passengerProfile.getController();
 
 
         callStage.setTitle("CARPOOL");

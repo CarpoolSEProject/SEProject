@@ -10,13 +10,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
-import java.util.List;
 
-public class passengerFeedController {
+public class PassengerFeedController {
 
     @FXML
     private Text navBar_home;
@@ -558,7 +556,7 @@ public class passengerFeedController {
                     @Override
                     public void handle(MouseEvent event) {
                         centerPane.getChildren().remove(centerPane.getChildren().size()-1);
-                        Main.summaryController.getHomeButton().setOnMouseClicked(null);
+                        Main.SummaryController.getHomeButton().setOnMouseClicked(null);
                         Main.summary.getRoot().relocate(0,0);
                         for (int i = 0; i<centerPane.getChildren().size()-1; i++) {
                             centerPane.getChildren().get(i).setOpacity(1.0);
@@ -566,9 +564,9 @@ public class passengerFeedController {
                     }
                 };
 
-                Main.summaryController.getHomeButton().setOnMouseClicked(ev); //call ev
-                Main.summaryController.getArrivedButton().setOnMouseClicked(ev); //call ev
-                Main.summaryController.toSummary(img1.getImage(), j.getEvent().getTo(),  j.getEvent().getFrom(),  j.getEvent().getTime(),
+                Main.SummaryController.getHomeButton().setOnMouseClicked(ev); //call ev
+                Main.SummaryController.getArrivedButton().setOnMouseClicked(ev); //call ev
+                Main.SummaryController.toSummary(img1.getImage(), j.getEvent().getTo(),  j.getEvent().getFrom(),  j.getEvent().getTime(),
                         j.getEvent().getDate(), String.valueOf(j.getEvent().getSeatLeft()), j.getEvent().getCarType(), mapPlace(j.getEvent().getLocationWaiting()));
             }
         }
@@ -576,7 +574,7 @@ public class passengerFeedController {
         else { //if the event is not joined by passenger
             System.out.println("There is no join event");
             Main.callStage.setScene(Main.detail);
-            Main.detailController.toDetail(img1.getImage(), to1.getText(), from1.getText(), time1.getText(),
+            Main.DetailController.toDetail(img1.getImage(), to1.getText(), from1.getText(), time1.getText(),
                 date1.getText(), seat1.getText(), car1.getText(),location1);
         }
 
@@ -604,7 +602,7 @@ public class passengerFeedController {
                     @Override
                     public void handle(MouseEvent event) {
                         centerPane.getChildren().remove(centerPane.getChildren().size()-1);
-                        Main.summaryController.getHomeButton().setOnMouseClicked(null);
+                        Main.SummaryController.getHomeButton().setOnMouseClicked(null);
                         Main.summary.getRoot().relocate(0,0);
                         for (int i = 0; i<centerPane.getChildren().size()-1; i++) {
                             centerPane.getChildren().get(i).setOpacity(1.0);
@@ -613,9 +611,9 @@ public class passengerFeedController {
                 };
 
 
-                Main.summaryController.getHomeButton().setOnMouseClicked(ev);
-                Main.summaryController.getArrivedButton().setOnMouseClicked(ev);
-                Main.summaryController.toSummary(img2.getImage(), j.getEvent().getTo(),  j.getEvent().getFrom(),  j.getEvent().getTime(),
+                Main.SummaryController.getHomeButton().setOnMouseClicked(ev);
+                Main.SummaryController.getArrivedButton().setOnMouseClicked(ev);
+                Main.SummaryController.toSummary(img2.getImage(), j.getEvent().getTo(),  j.getEvent().getFrom(),  j.getEvent().getTime(),
                         j.getEvent().getDate(), String.valueOf(j.getEvent().getSeatLeft()), j.getEvent().getCarType(), mapPlace(j.getEvent().getLocationWaiting()));
             }
         }
@@ -623,7 +621,7 @@ public class passengerFeedController {
         else {
             System.out.println("There is no join event");
             Main.callStage.setScene(Main.detail);
-            Main.detailController.toDetail(img2.getImage(), to2.getText(), from2.getText(), time2.getText(),
+            Main.DetailController.toDetail(img2.getImage(), to2.getText(), from2.getText(), time2.getText(),
                     date2.getText(), seat2.getText(), car2.getText(),location2);
         }
 
@@ -651,7 +649,7 @@ public class passengerFeedController {
                     @Override
                     public void handle(MouseEvent event) {
                         centerPane.getChildren().remove(centerPane.getChildren().size()-1);
-                        Main.summaryController.getHomeButton().setOnMouseClicked(null);
+                        Main.SummaryController.getHomeButton().setOnMouseClicked(null);
                         Main.summary.getRoot().relocate(0,0);
                         for (int i = 0; i<centerPane.getChildren().size()-1; i++) {
                             centerPane.getChildren().get(i).setOpacity(1.0);
@@ -660,9 +658,9 @@ public class passengerFeedController {
                 };
 
 
-                Main.summaryController.getHomeButton().setOnMouseClicked(ev);
-                Main.summaryController.getArrivedButton().setOnMouseClicked(ev);
-                Main.summaryController.toSummary(img3.getImage(), j.getEvent().getTo(),  j.getEvent().getFrom(),  j.getEvent().getTime(),
+                Main.SummaryController.getHomeButton().setOnMouseClicked(ev);
+                Main.SummaryController.getArrivedButton().setOnMouseClicked(ev);
+                Main.SummaryController.toSummary(img3.getImage(), j.getEvent().getTo(),  j.getEvent().getFrom(),  j.getEvent().getTime(),
                         j.getEvent().getDate(), String.valueOf(j.getEvent().getSeatLeft()), j.getEvent().getCarType(), mapPlace(j.getEvent().getLocationWaiting()));
             }
         }
@@ -670,7 +668,7 @@ public class passengerFeedController {
         else {
             System.out.println("There is no join event");
             Main.callStage.setScene(Main.detail);
-            Main.detailController.toDetail(img3.getImage(), to3.getText(), from3.getText(), time3.getText(),
+            Main.DetailController.toDetail(img3.getImage(), to3.getText(), from3.getText(), time3.getText(),
                     date3.getText(), seat3.getText(), car3.getText(),location3);
         }
 
@@ -699,7 +697,7 @@ public class passengerFeedController {
                     @Override
                     public void handle(MouseEvent event) {
                         centerPane.getChildren().remove(centerPane.getChildren().size()-1);
-                        Main.summaryController.getHomeButton().setOnMouseClicked(null);
+                        Main.SummaryController.getHomeButton().setOnMouseClicked(null);
                         Main.summary.getRoot().relocate(0,0);
                         for (int i = 0; i<centerPane.getChildren().size()-1; i++) {
                             centerPane.getChildren().get(i).setOpacity(1.0);
@@ -708,9 +706,9 @@ public class passengerFeedController {
                 };
 
 
-                Main.summaryController.getHomeButton().setOnMouseClicked(ev);
-                Main.summaryController.getArrivedButton().setOnMouseClicked(ev);
-                Main.summaryController.toSummary(img3.getImage(), j.getEvent().getTo(),  j.getEvent().getFrom(),  j.getEvent().getTime(),
+                Main.SummaryController.getHomeButton().setOnMouseClicked(ev);
+                Main.SummaryController.getArrivedButton().setOnMouseClicked(ev);
+                Main.SummaryController.toSummary(img3.getImage(), j.getEvent().getTo(),  j.getEvent().getFrom(),  j.getEvent().getTime(),
                         j.getEvent().getDate(), String.valueOf(j.getEvent().getSeatLeft()), j.getEvent().getCarType(), mapPlace(j.getEvent().getLocationWaiting()));
             }
         }
@@ -718,7 +716,7 @@ public class passengerFeedController {
         else {
             System.out.println("There is no join event");
             Main.callStage.setScene(Main.detail);
-            Main.detailController.toDetail(img4.getImage(), to4.getText(), from4.getText(), time4.getText(),
+            Main.DetailController.toDetail(img4.getImage(), to4.getText(), from4.getText(), time4.getText(),
                     date4.getText(), seat4.getText(), car4.getText(),location4);
         }
     }

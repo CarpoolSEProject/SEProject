@@ -13,7 +13,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import java.sql.Time;
 
-public class driverProfileController {
+public class DriverProfileController {
 
     @FXML
     private Text navBar_home;

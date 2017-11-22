@@ -15,7 +15,7 @@ import sample.Main;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
-public class confirmController {
+public class ConfirmController {
 
     @FXML
     private Pane pane;
@@ -56,7 +56,7 @@ public class confirmController {
     @FXML
     private Text place;
 
-    public choosePlaceToWaitController confirmParent;
+    public ChoosePlaceToWaitController confirmParent;
     String seat;
     String car;
 
@@ -175,7 +175,7 @@ public class confirmController {
 
         // To next page
         pane.getChildren().add(Main.summary.getRoot());
-        Main.summaryController.toSummary(img.getImage(), to.getText(), from.getText(), time.getText(),
+        Main.SummaryController.toSummary(img.getImage(), to.getText(), from.getText(), time.getText(),
                 date.getText(), seat, car, placeToWait.getText());
     }
 
