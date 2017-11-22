@@ -153,14 +153,12 @@ public class ConfirmController {
 
         System.out.println("test get result: "+q.getResultList());
 
-        System.out.println("look! to: "+ to.getText());
-        System.out.println("look! from: "+ from.getText());
-        System.out.println("look! date: "+ date.getText());
-        System.out.println("look! time: "+ time.getText());
-        System.out.println("look! car: "+ car);
+        System.out.println("to: "+ to.getText());
+        System.out.println("from: "+ from.getText());
+        System.out.println("date: "+ date.getText());
+        System.out.println("time: "+ time.getText());
+        System.out.println("car: "+ car);
 
-//        int seatForSend = Integer.parseInt(seat); //convert seat before send to db
-//        int locationWaitingForSend[] = convertLocation();
         String passenger = "Puttachart Srisuwankul";
 
         JoinEvent toSend = new JoinEvent(passenger, ev);
@@ -178,92 +176,6 @@ public class ConfirmController {
         Main.SummaryController.toSummary(img.getImage(), to.getText(), from.getText(), time.getText(),
                 date.getText(), seat, car, placeToWait.getText());
     }
-
-    public int[] convertLocation(){
-        int[] arr = new int[8];
-
-        if (placeToWait.equals("Kae Ki")){
-            for (int i = 0; i<8 ;i++) {
-                if (i == 0) {
-                    arr[i] = 1;
-                }
-                else {
-                    arr[i] = 0;
-                }
-            }
-        }
-        else if (placeToWait.equals("E12 Building")){
-            for (int i = 0; i<8 ;i++) {
-                if (i == 1) {
-                    arr[i] = 1;
-                }
-                else {
-                    arr[i] = 0;
-                }
-            }
-        }
-        else if (placeToWait.equals("A Cafeteria")){
-            for (int i = 0; i<8 ;i++) {
-                if (i == 2) {
-                    arr[i] = 1;
-                }
-                else {
-                    arr[i] = 0;
-                }
-            }
-        }
-        else if (placeToWait.equals("Central Library")){
-            for (int i = 0; i<8 ;i++) {
-                if (i == 3) {
-                    arr[i] = 1;
-                }
-                else {
-                    arr[i] = 0;
-                }
-            }
-        }
-        else if (placeToWait.equals("Faculty of Science")){
-            for (int i = 0; i<8 ;i++) {
-                if (i == 4) {
-                    arr[i] = 1;
-                }
-                else {
-                    arr[i] = 0;
-                }
-            }
-        }
-        else if (placeToWait.equals("Prathep Building")){
-            for (int i = 0; i<8 ;i++) {
-                if (i == 5) {
-                    arr[i] = 1;
-                }
-                else {
-                    arr[i] = 0;
-                }
-            }
-        }
-        else if (placeToWait.equals("ECC Building")){
-            for (int i = 0; i<8 ;i++) {
-                if (i == 6) {
-                    arr[i] = 1;
-                }
-                else {
-                    arr[i] = 0;
-                }
-            }
-        }
-        else if (placeToWait.equals("RNP")){
-            for (int i = 0; i<8 ;i++) {
-                if (i == 7) {
-                    arr[i] = 1;
-                }
-                else {
-                    arr[i] = 0;
-                }
-            }
-        }
-
-        return arr;
-    }
+    
 
 }
