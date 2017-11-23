@@ -13,10 +13,6 @@ public abstract class Car {
     private String typeName;
     private int seatNo;
 
-    public Car(String typeName, int seatNo) {
-        this.typeName = typeName;
-        this.seatNo = seatNo;
-    }
 
     public String getTypeName() {
         return typeName;

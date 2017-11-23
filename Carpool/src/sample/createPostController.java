@@ -231,7 +231,7 @@ public class CreatePostController {
 
                 // Send event to Database (Event Class)
                 if (carType == "Motorcycle") {
-                    Car c = new Motorcycle("Motorcycle", 2);
+                    Car c = new Motorcycle();
                     Event toSend = new Event(driverName, from, to, datee.toString(), timee, c.getTypeName(), seatNo, checkLocation);
                     em.getTransaction().begin();
                     em.persist(toSend);
@@ -239,7 +239,7 @@ public class CreatePostController {
 
                 }
                 else if (carType == "Private Car") {
-                    Car c = new PrivateCar("Private Car", 4);
+                    Car c = new PrivateCar();
                     Event toSend = new Event(driverName, from, to, datee.toString(), timee, c.getTypeName(), seatNo, checkLocation);
                     em.getTransaction().begin();
                     em.persist(toSend);

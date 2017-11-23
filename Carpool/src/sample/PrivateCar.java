@@ -6,18 +6,13 @@ import javax.persistence.Entity;
 @Entity
 public class PrivateCar extends Car {
 
-    public PrivateCar(String typeName, int seatNo) {
-
-        super(typeName,seatNo);
+    @Override
+    public String getTypeName() {
+        return "Private Car";
     }
 
-//    @Override
-//    public String getTypeName() {
-//        return super.getTypeName();
-//    }
-//
-//    @Override
-//    public int getSeatNo() {
-//        return super.getSeatNo();
-//    }
+    @Override
+    public int getSeatNo() {
+        return 4;
+    }
 }
