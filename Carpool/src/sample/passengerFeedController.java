@@ -548,7 +548,7 @@ public class PassengerFeedController {
             if (q.getResultList() != null) { //if this event is already joined then go to summary page
                 centerPane.getChildren().add(Main.summary.getRoot());
                 Main.summary.getRoot().relocate(40,3);
-                for (int i = 0; i<centerPane.getChildren().size()-2; i++) { //set centerpane to disappear
+                for (int i = 0; i<centerPane.getChildren().size()-1; i++) { //set centerpane to disappear
                     centerPane.getChildren().get(i).setOpacity(0.0);
                 }
 
@@ -558,7 +558,7 @@ public class PassengerFeedController {
                         centerPane.getChildren().remove(centerPane.getChildren().size()-1);
                         Main.SummaryController.getHomeButton().setOnMouseClicked(null);
                         Main.summary.getRoot().relocate(0,0);
-                        for (int i = 0; i<centerPane.getChildren().size()-1; i++) {
+                        for (int i = 0; i<centerPane.getChildren().size(); i++) {
                             centerPane.getChildren().get(i).setOpacity(1.0);
                         }
                     }
@@ -594,7 +594,7 @@ public class PassengerFeedController {
             if (q.getResultList() != null) { //if this event is already joined then go to summary page
                 centerPane.getChildren().add(Main.summary.getRoot());
                 Main.summary.getRoot().relocate(40,3);
-                for (int i = 0; i<centerPane.getChildren().size()-2; i++) {
+                for (int i = 0; i<centerPane.getChildren().size()-1; i++) {
                     centerPane.getChildren().get(i).setOpacity(0.0);
                 }
 
@@ -604,7 +604,7 @@ public class PassengerFeedController {
                         centerPane.getChildren().remove(centerPane.getChildren().size()-1);
                         Main.SummaryController.getHomeButton().setOnMouseClicked(null);
                         Main.summary.getRoot().relocate(0,0);
-                        for (int i = 0; i<centerPane.getChildren().size()-1; i++) {
+                        for (int i = 0; i<centerPane.getChildren().size(); i++) {
                             centerPane.getChildren().get(i).setOpacity(1.0);
                         }
                     }
@@ -641,7 +641,7 @@ public class PassengerFeedController {
             if (q.getResultList() != null) { //if this event is already joined then go to summary page
                 centerPane.getChildren().add(Main.summary.getRoot());
                 Main.summary.getRoot().relocate(40,3);
-                for (int i = 0; i<centerPane.getChildren().size()-2; i++) {
+                for (int i = 0; i<centerPane.getChildren().size()-1; i++) {
                     centerPane.getChildren().get(i).setOpacity(0.0);
                 }
 
@@ -651,7 +651,7 @@ public class PassengerFeedController {
                         centerPane.getChildren().remove(centerPane.getChildren().size()-1);
                         Main.SummaryController.getHomeButton().setOnMouseClicked(null);
                         Main.summary.getRoot().relocate(0,0);
-                        for (int i = 0; i<centerPane.getChildren().size()-1; i++) {
+                        for (int i = 0; i<centerPane.getChildren().size(); i++) {
                             centerPane.getChildren().get(i).setOpacity(1.0);
                         }
                     }
@@ -689,7 +689,7 @@ public class PassengerFeedController {
             if (q.getResultList() != null) { //if this event is already joined then go to summary page
                 centerPane.getChildren().add(Main.summary.getRoot());
                 Main.summary.getRoot().relocate(40,3);
-                for (int i = 0; i<centerPane.getChildren().size()-2; i++) {
+                for (int i = 0; i<centerPane.getChildren().size()-1; i++) {
                     centerPane.getChildren().get(i).setOpacity(0.0);
                 }
 
@@ -699,7 +699,7 @@ public class PassengerFeedController {
                         centerPane.getChildren().remove(centerPane.getChildren().size()-1);
                         Main.SummaryController.getHomeButton().setOnMouseClicked(null);
                         Main.summary.getRoot().relocate(0,0);
-                        for (int i = 0; i<centerPane.getChildren().size()-1; i++) {
+                        for (int i = 0; i<centerPane.getChildren().size(); i++) {
                             centerPane.getChildren().get(i).setOpacity(1.0);
                         }
                     }
