@@ -26,7 +26,7 @@ public class Event {
     @Temporal(TemporalType.DATE)
     public String date;
     public String time;
-    @OneToOne (fetch=EAGER, cascade=PERSIST)
+//    @OneToOne (fetch=EAGER, cascade=PERSIST)
     public String carType;
     public Integer seatLeft;
     public int[] locationWaiting;
