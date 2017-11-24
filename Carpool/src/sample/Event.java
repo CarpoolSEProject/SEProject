@@ -14,41 +14,41 @@ public class Event {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    public Integer EventID;
+    public Integer eventID;
     @ManyToOne
-    public String Driver;
+    public String driver;
 
     @OneToMany (cascade=CascadeType.ALL, mappedBy="event")
-    private List<JoinEvent> JoinEvent;
+    private List<JoinEvent> joinEvent;
 
-    public String From;
-    public String To;
+    public String from;
+    public String to;
     @Temporal(TemporalType.DATE)
-    public String Date;
-    public String Time;
+    public String date;
+    public String time;
     @OneToOne (fetch=EAGER, cascade=PERSIST)
-    public String CarType;
-    public Integer SeatLeft;
-    public int[] LocationWaiting;
+    public String carType;
+    public Integer seatLeft;
+    public int[] locationWaiting;
 
 
-    public Event(String Driver, String From, String To,String Date, String Time, String CarType, Integer SeatLeft, int[] LocationWaiting) {
-        this.Driver = Driver;
-        this.From = From;
-        this.To = To;
-        this.Date = Date;
-        this.Time = Time;
-        this.CarType = CarType;
-        this.SeatLeft = SeatLeft;
-        this.LocationWaiting = LocationWaiting;
+    public Event(String driver, String from, String to,String date, String time, String carType, Integer seatLeft, int[] locationWaiting) {
+        this.driver = driver;
+        this.from = from;
+        this.to = to;
+        this.date = date;
+        this.time = time;
+        this.carType = carType;
+        this.seatLeft = seatLeft;
+        this.locationWaiting = locationWaiting;
     }
 
     public Integer getEventID() {
-        return EventID;
+        return eventID;
     }
 
     public String getDriver() {
-        return Driver;
+        return driver;
     }
 
     public List<sample.JoinEvent> getJoinEvent() {
@@ -56,11 +56,11 @@ public class Event {
     }
 
     public String getFrom() {
-        return From;
+        return from;
     }
 
     public String getTo() {
-        return To;
+        return to;
     }
 
     public String getDate() {
@@ -69,12 +69,12 @@ public class Event {
 
 
     public String getTime() {
-        return Time;
+        return time;
     }
 
 
     public String getCarType() {
-        return CarType;
+        return carType;
     }
 
     public Integer getSeatLeft() {
@@ -86,7 +86,7 @@ public class Event {
     }
 
     public int[] getLocationWaiting() {
-        return LocationWaiting;
+        return locationWaiting;
     }
 
     public void addJoinEvent(sample.JoinEvent joinEvent) {

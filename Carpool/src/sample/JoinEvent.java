@@ -32,5 +32,7 @@ public class JoinEvent {
         return event;
     }
 
-
+    public String getPassenger() {
+        return passenger;
+    }
 }

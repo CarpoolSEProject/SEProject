@@ -15,5 +15,5 @@ public class Passenger extends Person {
     public JoinEvent getPassengerEvent() {
         return passengerEvent;
     }
-    
+
 }
