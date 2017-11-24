@@ -151,7 +151,7 @@ public class CreatePostController {
     void confirm(ActionEvent event) { //press confirm button
         String witsarut = "Witsarut Kavidum";
         EntityManager em = Database.getConnection().createEntityManager();
-        TypedQuery<String> q = em.createQuery("SELECT Name FROM Driver", String.class);
+        TypedQuery<String> q = em.createQuery("SELECT name FROM Driver", String.class);
         String driverName = null ;
         for ( String kong : q.getResultList()) {
             if(kong.equals(witsarut)){

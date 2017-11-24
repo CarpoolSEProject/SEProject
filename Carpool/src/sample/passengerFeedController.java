@@ -150,7 +150,7 @@ public class PassengerFeedController {
     void refresh(ActionEvent event) { //to refresh the feed
         EntityManager em = Database.getConnection().createEntityManager();
         TypedQuery<Integer> check = em.createQuery("SELECT table FROM Event table WHERE " +
-                "table.SeatLeft <> 0", Integer.class);
+                "table.seatLeft <> 0", Integer.class);
         System.out.println(check.getResultList());
 
         if (check.getResultList().isEmpty()) { //event is empty
@@ -161,7 +161,7 @@ public class PassengerFeedController {
             blockPane4.setVisible(false);
         }
         else if (check.getResultList().isEmpty() == false) { //event is not empty
-            TypedQuery<Event> fromTable = em.createQuery("SELECT e FROM Event e WHERE e.SeatLeft <> 0", Event.class);
+            TypedQuery<Event> fromTable = em.createQuery("SELECT e FROM Event e WHERE e.seatLeft <> 0", Event.class);
 
             for (Event ev : fromTable.getResultList()) {
                 if (ev.getEventID() == 1) {
@@ -537,7 +537,7 @@ public class PassengerFeedController {
     @FXML
     void clickBlock1(MouseEvent event) {
         EntityManager em2 = Database.getConnection().createEntityManager();
-        TypedQuery<JoinEvent> q = em2.createQuery("SELECT e FROM JoinEvent e WHERE e.event.EventID = 1", JoinEvent.class);
+        TypedQuery<JoinEvent> q = em2.createQuery("SELECT e FROM JoinEvent e WHERE e.event.eventID = 1", JoinEvent.class);
         JoinEvent j = null;
 
         if (q.getResultList().isEmpty() == false) { //if this event is already joined, set j to keep data of the join event
@@ -583,7 +583,7 @@ public class PassengerFeedController {
     @FXML
     void clickBlock2(MouseEvent event) {
         EntityManager em2 = Database.getConnection().createEntityManager();
-        TypedQuery<JoinEvent> q = em2.createQuery("SELECT e FROM JoinEvent e WHERE e.event.EventID = 2", JoinEvent.class);
+        TypedQuery<JoinEvent> q = em2.createQuery("SELECT e FROM JoinEvent e WHERE e.event.eventID = 2", JoinEvent.class);
         JoinEvent j = null;
 
         if (q.getResultList().isEmpty() == false) { //if this event is already joined then go to summary page
@@ -630,7 +630,7 @@ public class PassengerFeedController {
     @FXML
     void clickBlock3(MouseEvent event) {
         EntityManager em2 = Database.getConnection().createEntityManager();
-        TypedQuery<JoinEvent> q = em2.createQuery("SELECT e FROM JoinEvent e WHERE e.event.EventID = 3", JoinEvent.class);
+        TypedQuery<JoinEvent> q = em2.createQuery("SELECT e FROM JoinEvent e WHERE e.event.eventID = 3", JoinEvent.class);
         JoinEvent j = null;
 
         if (q.getResultList().isEmpty() == false) { //if this event is already joined then go to summary page
@@ -678,7 +678,7 @@ public class PassengerFeedController {
     @FXML
     void clickBlock4(MouseEvent event) {
         EntityManager em2 = Database.getConnection().createEntityManager();
-        TypedQuery<JoinEvent> q = em2.createQuery("SELECT e FROM JoinEvent e WHERE e.event.EventID = 4", JoinEvent.class);
+        TypedQuery<JoinEvent> q = em2.createQuery("SELECT e FROM JoinEvent e WHERE e.event.eventID = 4", JoinEvent.class);
         JoinEvent j = null;
 
         if (q.getResultList().isEmpty() == false) { //if this event is already joined then go to summary page

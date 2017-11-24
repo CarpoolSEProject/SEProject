@@ -8,7 +8,7 @@ public class Driver extends Person {
     private String carType;
     private String carLicense;
     private String rating;
-    @OneToMany(cascade=CascadeType.ALL, mappedBy="Driver")
+    @OneToMany(cascade=CascadeType.ALL, mappedBy="driver")
     private Event driverEvent;
 
 

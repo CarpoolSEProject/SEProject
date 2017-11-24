@@ -141,8 +141,8 @@ public class ConfirmController {
 
         // send event to database
         EntityManager em = Database.getConnection().createEntityManager();
-        TypedQuery<sample.Event> q = em.createQuery("SELECT table FROM Event table WHERE table.To = :to AND table.From = :from " +
-                "AND table.Date = :date AND table.Time = :time AND table.CarType = :car" , sample.Event.class);
+        TypedQuery<sample.Event> q = em.createQuery("SELECT table FROM Event table WHERE table.to = :to AND table.from = :from " +
+                "AND table.date = :date AND table.time = :time AND table.carType = :car" , sample.Event.class);
         q.setParameter("to",to.getText());
         q.setParameter("from",from.getText());
         q.setParameter("date",date.getText());

@@ -153,7 +153,7 @@ public class DriverFeedController {
         //Query event from Event table to show on feed
         EntityManager em = Database.getConnection().createEntityManager();
         TypedQuery<Integer> check = em.createQuery("SELECT table FROM Event table WHERE " +
-                "table.SeatLeft <> 0", Integer.class);
+                "table.seatLeft <> 0", Integer.class);
         System.out.println(check.getResultList());
 
         if (check.getResultList().isEmpty()) { //event is empty
@@ -164,7 +164,7 @@ public class DriverFeedController {
             blockPane4.setVisible(false);
         }
         else if (check.getResultList().isEmpty() == false) { //event is not empty
-            TypedQuery<Event> fromTable = em.createQuery("SELECT e FROM Event e WHERE e.SeatLeft <> 0", Event.class);
+            TypedQuery<Event> fromTable = em.createQuery("SELECT e FROM Event e WHERE e.seatLeft <> 0", Event.class);
 
             for (Event ev : fromTable.getResultList()) {
                 if (ev.getEventID() == 1) {
