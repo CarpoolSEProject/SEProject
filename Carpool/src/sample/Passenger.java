@@ -8,8 +8,8 @@ public class Passenger extends Person {
     @OneToMany(cascade=CascadeType.ALL, mappedBy="Passenger")
     public JoinEvent PassengerEvent;
 
-    public Passenger(String Username, String Password, String Email, String Name, String Gender, Integer Age, String PhoneNo) {
-        super(Username, Password, Email, Name, Gender, Age, PhoneNo);
+    public Passenger(String username, String password, String email, String name, String gender, Integer age, String phoneNo) {
+        super(username, password, email, name, gender, age, phoneNo);
     }
 
     public JoinEvent getPassengerEvent() {
