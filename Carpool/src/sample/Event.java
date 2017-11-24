@@ -47,57 +47,46 @@ public class Event {
         return EventID;
     }
 
-
     public String getDriver() {
         return Driver;
     }
 
-    public void setDriver(String driver) { Driver = driver; }
+    public List<sample.JoinEvent> getJoinEvent() {
+        return JoinEvent;
+    }
 
     public String getFrom() {
         return From;
-    }
-
-    public void setFrom(String from) {
-        From = from;
     }
 
     public String getTo() {
         return To;
     }
 
-    public void setTo(String to) {
-        To = to;
+    public String getDate() {
+        return Date;
     }
 
-    public String getDate() {return Date;}
 
     public String getTime() {
         return Time;
     }
 
-    public void setTime(String timetoArrive) {
-        Time = Time;
-    }
 
     public String getCarType() {
         return CarType;
     }
 
-    public int getSeatLeft() {
+    public Integer getSeatLeft() {
         return SeatLeft;
     }
 
-    public void setSeatLeft(int seatLeft) {
+    public void setSeatLeft(Integer seatLeft) {
         SeatLeft = seatLeft;
     }
 
     public int[] getLocationWaiting() {
         return LocationWaiting;
-    }
-
-    public List<sample.JoinEvent> getJoinEvent() {
-        return JoinEvent;
     }
 
     public void addJoinEvent(sample.JoinEvent joinEvent) {
