@@ -16,21 +16,24 @@ public class JoinEvent {
     @ManyToOne
     private Event event;
 
-    private String Passenger;
+    private String passenger;
 
 
-    public JoinEvent(String Passenger, Event event) {
-        this.Passenger = Passenger;
+    public JoinEvent(String passenger, Event event) {
+        this.passenger = passenger;
         this.event = event;
     }
 
-    public String getPassenger() { return Passenger; }
 
-    public void setPassenger(String Passenger) { this.Passenger = Passenger; }
+    public Integer getJoinEventID() {
+        return joinEventID;
+    }
 
     public Event getEvent() {
         return event;
     }
 
-
+    public String getPassenger() {
+        return passenger;
+    }
 }
