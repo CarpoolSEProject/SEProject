@@ -9,51 +9,51 @@ public abstract class Person {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer id;
-    private String Username;
-    private String Password;
-    private String Email;
-    private String Name;
-    private String Gender;
-    private Integer Age;
-    private String PhoneNo;
+    private String username;
+    private String password;
+    private String email;
+    private String name;
+    private String gender;
+    private Integer age;
+    private String phoneNo;
 
-    public Person(String Username, String Password, String Email, String Name, String Gender, Integer Age, String PhoneNo) {
-        this.Username = Username;
-        this.Password = Password;
-        this.Email = Email;
-        this.Name = Name;
-        this.Gender = Gender;
-        this.Age = Age;
-        this.PhoneNo = PhoneNo;
+    public Person(String username, String password, String email, String name, String gender, Integer age, String phoneNo) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+        this.phoneNo = phoneNo;
     }
 
     public Integer getId() { return id; }
 
     public String getUsername() {
-        return Username;
+        return username;
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public String getGender() {
-        return Gender;
+        return gender;
     }
 
     public Integer getAge() {
-        return Age;
+        return age;
     }
 
     public String getPhoneNo() {
-        return PhoneNo;
+        return phoneNo;
     }
 }
