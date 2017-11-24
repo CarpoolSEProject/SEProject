@@ -40,7 +40,7 @@ public class Controller {
     void handle(ActionEvent event) {
         System.out.println("Log in");  //When press loginButton
         EntityManager em = Database.getConnection().createEntityManager();
-        TypedQuery<Person> q = em.createQuery("SELECT p FROM Person p WHERE p.Username = :user AND p.Password = :pass", Person.class);
+        TypedQuery<Person> q = em.createQuery("SELECT p FROM Person p WHERE p.username = :user AND p.password = :pass", Person.class);
         Person ps2 = null;
         q.setParameter("user",enterUsername.getText());
         q.setParameter("pass",enterPassword.getText());
@@ -71,7 +71,7 @@ public class Controller {
                 if(event.getCode().equals(KeyCode.ENTER)) {
                     System.out.println("Log in");  //When press loginButton
                     EntityManager em = Database.getConnection().createEntityManager();
-                    TypedQuery<Person> q = em.createQuery("SELECT p FROM Person p WHERE p.Username = :user AND p.Password = :pass", Person.class);
+                    TypedQuery<Person> q = em.createQuery("SELECT p FROM Person p WHERE p.username = :user AND p.password = :pass", Person.class);
                     Person ps2 = null;
                     q.setParameter("user",enterUsername.getText());
                     q.setParameter("pass",enterPassword.getText());

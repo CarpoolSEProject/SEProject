@@ -32,7 +32,8 @@ public class Event {
     public int[] locationWaiting;
 
 
-    public Event(String driver, String from, String to,String date, String time, String carType, Integer seatLeft, int[] locationWaiting) {
+    public Event(String driver, String from, String to,String date, String time, String carType,
+                 Integer seatLeft, int[] locationWaiting) {
         this.driver = driver;
         this.from = from;
         this.to = to;
@@ -52,7 +53,7 @@ public class Event {
     }
 
     public List<sample.JoinEvent> getJoinEvent() {
-        return JoinEvent;
+        return joinEvent;
     }
 
     public String getFrom() {
@@ -64,7 +65,7 @@ public class Event {
     }
 
     public String getDate() {
-        return Date;
+        return date;
     }
 
 
@@ -78,11 +79,11 @@ public class Event {
     }
 
     public Integer getSeatLeft() {
-        return SeatLeft;
+        return seatLeft;
     }
 
     public void setSeatLeft(Integer seatLeft) {
-        SeatLeft = seatLeft;
+        this.seatLeft = seatLeft;
     }
 
     public int[] getLocationWaiting() {
@@ -90,6 +91,6 @@ public class Event {
     }
 
     public void addJoinEvent(sample.JoinEvent joinEvent) {
-        JoinEvent.add(joinEvent);
+        this.joinEvent.add(joinEvent);
     }
 }
