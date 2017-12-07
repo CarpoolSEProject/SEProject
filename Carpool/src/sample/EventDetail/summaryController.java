@@ -56,6 +56,7 @@ public class SummaryController {
     String car;
 
     public void toSummary(Image img, String to, String from, String time, String date, String seat, String car, String placeToWait){
+        System.out.println("[Summary]");
         this.img.setImage(img);
         this.to.setText(to);
         this.from.setText(from);

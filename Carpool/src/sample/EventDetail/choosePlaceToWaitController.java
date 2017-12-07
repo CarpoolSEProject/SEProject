@@ -55,6 +55,7 @@ public class ChoosePlaceToWaitController {
     public DetailController choosePlaceParent;
 
     public void toChoosePlaceToWait(Image img, String to, String from, String time, String date, String seat, String car, String[] choicePlaceToWait){
+        System.out.println("[Choose place]");
 
         this.to = to;
         this.from = from;
