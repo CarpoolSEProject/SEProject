@@ -14,7 +14,7 @@ import javafx.scene.text.Text;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
-public class PassengerFeedController {
+public class passengerFeedController {
 
     @FXML
     private Text navBar_home;
@@ -349,7 +349,7 @@ public class PassengerFeedController {
 
 
                 }
-                 if (ev.getEventID() == 3) {
+                if (ev.getEventID() == 3) {
                     blockPane3.setVisible(true);
                     to3.setText(ev.getTo());
                     from3.setText(ev.getFrom());
@@ -439,7 +439,7 @@ public class PassengerFeedController {
                     }
 
                 }
-                 if (ev.getEventID() == 4) {
+                if (ev.getEventID() == 4) {
                     blockPane4.setVisible(true);
                     to4.setText(ev.getTo());
                     from4.setText(ev.getFrom());
@@ -575,7 +575,7 @@ public class PassengerFeedController {
             System.out.println("There is no join event");
             Main.callStage.setScene(Main.detail);
             Main.DetailController.toDetail(img1.getImage(), to1.getText(), from1.getText(), time1.getText(),
-                date1.getText(), seat1.getText(), car1.getText(),location1);
+                    date1.getText(), seat1.getText(), car1.getText(),location1);
         }
 
     }
