@@ -129,12 +129,14 @@ public class SummaryController {
     void arrrived(ActionEvent event) {
         System.out.println("ARRIVED");
         Main.callStage.setScene(Main.feed);
+        myParent.removeMe();
     }
 
     @FXML
     void home(ActionEvent event) {
         System.out.println("HOME");
         Main.callStage.setScene(Main.feed);
+        myParent.removeMe();
     }
 
     public JFXButton getHomeButton() {

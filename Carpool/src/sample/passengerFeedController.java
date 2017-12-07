@@ -151,7 +151,7 @@ public class PassengerFeedController {
         EntityManager em = Database.getConnection().createEntityManager();
         TypedQuery<Integer> check = em.createQuery("SELECT table FROM Event table WHERE " +
                 "table.seatLeft <> 0", Integer.class);
-        System.out.println(check.getResultList());
+        System.out.println("List of all event: "+check.getResultList());
 
         if (check.getResultList().isEmpty()) { //event is empty
             System.out.println("empty DB");
@@ -574,6 +574,8 @@ public class PassengerFeedController {
         else { //if the event is not joined by passenger
             System.out.println("The 1st event is not joined.");
             Main.callStage.setScene(Main.detail);
+            Main.ChoosePlaceToWaitController.removeMe();
+            Main.DetailController.removeMe();
             Main.DetailController.toDetail(img1.getImage(), to1.getText(), from1.getText(), time1.getText(),
                     date1.getText(), seat1.getText(), car1.getText(),location1);
         }
@@ -621,6 +623,8 @@ public class PassengerFeedController {
         else {
             System.out.println("The 2nd event is not joined.");
             Main.callStage.setScene(Main.detail);
+            Main.ChoosePlaceToWaitController.removeMe();
+            Main.DetailController.removeMe();
             Main.DetailController.toDetail(img2.getImage(), to2.getText(), from2.getText(), time2.getText(),
                     date2.getText(), seat2.getText(), car2.getText(),location2);
         }
@@ -667,8 +671,11 @@ public class PassengerFeedController {
         else {
             System.out.println("The 3rd event is not joined.");
             Main.callStage.setScene(Main.detail);
+            Main.ChoosePlaceToWaitController.removeMe();
+            Main.DetailController.removeMe();
             Main.DetailController.toDetail(img3.getImage(), to3.getText(), from3.getText(), time3.getText(),
                     date3.getText(), seat3.getText(), car3.getText(),location3);
+
         }
 
 
@@ -715,6 +722,8 @@ public class PassengerFeedController {
         else {
             System.out.println("The 4th event is not joined.");
             Main.callStage.setScene(Main.detail);
+            Main.ChoosePlaceToWaitController.removeMe();
+            Main.DetailController.removeMe();
             Main.DetailController.toDetail(img4.getImage(), to4.getText(), from4.getText(), time4.getText(),
                     date4.getText(), seat4.getText(), car4.getText(),location4);
         }

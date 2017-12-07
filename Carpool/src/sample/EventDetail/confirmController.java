@@ -62,6 +62,7 @@ public class ConfirmController {
 
 
     public void toConfirm(Image img, String to, String from, String time, String date, String seat, String car, String placeToWait){
+        System.out.println("[Confirm]");
         this.img.setImage(img);
         this.to.setText(to);
         this.from.setText(from);
@@ -173,9 +174,14 @@ public class ConfirmController {
 
         // To next page
         pane.getChildren().add(Main.summary.getRoot());
+//        confirmParent.removeMe();
         Main.SummaryController.toSummary(img.getImage(), to.getText(), from.getText(), time.getText(),
                 date.getText(), seat, car, placeToWait.getText());
+
+        Main.SummaryController.myParent = this;
     }
 
-
+    public void removeMe() {
+        pane.getChildren().remove(Main.summary.getRoot());
+    }
 }

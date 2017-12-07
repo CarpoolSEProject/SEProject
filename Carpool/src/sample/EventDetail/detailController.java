@@ -114,7 +114,7 @@ public class DetailController {
 
     public void toDetail(Image img, String to, String from, String time, String date, String seat, String car, int[] locationWaiting) {
         System.out.println("[Detail]");
-        //        set img and other texts
+        //set img and other texts
         this.img.setImage(img);
         this.to.setText(to);
         this.from.setText(from);
@@ -130,7 +130,6 @@ public class DetailController {
         this.seat.setVisible(true);
         this.car.setVisible(true);
 
-        System.out.println(to);
 
         if (to.equals("E12 Building")) {
             line_to.setFill(Color.valueOf("#1bb64f"));
