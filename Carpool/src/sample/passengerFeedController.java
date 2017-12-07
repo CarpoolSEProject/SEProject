@@ -707,7 +707,7 @@ public class passengerFeedController {
 
                 Main.SummaryController.getHomeButton().setOnMouseClicked(ev);
                 Main.SummaryController.getArrivedButton().setOnMouseClicked(ev);
-                Main.SummaryController.toSummary(img3.getImage(), j.getEvent().getTo(),  j.getEvent().getFrom(),  j.getEvent().getTime(),
+                Main.SummaryController.toSummary(img4.getImage(), j.getEvent().getTo(),  j.getEvent().getFrom(),  j.getEvent().getTime(),
                         j.getEvent().getDate(), String.valueOf(j.getEvent().getSeatLeft()), j.getEvent().getCarType(), mapPlace(j.getEvent().getLocationWaiting()));
             }
         }
