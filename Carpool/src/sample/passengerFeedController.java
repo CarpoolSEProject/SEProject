@@ -541,7 +541,7 @@ public class passengerFeedController {
         JoinEvent j = null;
 
         if (q.getResultList().isEmpty() == false) { //if this event is already joined, set j to keep data of the join event
-            System.out.println("q.getResultList() != null");
+            System.out.println("The 1st event is already joined.");
             for (JoinEvent ev : q.getResultList()) {
                 j = ev;
             }
@@ -587,7 +587,7 @@ public class passengerFeedController {
         JoinEvent j = null;
 
         if (q.getResultList().isEmpty() == false) { //if this event is already joined then go to summary page
-            System.out.println("q.getResultList() != null");
+            System.out.println("The 2nd event is already joined.");
             for (JoinEvent ev : q.getResultList()) {
                 j = ev;
             }
@@ -634,7 +634,7 @@ public class passengerFeedController {
         JoinEvent j = null;
 
         if (q.getResultList().isEmpty() == false) { //if this event is already joined then go to summary page
-            System.out.println("q.getResultList() != null");
+            System.out.println("The 3rd event is already joined.");
             for (JoinEvent ev : q.getResultList()) {
                 j = ev;
             }
@@ -681,7 +681,7 @@ public class passengerFeedController {
         JoinEvent j = null;
 
         if (q.getResultList().isEmpty() == false) { //if this event is already joined then go to summary page
-            System.out.println("q.getResultList() != null");
+            System.out.println("The 4th event is already joined.");
             for (JoinEvent ev : q.getResultList()) {
                 j = ev;
             }
